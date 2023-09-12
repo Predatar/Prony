@@ -1,47 +1,83 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode == 'development';
 const target = devMode ? 'web' : 'browserslist';
-const devtool = devMode ? 'source-map' : undefined;
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: path.join(__dirname, 'public', 'index.html')
+  }),
+  new MiniCssExtractPlugin({
+    filename: '[contenthash].css'
+  })
+];
+
+if (!devMode) {
+  plugins.push(new BundleAnalyzerPlugin());
+}
+
+if (process.env.SERVE) {
+  plugins.push(new ReactRefreshWebpackPlugin());
+}
+
+let optimization = undefined;
+
+if (!devMode) {
+  optimization = {
+    splitChunks: {
+      chunks: 'all'
+    },
+    minimize: true,
+    minimizer: [new TerserPlugin({ parallel: true, minify: TerserPlugin.swcMinify })]
+  };
+}
 
 module.exports = {
   mode,
   target,
-  devtool,
   devServer: {
-    port: 3000,
+    port: 3030,
     open: true,
-    hot: true
+    hot: true,
+    compress: true,
+    client: {
+      progress: true
+    }
   },
   entry: path.resolve(__dirname, 'src', 'index.js'),
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  },
   output: {
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    filename: devMode ? '[name].js' : '[name].[contenthash].js',
+    filename: devMode ? '[name].js' : '[fullhash].js',
     assetModuleFilename: 'assets/[name][ext]'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public', 'index.html')
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css'
-    }),
-    new BundleAnalyzerPlugin()
-  ],
+  plugins,
   module: {
     rules: [
+      // --- JavaScript
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      // --- HTMl
       {
         test: /\.html$/i,
         loader: 'html-loader'
       },
+      // --- S/A/C/SS
       {
-        test: /\.(c||sa||sc)ss$/i,
+        test: /\.(s[ac]|c)ss$/i,
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
@@ -49,12 +85,16 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [require('postcss-preset-env')]
+                plugins: ['postcss-preset-env']
               }
             }
-          },
-          'sass-loader'
+          }
         ]
+      },
+      // --- S/A/SS
+      {
+        test: /\.(s[ac])ss$/i,
+        use: ['sass-loader']
       },
       {
         test: /\.(woff2?|eot|ttf)$/i,
@@ -88,23 +128,9 @@ module.exports = {
             }
           }
         ],
-        type: 'asset/resource'
-      },
-      {
-        test: /\.(?:js|mjs|cjs|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
+        type: devMode ? 'asset' : 'asset/resource'
       }
     ]
   },
-  resolve: {
-    extensions: ['*', '.js', '.jsx']
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all'
-    },
-    minimize: true,
-    minimizer: [new TerserPlugin({ parallel: true, minify: TerserPlugin.swcMinify })]
-  }
+  optimization
 };
