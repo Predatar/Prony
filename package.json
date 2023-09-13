@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "cross-env webpack serve",
+    "start-dev": "cross-env SERVE=true webpack serve",
     "build-dev": "webpack",
     "build-prod": "webpack --node-env=production",
     "clear": "rd /s /q build",
@@ -43,10 +43,10 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^5.3.4"
   }
 }

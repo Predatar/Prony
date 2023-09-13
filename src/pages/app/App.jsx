@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 
-import styles from './index.module.scss';
+import AppRouter from '../../routes/AppRouter';
+import Spinner from '../spinner/Spinner';
 
 const App = () => {
-  return <div className={styles.text}>App</div>;
+  return (
+    <Suspense fallback={<Spinner />}>
+      <AppRouter />
+    </Suspense>
+  );
 };
 
 export default App;
