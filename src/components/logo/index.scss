@@ -1,0 +1,10 @@
+.logo {
+  display: block;
+	
+  &_small {
+    width: 138px;
+  }
+  &_big {
+    width: 205px;
+  }
+}
