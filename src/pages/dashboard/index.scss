@@ -1,7 +1,9 @@
 .dashboard {
-  display: flex;
+  display: grid;
+
+  grid-template-columns: 261px 1fr;
+  grid-template-rows: 100dvh;
 
   &__wrapper {
-
   }
 }
