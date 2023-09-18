@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import './index.scss';
 
 import img from '../../../img/personal-img.png';
 
 const Header = () => {
+  const input = useRef();
+
+  useEffect(() => {
+    input.current.checked = true
+  }, []);
+
   return (
     <div className="dashboard-header">
       <div className="personal">
@@ -21,7 +27,7 @@ const Header = () => {
       </div>
       <div className="theme">
         <label htmlFor="day" className="radio__label">
-          <input type="radio" name="theme" id="day" value={'day'} className="radio__input" />
+          <input type="radio" name="theme" id="day" value={'day'} className="radio__input" ref={input} />
           <span className="radio__custom"></span>
           <div className="radio__text">Day theme</div>
         </label>

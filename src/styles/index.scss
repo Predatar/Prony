@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  display: block;
+}
+
 .container {
   margin: 0 auto;
   width: min(100%, 1128px);

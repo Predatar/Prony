@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -9,23 +10,27 @@ import ROUTES from '../../routes/const';
 import Sidebar from './sidebar/Sidebar';
 import Header from './header/Header';
 
+const MainPage = lazy(() => import('./mainPage/MainPage'));
+const BoardPage = lazy(() => import('./boardPage/BoardPage'));
+
 import './index.scss';
 
 const DashBoard = () => {
   return (
     <div className="dashboard">
+      <Helmet>
+        <title>Dashboard - PRONY</title>
+      </Helmet>
       <Sidebar />
       <div className="dashboard__wrapper">
         <Header />
         <Suspense fallback={<Spinner />}>
           <Switch>
-            <Route exact to={ROUTES.DASHBOARD_HOME}>
-              asdasdawd
+            <Route exact path={ROUTES.DASHBOARD_HOME}>
+              <MainPage />
             </Route>
-            <Route exact to={ROUTES.DASHBOARD_BOARDS}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ipsa ea sit magni odit quisquam expedita
-              hic repudiandae odio temporibus, corrupti deserunt amet mollitia nobis assumenda! Voluptatibus quas eum
-              dolores?
+            <Route path={ROUTES.DASHBOARD_BOARDS}>
+              <BoardPage />
             </Route>
           </Switch>
         </Suspense>

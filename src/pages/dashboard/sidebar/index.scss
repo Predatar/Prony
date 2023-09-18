@@ -10,7 +10,7 @@
   &__list {
     padding-top: 18px;
 
-    height: 100%;
+    height: calc(100% - 70px);
 
     border-right: 1px solid #ededef;
   }
