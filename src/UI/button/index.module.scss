@@ -1,0 +1,29 @@
+.btn {
+  width: var(--width);
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px; /* 150% */
+  letter-spacing: 0.07px;
+  color: #fff;
+
+	cursor: pointer;
+}
+
+.btn_primary {
+  background: var(--colors-2-secondary, #1565c0);
+}
+.btn_secondary {
+  color: var(--colors-grey-500, #9e9e9e);
+  background: var(--buttons-outlined-default, #e0e0e0);
+}
+.btn_warning {
+  background: var(--colors-red-500, #f44336);
+}

@@ -16,6 +16,7 @@ const BoardPage = lazy(() => import('./boardPage/BoardPage'));
 import './index.scss';
 
 const DashBoard = () => {
+
   return (
     <div className="dashboard">
       <Helmet>
@@ -31,6 +32,9 @@ const DashBoard = () => {
             </Route>
             <Route path={ROUTES.DASHBOARD_BOARDS}>
               <BoardPage />
+            </Route>
+            <Route path={ROUTES.DASHBOARD_POSTS}>
+              Posts
             </Route>
           </Switch>
         </Suspense>

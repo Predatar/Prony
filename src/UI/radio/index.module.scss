@@ -1,0 +1,17 @@
+.radio {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid white;
+
+  outline: 2px solid rgba(39, 37, 87, 0.3);
+
+  cursor: pointer;
+
+  transition: all 0.2s;
+
+  &Active {
+    background: rgba(21, 101, 192, 1);
+    outline-color: rgba(21, 101, 192, 1);
+  }
+}
