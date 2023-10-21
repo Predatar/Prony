@@ -1,0 +1,29 @@
+.input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &:checked + .box {
+    border: none;
+    background: #1565c0;
+  }
+}
+.box {
+  width: 18px;
+  height: 18px;
+  display: block;
+
+  border: 2px solid #bebecd;
+  border-radius: 2px;
+}
+.check {
+  width: 13px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-47%, -67%) rotate(133deg);
+  z-index: 2;
+}
