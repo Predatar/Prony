@@ -11,6 +11,8 @@ import * as Yup from 'yup';
 import Btn from '../../../../UI/button/Btn';
 import Links from '../../../../UI/links/Links';
 import Radio from '../../../../UI/radio/Radio';
+import Switch from '../../../../UI/switch/Switch';
+import Checkbox from '../../../../UI/checkbox/Checkbox';
 
 import ROUTES from '../../../../routes/const';
 
@@ -66,7 +68,7 @@ const EditBoard = () => {
               <label className="dashboard-board__label">Privacy</label>
               <div className={styles.input}>
                 <div className={styles.radio}>
-                  <Radio />
+                  <Radio name={'privacy'} />
                 </div>
                 <div>
                   <div className={styles.title}>Public</div>
@@ -77,7 +79,7 @@ const EditBoard = () => {
               </div>
               <div className={styles.input}>
                 <div className={styles.radio}>
-                  <Radio />
+                  <Radio name={'privacy'} />
                 </div>
                 <div>
                   <div className={styles.title}>Private</div>
@@ -89,7 +91,7 @@ const EditBoard = () => {
               <label className="dashboard-board__label">Status</label>
               <div className={styles.input}>
                 <div className={styles.radio}>
-                  <Radio />
+                  <Radio name={'status'} />
                 </div>
                 <div>
                   <div className={styles.title}>Locked</div>
@@ -98,11 +100,59 @@ const EditBoard = () => {
               </div>
               <div className={styles.input}>
                 <div className={styles.radio}>
-                  <Radio />
+                  <Radio name={'status'} />
                 </div>
                 <div>
                   <div className={styles.title}>Unlocked</div>
                   <div className={styles.subtitle}>Anybody can post</div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.container}>
+              <div className={styles.input}>
+                <div className={styles.radio}>
+                  <Switch />
+                </div>
+                <div>
+                  <div className={styles.title}>Board on roadmap</div>
+                  <div className={styles.subtitle}>
+                    By default, your board is visible on your roadmap. Turn it off if you don’t want your board and its
+                    posts to be shown there.
+                  </div>
+                </div>
+              </div>
+              <div className={styles.input}>
+                <div className={styles.radio}>
+                  <Switch />
+                </div>
+                <div>
+                  <div className={styles.title}>Indexed</div>
+                  <div className={styles.subtitle}>
+                    By default, your board will be indexed by search engines like Google. Turn it off if you don’t want
+                    that
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.container}>
+              <div className={styles.input}>
+                <div className={styles.radio}>
+                  <Checkbox name={'a'} />
+                </div>
+                <div>
+                  <div className={styles.title}>Post require pre approval</div>
+                  <div className={styles.subtitle}>
+                    All new posts should be approved by moderators before going public
+                  </div>
+                </div>
+              </div>
+              <div className={styles.input}>
+                <div className={styles.radio}>
+                  <Checkbox name={'a'} />
+                </div>
+                <div>
+                  <div className={styles.title}>Anonymous voting</div>
+                  <div className={styles.subtitle}>Allow anonymous votes</div>
                 </div>
               </div>
             </div>
