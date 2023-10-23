@@ -30,15 +30,15 @@ const CreateBoard = () => {
 
   return (
     <>
-      <div className="dashboard-board__path">
+      <div className="dashboard__path">
         <Helmet>
           <title>Create board - PRONY</title>
         </Helmet>
         <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>/
         <Link to={ROUTES.DASHBOARD_BOARDS_CREATE}>Create board</Link>
       </div>
-      <div className="dashboard-board__main">
-        <div className="dashboard-board__title">Create board</div>
+      <div className="dashboard__main">
+        <div className="dashboard__title">Create board</div>
       </div>
       <form className="dashboard-board__form" onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="boardName" className="dashboard-board__label">

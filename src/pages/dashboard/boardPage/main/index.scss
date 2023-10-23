@@ -1,13 +1,4 @@
 .dashboard-board {
-  &__title {
-    color: var(--272557, #272557);
-    font-variant-numeric: lining-nums proportional-nums;
-
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38.4px; /* 120% */
-    letter-spacing: -0.219px;
-  }
 
   &__table {
     margin-top: 23px;

@@ -1,11 +1,7 @@
-.dashboard {
-  display: grid;
-
-  grid-template-columns: 261px 1fr;
-  grid-template-rows: 100dvh;
-
-  &__wrapper {
-  }
+.dashboard-tags {
+  padding: 10px 40px 90px 36px;
+  height: calc(100% - 64px);
+  background: #f9f9fc;
 
   &__path {
     display: flex;
