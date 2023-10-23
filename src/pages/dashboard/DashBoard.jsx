@@ -10,9 +10,10 @@ import ROUTES from "../../routes/const";
 import Sidebar from "./sidebar/Sidebar";
 import Header from "./header/Header";
 
+const PostPage = lazy(() => import("./postPage/PostPage"));
 const MainPage = lazy(() => import("./mainPage/MainPage"));
 const BoardPage = lazy(() => import("./boardPage/BoardPage"));
-const PostPage = lazy(() => import("./postPage/PostPage"));
+const TagsPage = lazy(() => import('./tagsPage/TagsPage'));
 
 import "./index.scss";
 
@@ -35,6 +36,8 @@ const DashBoard = () => {
             </Route>
             <Route path={ROUTES.DASHBOARD_POSTS}>
               <PostPage />
+            <Route path={ROUTES.DASHBOARD_STATUS}>
+              <TagsPage />
             </Route>
           </Switch>
         </Suspense>
