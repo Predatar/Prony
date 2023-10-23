@@ -12,11 +12,11 @@ import Header from './header/Header';
 
 const MainPage = lazy(() => import('./mainPage/MainPage'));
 const BoardPage = lazy(() => import('./boardPage/BoardPage'));
+const TagsPage = lazy(() => import('./tagsPage/TagsPage'));
 
 import './index.scss';
 
 const DashBoard = () => {
-
   return (
     <div className="dashboard">
       <Helmet>
@@ -33,8 +33,9 @@ const DashBoard = () => {
             <Route path={ROUTES.DASHBOARD_BOARDS}>
               <BoardPage />
             </Route>
-            <Route path={ROUTES.DASHBOARD_POSTS}>
-              Posts
+            <Route path={ROUTES.DASHBOARD_POSTS}>Posts</Route>
+            <Route path={ROUTES.DASHBOARD_STATUS}>
+              <TagsPage />
             </Route>
           </Switch>
         </Suspense>
