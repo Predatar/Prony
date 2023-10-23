@@ -4,6 +4,7 @@ const ROUTES = {
   DASHBOARD_BOARDS: '/dashboard/board',
   DASHBOARD_BOARDS_CREATE: '/dashboard/board/create',
   DASHBOARD_BOARDS_EDIT: '/dashboard/board/edit',
+  DASHBOARD_BOARDS_EDIT_BOARD: '/dashboard/board/edit-board',
   DASHBOARD_BOARDS_DELETE: '/dashboard/board/delete',
   DASHBOARD_POSTS: '/dashboard/posts',
   DASHBOARD_POSTS_CREATE: '/dashboard/posts/create',

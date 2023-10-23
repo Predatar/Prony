@@ -57,10 +57,10 @@ const MainBoard = () => {
             <MdViewHeadline />
             List board tags
           </div>
-          <div className="dashboard-board__popup-item">
+          <Link to={ROUTES.DASHBOARD_BOARDS_EDIT_BOARD} className="dashboard-board__popup-item">
             <MdCreate />
             Edit board post
-          </div>
+          </Link>
           <Link to={ROUTES.DASHBOARD_BOARDS_DELETE} className="dashboard-board__popup-item">
             <MdCancel />
             Delete board

@@ -7,7 +7,8 @@ import Spinner from '../../spinner//Spinner';
 const MainBoard = lazy(() => import('./main/MainBoard'));
 const CreateBoard = lazy(() => import('./create/CreateBoard'));
 const DeleteBoard = lazy(() => import('./delete/DeleteBoard'));
-const EditBoard = lazy(() => import('./edit/EditBoard'));
+const Edit = lazy(() => import('./edit/Edit'));
+const EditBoard = lazy(() => import('./editBoard/EditBoard'));
 
 import ROUTES from '../../../routes/const';
 
@@ -28,6 +29,9 @@ const BoardPage = () => {
             <DeleteBoard />
           </Route>
           <Route path={ROUTES.DASHBOARD_BOARDS_EDIT}>
+            <Edit />
+          </Route>
+          <Route path={ROUTES.DASHBOARD_BOARDS_EDIT_BOARD}>
             <EditBoard />
           </Route>
         </Switch>
