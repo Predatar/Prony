@@ -34,7 +34,7 @@ const EditBoard = () => {
   const onSubmit = (date) => console.log(date);
   return (
     <>
-      <div className="dashboard-board__path">
+      <div className="dashboard__path">
         <Helmet>
           <title>Create board - PRONY</title>
         </Helmet>
@@ -42,8 +42,8 @@ const EditBoard = () => {
         <Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>/
         <Link to={ROUTES.DASHBOARD_BOARDS_CREATE}>Edit oard</Link>
       </div>
-      <div className="dashboard-board__main">
-        <div className="dashboard-board__title">Edit Board</div>
+      <div className="dashboard__main">
+        <div className="dashboard__title">Edit Board</div>
       </div>
       <form
         className="dashboard-board__form dashboard-board__form_long"

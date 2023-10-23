@@ -11,15 +11,15 @@ import Select from "../../../../components/select/Select";
 const PostBoard = () => {
   return (
     <>
-      <div className="dashboard-board__path">
+      <div className="dashboard__path">
         <Helmet>
           <title>Posts - PRONY</title>
         </Helmet>
         <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/
         <Link to={ROUTES.DASHBOARD_POSTS}>Posts</Link>
       </div>
-      <div className="dashboard-board__main">
-        <div className="dashboard-board__title">Posts</div>
+      <div className="dashboard__main">
+        <div className="dashboard__title">Posts</div>
         <div className="posts">
           <div className="posts__body">
             <div className="posts__top">

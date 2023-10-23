@@ -54,10 +54,10 @@ const MainPage = () => {
 
   return (
     <div className="dashboard-main">
-      <Link to={ROUTES.DASHBOARD_HOME} className="dashboard-main__path">
+      <Link to={ROUTES.DASHBOARD_HOME} className="dashboard__path">
         Dashboard
       </Link>
-      <div className="dashboard-main__title">Dashboard</div>
+      <div className="dashboard__title">Dashboard</div>
       <div className="dashboard-main__container">
         <div className="dashboard-main__wrapper">
           <div className="dashboard-main__cards">

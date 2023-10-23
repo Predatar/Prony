@@ -18,15 +18,15 @@ import styles from './index.module.scss';
 const EditBoard = () => {
   return (
     <>
-      <div className="dashboard-board__path">
+      <div className="dashboard__path">
         <Helmet>
           <title>Create board - PRONY</title>
         </Helmet>
         <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>/
         <Link to={ROUTES.DASHBOARD_BOARDS_CREATE}>Edit board post</Link>
       </div>
-      <div className="dashboard-board__main">
-        <div className="dashboard-board__title">Edit board post form</div>
+      <div className="dashboard__main">
+        <div className="dashboard__title">Edit board post form</div>
         <Btn text={'Add field'} width={121} theme={'btn_primary'} />
       </div>
       <form className="dashboard-board__form dashboard-board__form_long">
