@@ -1,0 +1,34 @@
+.select {
+  border-radius: 5px;
+  border: 1px solid var(--colors-grey-300, #e0e0e0);
+  cursor: pointer;
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 15px 5px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5px;
+  }
+  &__count {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+    background-color: #1565c0;
+    border-radius: 50%;
+    padding: 0 6px;
+  }
+  &__title {
+    color: #9e9e9e;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+  }
+}
