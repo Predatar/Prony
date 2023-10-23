@@ -1,20 +1,21 @@
-import React, { lazy, Suspense } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet";
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Spinner from '../spinner/Spinner';
+import Spinner from "../spinner/Spinner";
 
-import ROUTES from '../../routes/const';
+import ROUTES from "../../routes/const";
 
-import Sidebar from './sidebar/Sidebar';
-import Header from './header/Header';
+import Sidebar from "./sidebar/Sidebar";
+import Header from "./header/Header";
 
-const MainPage = lazy(() => import('./mainPage/MainPage'));
-const BoardPage = lazy(() => import('./boardPage/BoardPage'));
+const PostPage = lazy(() => import("./postPage/PostPage"));
+const MainPage = lazy(() => import("./mainPage/MainPage"));
+const BoardPage = lazy(() => import("./boardPage/BoardPage"));
 const TagsPage = lazy(() => import('./tagsPage/TagsPage'));
 
-import './index.scss';
+import "./index.scss";
 
 const DashBoard = () => {
   return (
@@ -33,7 +34,8 @@ const DashBoard = () => {
             <Route path={ROUTES.DASHBOARD_BOARDS}>
               <BoardPage />
             </Route>
-            <Route path={ROUTES.DASHBOARD_POSTS}>Posts</Route>
+            <Route path={ROUTES.DASHBOARD_POSTS}>
+              <PostPage />
             <Route path={ROUTES.DASHBOARD_STATUS}>
               <TagsPage />
             </Route>
