@@ -60,7 +60,7 @@
     gap: 72px;
   }
   &__container {
-    width: 707px;
+    width: stretch;
     display: flex;
     flex-direction: column;
     gap: 13px;
@@ -168,6 +168,8 @@
     letter-spacing: 0.079px;
 
     transition: all 0.2s;
+
+    cursor: pointer;
 
     svg {
       color: rgba(224, 224, 224, 1);
