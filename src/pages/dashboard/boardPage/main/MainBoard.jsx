@@ -124,14 +124,14 @@ const MainBoard = () => {
   };
   return (
     <>
-      <div className="dashboard-board__path">
+      <div className="dashboard__path">
         <Helmet>
           <title>Dashboard Boards - PRONY</title>
         </Helmet>
         <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>
       </div>
-      <div className="dashboard-board__main">
-        <div className="dashboard-board__title">Boards</div>
+      <div className="dashboard__main">
+        <div className="dashboard__title">Boards</div>
         <Links text={'Create Board'} theme={'link_primary'} width={147} to={ROUTES.DASHBOARD_BOARDS_CREATE} />
       </div>
       <div className="dashboard-board__table">
