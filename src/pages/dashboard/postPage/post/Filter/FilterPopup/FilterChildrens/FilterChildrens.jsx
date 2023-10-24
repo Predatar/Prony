@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import CheckBox from "../../../../../../../UI/checkbox/Checkbox";
+import Radio from "../../../../../../../UI/radio/Radio";
+import Select from "../../../../../../../components/select/Select";
 
 const FilterItems = ({ name }) => {
   const renderFilter = () => {
@@ -13,7 +15,6 @@ const FilterItems = ({ name }) => {
             </label>
           </div>
         );
-
       case "Segments":
         return (
           <>
@@ -37,7 +38,6 @@ const FilterItems = ({ name }) => {
             </div>
           </>
         );
-
       case "Tags":
         return (
           <>
@@ -112,26 +112,106 @@ const FilterItems = ({ name }) => {
           <>
             <div className="filter-form__wrapper">
               <label>
-                <CheckBox />
+                <Radio />
                 Last 24 hours
               </label>
             </div>
             <div className="filter-form__wrapper">
               <label>
-                <CheckBox />
+                <Radio />
                 Last week
               </label>
             </div>
             <div className="filter-form__wrapper">
               <label>
-                <CheckBox />
+                <Radio />
                 Last month
               </label>
             </div>
           </>
         );
+      case "Owners":
+        const [shopOwners, setShowOwners] = useState(false);
+        const handleSelectClickOwners = () => {
+          setShowOwners((prev) => !prev);
+        };
+        return (
+          <>
+            <Select
+              selectInPopup
+              position={"static"}
+              borderTop={"1px solid  #e0e0e0"}
+              width={345}
+              title="Select owners"
+              onClick={handleSelectClickOwners}
+            >
+              {shopOwners && (
+                <div className="owners">
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Max
+                    </label>
+                  </div>
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Artem
+                    </label>
+                  </div>
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Michael
+                    </label>
+                  </div>
+                </div>
+              )}
+            </Select>
+          </>
+        );
+      case "Author":
+        const [shopAuthor, setShowAuthor] = useState(false);
+        const handleSelectClickAuthor = () => {
+          setShowAuthor((prev) => !prev);
+        };
+        return (
+          <>
+            <Select
+              selectInPopup
+              position={"static"}
+              borderTop={"1px solid  #e0e0e0"}
+              width={345}
+              title="Select authors"
+              onClick={handleSelectClickAuthor}
+            >
+              {shopAuthor && (
+                <div className="authors">
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Author Name 1
+                    </label>
+                  </div>
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Author Name 2
+                    </label>
+                  </div>
+                  <div className="filter-form__wrapper">
+                    <label>
+                      <CheckBox />
+                      Author Name 3
+                    </label>
+                  </div>
+                </div>
+              )}
+            </Select>
+          </>
+        );
       default:
-        return null; // Возвращаем null по умолчанию, если значение checkBoxName не соответствует ни одному из вариантов
+        return null;
     }
   };
 

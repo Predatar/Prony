@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Spinner from "../../spinner//Spinner";
 
-const MainBoard = lazy(() => import("./post/PostBoard"));
+const PostBoard = lazy(() => import("./post/PostBoard"));
 
 import ROUTES from "../../../routes/const";
 
@@ -16,7 +16,7 @@ const PostPage = () => {
       <Suspense fallback={<Spinner />}>
         <Switch>
           <Route exact path={ROUTES.DASHBOARD_POSTS}>
-            <MainBoard />
+            <PostBoard />
           </Route>
         </Switch>
       </Suspense>

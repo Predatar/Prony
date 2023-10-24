@@ -46,7 +46,19 @@ const PostBoard = () => {
             </div>
           </div>
         </div>
-        <form className="posts__form posts-form">{selects()}</form>
+        <form className="posts__form posts-form">
+          <div style={{ width: 488 }} className="posts-form__wrapper-select">
+            <input
+              placeholder="Search all posts"
+              className="posts-form__search"
+              type="search"
+            />
+            <button className="posts-form__search-btn">
+              <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
+            </button>
+          </div>
+          {selects()}
+        </form>
       </div>
     </>
   );
@@ -55,74 +67,100 @@ const PostBoard = () => {
 export default PostBoard;
 
 const selects = () => {
+  const components = [];
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleClick = (index) => {
+    if (index === activeIndex) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select widthPopup={333} count width={178} title="Tags">
+        <Filter title="Tags">
+          <FilterChildrens name="Tags" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="1" widthPopup={333} width={221} title="Boards">
+        <Filter title="Boards">
+          <FilterChildrens name="Boards" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="2" widthPopup={333} width={221} title="Statuses">
+        <Filter title="Statuses">
+          <FilterChildrens name="Statuses" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="3" widthPopup={403} width={324} title="Owners">
+        <Filter title="Owners">
+          <FilterChildrens name="Owners" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="4" widthPopup={403} count width={324} title="Author">
+        <Filter title="Author">
+          <FilterChildrens name="Author" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select  id="5" widthPopup={333} width={164} title="Created in">
+        <Filter title="Created">
+          <FilterChildrens name="Created" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="6" widthPopup={333} width={280} title="User segments">
+        <Filter title="User segments">
+          <FilterChildrens name="Segments" />
+        </Filter>
+      </Select>
+    </div>
+  );
+  components.push(
+    <div className="posts-form__wrapper-select">
+      <Select id="7" widthPopup={333} width={200} title="Approved">
+        <Filter title="Approved">
+          <FilterChildrens name="Approved" />
+        </Filter>
+      </Select>
+    </div>
+  );
+
   return (
     <>
-      <div style={{ width: 488 }} className="posts-form__wrapper">
-        <input
-          placeholder="Search all posts"
-          className="posts-form__search"
-          type="search"
-        />
-        <button className="posts-form__search-btn">
-          <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
-        </button>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} count width={178} title="Tags">
-          <Filter title="Tags">
-            <FilterChildrens name="Tags" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} width={221} title="Boards">
-          <Filter title="Boards">
-            <FilterChildrens name="Boards" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} width={221} title="Statuses">
-          <Filter title="Statuses">
-            <FilterChildrens name="Statuses" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select width={324} title="Owners">
-          <Filter title="Owners">
-            <FilterChildrens name="Owners" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={403} count width={324} title="Author">
-          <Filter title="Author">
-            <FilterChildrens name="Author" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} width={164} title="Created in">
-          <Filter title="Created">
-            <FilterChildrens name="Created" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} width={280} title="User segments">
-          <Filter title="User segments">
-            <FilterChildrens name="Segments" />
-          </Filter>
-        </Select>
-      </div>
-      <div className="posts-form__wrapper">
-        <Select widthPopup={333} width={200} title="Approved">
-          <Filter title="Approved">
-            <FilterChildrens name="Approved" />
-          </Filter>
-        </Select>
-      </div>
+      {components.map((component, index) => (
+        <div
+          onClick={(event) => {if (event.target.classList.contains("select__body")) {handleClick(index);}}}
+          className={`posts-form__wrapper ${index === activeIndex ? "active" : ""}`}
+          key={index}
+        >
+          {component}
+        </div>
+      ))}
     </>
   );
 };

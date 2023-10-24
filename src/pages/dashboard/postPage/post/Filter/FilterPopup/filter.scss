@@ -36,3 +36,12 @@
     gap: 9px;
   }
 }
+
+
+.owners,
+.authors{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}

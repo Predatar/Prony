@@ -9,13 +9,13 @@ const Filter = ({ title, children }) => {
         <div className="filter__title">
           <SelectTitle title={title} />
         </div>
-        <form className="filter__form filter-form">
+        <div className="filter__form filter-form">
           <div className="filter-form__top">{children}</div>
           <div className="filter-form__buttons">
             <Btn text={"Apply filters"} width={140} theme={"btn_primary"} />
             <Btn text={"Cancel"} width={109} theme={"btn_secondary"} />
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
