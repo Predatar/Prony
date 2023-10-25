@@ -1,14 +1,15 @@
 import "./select.scss";
-import React from "react";
+import React  from "react";
 import { MdArrowDropDown } from "react-icons/md";
 
 const Select = ({title,width,children,count,widthPopup,position,borderTop,id,selectInPopup,onClick}) => {
+
   return (
-    <div style={{ width: width }} className="select">
-      <div onClick={onClick} id={id} className={selectInPopup ? "select__body-secondary" : "select__body"}>
+    <div id={id} style={{ width: width }} className="select">
+      <div onClick={onClick}  className="select__body">
         <div className="select__left">
           <div className="select__title">{title}</div>
-          {count ? <div className="select__count">1</div> : null}
+          {count === true && <div className="select__count">0</div>}
         </div>
         <MdArrowDropDown style={{ width: 24, height: 24 }} />
       </div>
@@ -21,3 +22,5 @@ const Select = ({title,width,children,count,widthPopup,position,borderTop,id,sel
 };
 
 export default Select;
+
+

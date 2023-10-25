@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import ROUTES from "../../../../routes/const";
@@ -7,9 +7,7 @@ import Btn from "../../../../UI/button/Btn";
 
 import { MdGetApp, MdUpload } from "react-icons/md";
 import { BiSearchAlt2 } from "react-icons/bi";
-import Select from "../../../../components/select/Select";
-import Filter from "./Filter/FilterPopup/FilterPopup";
-import FilterChildrens from "./Filter/FilterPopup/FilterChildrens/FilterChildrens";
+import Selects from "./Selects/Selects";
 
 const PostBoard = () => {
   return (
@@ -57,7 +55,7 @@ const PostBoard = () => {
               <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
             </button>
           </div>
-          {selects()}
+          <Selects />
         </form>
       </div>
     </>
@@ -65,102 +63,3 @@ const PostBoard = () => {
 };
 
 export default PostBoard;
-
-const selects = () => {
-  const components = [];
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const handleClick = (index) => {
-    if (index === activeIndex) {
-      setActiveIndex(null);
-    } else {
-      setActiveIndex(index);
-    }
-  };
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select widthPopup={333} count width={178} title="Tags">
-        <Filter title="Tags">
-          <FilterChildrens name="Tags" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="1" widthPopup={333} width={221} title="Boards">
-        <Filter title="Boards">
-          <FilterChildrens name="Boards" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="2" widthPopup={333} width={221} title="Statuses">
-        <Filter title="Statuses">
-          <FilterChildrens name="Statuses" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="3" widthPopup={403} width={324} title="Owners">
-        <Filter title="Owners">
-          <FilterChildrens name="Owners" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="4" widthPopup={403} count width={324} title="Author">
-        <Filter title="Author">
-          <FilterChildrens name="Author" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select  id="5" widthPopup={333} width={164} title="Created in">
-        <Filter title="Created">
-          <FilterChildrens name="Created" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="6" widthPopup={333} width={280} title="User segments">
-        <Filter title="User segments">
-          <FilterChildrens name="Segments" />
-        </Filter>
-      </Select>
-    </div>
-  );
-  components.push(
-    <div className="posts-form__wrapper-select">
-      <Select id="7" widthPopup={333} width={200} title="Approved">
-        <Filter title="Approved">
-          <FilterChildrens name="Approved" />
-        </Filter>
-      </Select>
-    </div>
-  );
-
-  return (
-    <>
-      {components.map((component, index) => (
-        <div
-          onClick={(event) => {if (event.target.classList.contains("select__body")) {handleClick(index);}}}
-          className={`posts-form__wrapper ${index === activeIndex ? "active" : ""}`}
-          key={index}
-        >
-          {component}
-        </div>
-      ))}
-    </>
-  );
-};
