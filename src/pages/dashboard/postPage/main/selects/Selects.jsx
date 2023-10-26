@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Select from "../../../../../components/select/Select";
-import Filter from "../Filter/FilterPopup/FilterPopup";
 import { SelectInPopup, selects } from "../../../../../data/select";
+import { smallSelects } from "../../../../../data/smallSelects";
+import Filter from "../Filter/FilterPopup/FilterPopup";
+import { SmallSelects } from "./smallSelects/SmallSelects";
 
-const Selects = () => {
+const RenderSelects = () => {
   const [openFilter, setOpenFilter] = useState(null);
 
   const handleFilterClick = (filterId) => {
@@ -56,4 +58,20 @@ const Selects = () => {
   );
 };
 
-export default Selects;
+export { RenderSelects };
+
+const RenderSmallSelect = () => {
+  return smallSelects.map(({ id, name, width, select }) => {
+    return (
+      <SmallSelects
+        id={id}
+        name={name}
+        width={width}
+        select={select}
+        selectFirst={select[0].fields}
+      />
+    );
+  });
+};
+
+export { RenderSmallSelect };

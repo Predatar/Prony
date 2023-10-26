@@ -2,14 +2,17 @@
   min-height: 140px;
   background: #f8f8f8;
   margin-bottom: 47px;
-  &.white {
-    background: #fff;
+  &__item {
+    background: #f8f8f8;
+    &.white {
+      background: #fff;
+    }
   }
   &__body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 21px 30px;
+    padding: 22px 30px;
   }
   &__center {
     flex: 1 1 auto;

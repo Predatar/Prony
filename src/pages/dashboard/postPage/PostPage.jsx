@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Spinner from "../../spinner//Spinner";
 
-const PostBoard = lazy(() => import("./post/PostBoard"));
+const PostBoard = lazy(() => import("./main/PostBoard"));
 
 import ROUTES from "../../../routes/const";
 

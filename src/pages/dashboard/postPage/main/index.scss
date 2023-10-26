@@ -96,3 +96,13 @@
     justify-content: space-between;
   }
 }
+
+.posts-page {
+  &__comments{
+    background: #fff;
+  }
+  &__comments-wrapper {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 37px;
+  }
+}

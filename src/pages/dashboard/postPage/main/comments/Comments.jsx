@@ -13,7 +13,7 @@ const Comments = ({
   secondaryColorTag,
 }) => {
   return (
-    <div className={`${white ? "comments white" : "comments"}`}>
+    <div className={`${white ? "comments__item white" : "comments__item"}`}>
       <div className="comments__body">
         <div className="comments__left">
           <img src={img} alt="person" />

@@ -7,12 +7,10 @@ import "./index.scss";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 import { MdGetApp, MdUpload } from "react-icons/md";
-import img1 from "../../../../img/Post/Comments/1.png";
-import Comments from "./Comments/Comments";
 import FilterSelected from "./FilterSelected/FilterSelected";
-import Pagination from "./Pagination/Pagination";
-import Selects from "./Selects/Selects";
-import SmallSelects from "./Selects/SmallSelect/SmallSelects";
+import RenderComments from "./comments/renderComments/RenderComments";
+import Pagination from "./pagination/Pagination";
+import { RenderSelects, RenderSmallSelect } from "./selects/Selects";
 
 const PostBoard = () => {
   return (
@@ -60,7 +58,7 @@ const PostBoard = () => {
               <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
             </button>
           </div>
-          <Selects />
+          <RenderSelects />
         </form>
         <div className="post-selecteds-info">
           <div className="post-selecteds-info__selecteds">
@@ -68,47 +66,16 @@ const PostBoard = () => {
             <FilterSelected selected="Name1" nameSelect="Author" />
           </div>
           <div className="post-selecteds-info__small-selects">
-            <SmallSelects />
+            <RenderSmallSelect />
           </div>
         </div>
         <div className="posts-page__comments">
-          <Comments
-            img={img1}
-            name="Konnor Castro"
-            tag
-            secondaryTag
-            secondaryColorTag="#27AE60"
-            colorTag="#EB5757"
-          />
-          <Comments
-            white
-            img={img1}
-            name="Bryson Casey"
-            secondaryTag
-            secondaryColorTag="#27AE60"
-          />
-          <Comments
-            img={img1}
-            name="Montana Leon"
-            tag
-            secondaryTag
-            secondaryColorTag="#27AE60"
-            colorTag="#EB5757"
-          />
-          <Comments
-            white
-            img={img1}
-            name="Safaa Marriott"
-            tag
-            secondaryTag
-            secondaryColorTag="#27AE60"
-            colorTag="#EB5757"
-          />
-          <Comments img={img1} name="Sophia-Rose Nava" tag />
-          <Comments white img={img1} name="Kasim Daniels" />
-        </div>
-        <div className="posts-page__pagination">
-          <Pagination />
+          <div className="posts-page__comments-wrapper">
+            <RenderComments />
+          </div>
+          <div className="posts-page__pagination">
+            <Pagination />
+          </div>
         </div>
       </div>
     </>
