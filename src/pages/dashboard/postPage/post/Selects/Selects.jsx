@@ -2,25 +2,13 @@ import React, { useState, useEffect } from "react";
 import Select from "../../../../../components/select/Select";
 import Filter from "../Filter/FilterPopup/FilterPopup";
 import { SelectInPopup, selects } from "../../../../../data/select";
-import Checkbox from "../../../../../UI/checkbox/Checkbox";
 
 const Selects = () => {
-  const [openFilter, setOpenFilter] = useState("");
-  const [filterState, setFilterState] = useState([]);
-
-  useEffect(() => {
-    const result = selects.map(({ id, state, type }) => ({
-      id,
-      state,
-      type,
-    }));
-    setFilterState(result);
-    console.log(result);
-  }, []);
+  const [openFilter, setOpenFilter] = useState(null);
 
   const handleFilterClick = (filterId) => {
     if (openFilter === filterId) {
-      setOpenFilter("");
+      setOpenFilter(null);
     } else {
       setOpenFilter(filterId);
     }
@@ -34,7 +22,7 @@ const Selects = () => {
       widthPopup,
       content,
       subselect,
-      type,
+      count,
       filter: { title },
     }) => {
       return (
@@ -45,6 +33,7 @@ const Selects = () => {
             widthPopup={widthPopup}
             width={width}
             title={name}
+            count={count}
           >
             {openFilter === name && (
               <Filter title={title}>
@@ -52,48 +41,10 @@ const Selects = () => {
                   {subselect ? (
                     <SelectInPopup
                       title={subselect.name}
-                      content={subselect.content.map(
-                        (element, index) =>
-                          type === "checkbox" && (
-                            <Checkbox
-                              onClick={() =>
-                                setFilterState(
-                                  (prev) =>
-                                    (prev.find(
-                                      (element) => element.id === id
-                                    ).state[Object.keys(state)[index]] =
-                                      !prev.find((element) => element.id === id)
-                                        .state[Object.keys(state)[index]])
-                                )
-                              }
-                              name={name}
-                            >
-                              {element}
-                            </Checkbox>
-                          )
-                      )}
+                      content={subselect.content}
                     />
                   ) : (
-                    content.map(
-                      (element, index) =>
-                        type === "checkbox" && (
-                          <Checkbox
-                            onClick={() =>
-                              setFilterState(
-                                (prev) =>
-                                  (prev.find(
-                                    (element) => element.id === id
-                                  ).state[Object.keys(state)[index]] =
-                                    !prev.find((element) => element.id === id)
-                                      .state[Object.keys(state)[index]])
-                              )
-                            }
-                            name={name}
-                          >
-                            {element}
-                          </Checkbox>
-                        )
-                    )
+                    content
                   )}
                 </div>
               </Filter>

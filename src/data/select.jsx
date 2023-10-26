@@ -27,7 +27,6 @@ export const selects = [
     width: 178,
     count: true,
     widthPopup: 333,
-    type: "checkBox",
     state: {
       noTags: false,
       tagName1: false,
@@ -36,7 +35,24 @@ export const selects = [
     filter: {
       title: "Tags",
     },
-    content: ["noTags", "tagName1", "tagName2"],
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          No tags
+        </label>
+
+        <label>
+          <CheckBox />
+          Tagname1
+        </label>
+
+        <label>
+          <CheckBox />
+          Tagname2
+        </label>
+      </>
+    ),
   },
 
   {
@@ -44,7 +60,6 @@ export const selects = [
     id: "boards",
     width: 221,
     widthPopup: 333,
-    type: "checkBox",
     state: {
       boardName: false,
       boardName1: false,
@@ -53,14 +68,30 @@ export const selects = [
     filter: {
       title: "Boards",
     },
-    content: ["Authors", "Authors", "Authors"],
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Board name1
+        </label>
+
+        <label>
+          <CheckBox />
+          Board name2
+        </label>
+
+        <label>
+          <CheckBox />
+          Board name3
+        </label>
+      </>
+    ),
   },
   {
     name: "Statuses",
     id: "statuses",
     width: 221,
     widthPopup: 333,
-    type: "checkBox",
     state: {
       noStatus: false,
       status1: false,
@@ -69,7 +100,24 @@ export const selects = [
     filter: {
       title: "Statuses",
     },
-    content: ["Authors", "Authors", "Authors"],
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          No status
+        </label>
+
+        <label>
+          <CheckBox />
+          Satus1
+        </label>
+
+        <label>
+          <CheckBox />
+          Satus2
+        </label>
+      </>
+    ),
   },
   {
     name: "Owners",
@@ -89,11 +137,27 @@ export const selects = [
       id: "owners",
       width: 324,
       widthPopup: 403,
-      type: "checkBox",
       filter: {
         title: "Owners",
       },
-      content: ["Authors", "Authors", "Authors"],
+      content: (
+        <div className="owners">
+          <label>
+            <CheckBox />
+            Artem
+          </label>
+
+          <label>
+            <CheckBox />
+            Igor
+          </label>
+
+          <label>
+            <CheckBox />
+            Denis
+          </label>
+        </div>
+      ),
     },
   },
   {
@@ -101,6 +165,7 @@ export const selects = [
     id: "author",
     width: 324,
     widthPopup: 403,
+    count: true,
     state: {
       artem: false,
       igor: false,
@@ -114,11 +179,27 @@ export const selects = [
       id: "author",
       width: 324,
       widthPopup: 403,
-      type: "checkBox",
       filter: {
         title: "Authors",
       },
-      content: ["Authors", "Authors", "Authors"],
+      content: (
+        <div className="owners">
+          <label>
+            <CheckBox />
+            Artem
+          </label>
+
+          <label>
+            <CheckBox />
+            Igor
+          </label>
+
+          <label>
+            <CheckBox />
+            Denis
+          </label>
+        </div>
+      ),
     },
   },
   {
@@ -126,7 +207,6 @@ export const selects = [
     id: "created",
     width: 164,
     widthPopup: 333,
-    type: "radio",
     state: {
       noStatus: false,
       status1: false,
@@ -135,14 +215,30 @@ export const selects = [
     filter: {
       title: "Created in",
     },
-    content: ["Last 24 hours", "Last week", "Last month"],
+    content: (
+      <>
+        <label>
+          <Radio />
+          Last 24 hours
+        </label>
+
+        <label>
+          <Radio />
+          Last week
+        </label>
+
+        <label>
+          <Radio />
+          Last month
+        </label>
+      </>
+    ),
   },
   {
-    name: "Segments",
+    name: "User segments",
     id: "segments",
     width: 280,
     widthPopup: 333,
-    type: "checkbox",
     state: {
       segments: false,
       segments: false,
@@ -151,20 +247,41 @@ export const selects = [
     filter: {
       title: "User segments",
     },
-    content: ["segments", "segments", "segments"],
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Segment1
+        </label>
+
+        <label>
+          <CheckBox />
+          Segment2
+        </label>
+
+        <label>
+          <CheckBox />
+          Segment3
+        </label>
+      </>
+    ),
   },
   {
     name: "Approved",
     id: "approved",
     width: 200,
     widthPopup: 333,
-    type: "checkbox",
     state: {
       approved: false,
     },
     filter: {
       title: "Approved",
     },
-    content: ["not approved"],
+    content: (
+      <label>
+        <CheckBox />
+        not approved
+      </label>
+    ),
   },
 ];

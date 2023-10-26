@@ -9,7 +9,7 @@ const Select = ({title,width,children,count,widthPopup,position,borderTop,id,sel
       <div onClick={onClick}  className="select__body">
         <div className="select__left">
           <div className="select__title">{title}</div>
-          {count === true && <div className="select__count">0</div>}
+          {count === true && <div className="select__count">1</div>}
         </div>
         <MdArrowDropDown style={{ width: 24, height: 24 }} />
       </div>

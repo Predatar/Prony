@@ -8,6 +8,8 @@ import Btn from "../../../../UI/button/Btn";
 import { MdGetApp, MdUpload } from "react-icons/md";
 import { BiSearchAlt2 } from "react-icons/bi";
 import Selects from "./Selects/Selects";
+import FilterSelected from "./FilterSelected/FilterSelected";
+import SmallSelects from "./Selects/SmallSelect/SmallSelects";
 
 const PostBoard = () => {
   return (
@@ -57,6 +59,15 @@ const PostBoard = () => {
           </div>
           <Selects />
         </form>
+        <div className="post-selecteds-info">
+          <div className="post-selecteds-info__selecteds">
+            <FilterSelected selected="Tagname1" nameSelect="Tag" />
+            <FilterSelected selected="Name1" nameSelect="Author" />
+          </div>
+          <div className="post-selecteds-info__small-selects">
+            <SmallSelects />
+          </div>
+        </div>
       </div>
     </>
   );
