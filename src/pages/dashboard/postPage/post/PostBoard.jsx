@@ -1,14 +1,17 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import Btn from "../../../../UI/button/Btn";
 import ROUTES from "../../../../routes/const";
 import "./index.scss";
-import Btn from "../../../../UI/button/Btn";
 
-import { MdGetApp, MdUpload } from "react-icons/md";
 import { BiSearchAlt2 } from "react-icons/bi";
-import Selects from "./Selects/Selects";
+import { MdGetApp, MdUpload } from "react-icons/md";
+import img1 from "../../../../img/Post/Comments/1.png";
+import Comments from "./Comments/Comments";
 import FilterSelected from "./FilterSelected/FilterSelected";
+import Pagination from "./Pagination/Pagination";
+import Selects from "./Selects/Selects";
 import SmallSelects from "./Selects/SmallSelect/SmallSelects";
 
 const PostBoard = () => {
@@ -67,6 +70,45 @@ const PostBoard = () => {
           <div className="post-selecteds-info__small-selects">
             <SmallSelects />
           </div>
+        </div>
+        <div className="posts-page__comments">
+          <Comments
+            img={img1}
+            name="Konnor Castro"
+            tag
+            secondaryTag
+            secondaryColorTag="#27AE60"
+            colorTag="#EB5757"
+          />
+          <Comments
+            white
+            img={img1}
+            name="Bryson Casey"
+            secondaryTag
+            secondaryColorTag="#27AE60"
+          />
+          <Comments
+            img={img1}
+            name="Montana Leon"
+            tag
+            secondaryTag
+            secondaryColorTag="#27AE60"
+            colorTag="#EB5757"
+          />
+          <Comments
+            white
+            img={img1}
+            name="Safaa Marriott"
+            tag
+            secondaryTag
+            secondaryColorTag="#27AE60"
+            colorTag="#EB5757"
+          />
+          <Comments img={img1} name="Sophia-Rose Nava" tag />
+          <Comments white img={img1} name="Kasim Daniels" />
+        </div>
+        <div className="posts-page__pagination">
+          <Pagination />
         </div>
       </div>
     </>

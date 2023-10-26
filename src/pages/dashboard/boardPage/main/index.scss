@@ -1,5 +1,4 @@
 .dashboard-board {
-
   &__table {
     margin-top: 23px;
     border-radius: 10px;
@@ -38,6 +37,8 @@
     height: 85px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding-right: 70px;
 
     &:nth-child(2n + 1) {
       background: #f8f8f8;

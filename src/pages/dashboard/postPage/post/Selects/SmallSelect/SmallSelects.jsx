@@ -1,8 +1,7 @@
-import React from "react";
-import { smallSelects } from "../../../../../../data/smallSelects";
+import React, { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
+import { smallSelects } from "../../../../../../data/smallSelects";
 import "./smallSelect.scss";
-import { useState } from "react";
 const SmallSelects = () => {
   const [open, setOpen] = useState(null);
 

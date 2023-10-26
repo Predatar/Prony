@@ -1,7 +1,7 @@
 import React from "react";
-import "./filter.scss";
-import SelectTitle from "../../../../../../components/select/selectTitle/SelectTitle";
 import Btn from "../../../../../../UI/button/Btn";
+import SelectTitle from "../../../../../../components/select/selectTitle/SelectTitle";
+import "./filter.scss";
 const Filter = ({ title, children }) => {
   return (
     <div className="filter">
