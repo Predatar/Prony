@@ -28,12 +28,14 @@ const PostBoard = () => {
           <div className="posts__buttons-body">
             <div className="posts__left-button">
               <div className="posts__buttons">
-                <button className="posts__import">
-                  <MdGetApp
-                    style={{ color: "#E0E0E0", width: 24, height: 24 }}
-                  />
-                  Import
-                </button>
+                <Link to={ROUTES.DASHBOARD_POSTS_EDIT}>
+                  <button className="posts__import">
+                    <MdGetApp
+                      style={{ color: "#E0E0E0", width: 24, height: 24 }}
+                    />
+                    Import
+                  </button>
+                </Link>
                 <button className="posts__import">
                   <MdUpload
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
@@ -43,7 +45,9 @@ const PostBoard = () => {
               </div>
             </div>
             <div className="posts__right-button">
-              <Btn text={"Create post"} width={136} theme={"btn_primary"} />
+              <Link to={ROUTES.DASHBOARD_POSTS_CREATE}>
+                <Btn text={"Create post"} width={136} theme={"btn_primary"} />
+              </Link>
             </div>
           </div>
         </div>

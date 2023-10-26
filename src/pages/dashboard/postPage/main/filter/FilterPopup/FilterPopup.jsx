@@ -3,11 +3,14 @@ import Btn from "../../../../../../UI/button/Btn";
 import SelectTitle from "../../../../../../components/select/selectTitle/SelectTitle";
 import "./filter.scss";
 const Filter = ({ title, children }) => {
+  const bodyStyle = {
+    display: title ? "flex" : "block",
+  };
   return (
     <div className="filter">
-      <div className="filter__body">
+      <div style={bodyStyle} className="filter__body">
         <div className="filter__title">
-          <SelectTitle title={title} />
+          {title && <SelectTitle title={title} />}
         </div>
         <div className="filter__form filter-form">
           <div className="filter-form__top">{children}</div>
