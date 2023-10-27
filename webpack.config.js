@@ -32,7 +32,8 @@ let optimization = undefined;
 if (!devMode) {
   optimization = {
     splitChunks: {
-      chunks: 'all'
+      chunks: 'all',
+      minChunks: Infinity
     },
     minimize: true,
     minimizer: [new TerserPlugin({ parallel: true, minify: TerserPlugin.swcMinify })]
