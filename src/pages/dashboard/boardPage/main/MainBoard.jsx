@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from "react";
 
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import {
   MdCancel,
@@ -13,8 +13,8 @@ import {
   MdMoreVert,
   MdSettings,
   MdViewHeadline,
-  MdVisibility
-} from 'react-icons/md';
+  MdVisibility,
+} from "react-icons/md";
 
 import Links from '../../../../UI/links/Links';
 import {
@@ -23,17 +23,17 @@ import {
   DashboardPopupItemLink
 } from '../../../../components/dashboardPopup/DashboardPopup';
 
-import ROUTES from '../../../../routes/const';
+import ROUTES from "../../../../routes/const";
 
-import './index.scss';
+import "./index.scss";
 
 const MainBoard = () => {
   useEffect(() => {
-    document.querySelector('.dashboard').style = 'grid-template-rows: 1fr;';
+    document.querySelector(".dashboard").style = "grid-template-rows: 1fr;";
   }, []);
   useEffect(() => {
     return () => {
-      document.querySelector('.dashboard').style = '';
+      document.querySelector(".dashboard").style = "";
     };
   });
 
@@ -43,21 +43,23 @@ const MainBoard = () => {
         <div className="dashboard-board__drag">
           <MdDragIndicator />
         </div>
-        <div className="dashboard-board__name">Send status updates back through Intercom</div>
+        <div className="dashboard-board__name">
+          Send status updates back through Intercom
+        </div>
         <div className="dashboard-board__posts">12</div>
         <div className="dashboard-board__activities">
           <div
             className="dashboard-board__visibility"
-            onClick={e => {
-              e.target.classList.toggle('dashboard-board__visibility_active');
+            onClick={(e) => {
+              e.target.classList.toggle("dashboard-board__visibility_active");
             }}
           >
             <MdVisibility />
           </div>
           <div
             className="dashboard-board__lock"
-            onClick={e => {
-              e.target.classList.toggle('dashboard-board__lock_active');
+            onClick={(e) => {
+              e.target.classList.toggle("dashboard-board__lock_active");
             }}
           >
             <MdLockOpen />
@@ -98,11 +100,17 @@ const MainBoard = () => {
         <Helmet>
           <title>Dashboard Boards - PRONY</title>
         </Helmet>
-        <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>
+        <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/
+        <Link to={ROUTES.DASHBOARD_BOARDS}>Boards</Link>
       </div>
       <div className="dashboard__main">
         <div className="dashboard__title">Boards</div>
-        <Links text={'Create Board'} theme={'link_primary'} width={147} to={ROUTES.DASHBOARD_BOARDS_CREATE} />
+        <Links
+          text={"Create Board"}
+          theme={"link_primary"}
+          width={147}
+          to={ROUTES.DASHBOARD_BOARDS_CREATE}
+        />
       </div>
       <div className="dashboard-board__table">
         <div className="dashboard-board__head">
