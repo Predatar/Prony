@@ -1,0 +1,49 @@
+.filter {
+  background-color: #fff;
+  padding: 32px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #333;
+      font-variant-numeric: lining-nums proportional-nums;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0.6px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+}
+
+.owners,
+.authors {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+}
