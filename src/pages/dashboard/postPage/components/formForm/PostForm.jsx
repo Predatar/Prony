@@ -6,7 +6,7 @@ import Select from "../../../../../components/select/Select";
 import Filter from "../../main/filter/filterPopup/FilterPopup";
 import "./postForm.scss";
 
-import { selects } from "../../../../../data/select";
+import { selectsInPostForm } from "../../../../../data/postFormSelects";
 
 const Form = () => {
   //file
@@ -33,6 +33,8 @@ const Form = () => {
     }
   };
 
+  console.log(selectedFile);
+
   return (
     <form className="post-form">
       <div className="post-form__body">
@@ -41,7 +43,7 @@ const Form = () => {
             <div className="post-form__input-name">
               Board name <span>*</span>
             </div>
-            {selects.map(
+            {selectsInPostForm.map(
               ({ name, id, width, widthPopup, content }) =>
                 id === "boardForm" && (
                   <Select
@@ -87,14 +89,7 @@ const Form = () => {
               <div className="post-form__show-file">
                 {selectedFile ? (
                   <>
-                    <img
-                      src={
-                        selectedFile instanceof Blob
-                          ? URL.createObjectURL(selectedFile)
-                          : ""
-                      }
-                      alt=""
-                    />
+                    <img src={URL.createObjectURL(selectedFile)} alt="" />
                     <button
                       onClick={() => setSelectedFile(null)}
                       className="post-form__cancel"
@@ -110,7 +105,7 @@ const Form = () => {
           </div>
           <div className="post-form__wrapper">
             <div className="post-form__input-name">Owner</div>
-            {selects.map(
+            {selectsInPostForm.map(
               ({ name, id, width, widthPopup, content }) =>
                 id === "ownerForm" && (
                   <Select
@@ -129,7 +124,7 @@ const Form = () => {
             <div className="post-form__input-name">
               Status <span>*</span>
             </div>
-            {selects.map(
+            {selectsInPostForm.map(
               ({ name, id, width, widthPopup, content }) =>
                 id === "statusrForm" && (
                   <Select
