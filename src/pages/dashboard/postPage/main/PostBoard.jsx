@@ -11,7 +11,8 @@ import FilterSelected from "./FilterSelected/FilterSelected";
 import RenderComments from "./comments/renderComments/RenderComments";
 import Pagination from "./pagination/Pagination";
 import { RenderSelects, RenderSmallSelect } from "./selects/Selects";
-
+import { smallSelects } from "../../../../data/smallSelects";
+import { selects } from "../../../../data/select";
 const PostBoard = () => {
   return (
     <>
@@ -28,14 +29,13 @@ const PostBoard = () => {
           <div className="posts__buttons-body">
             <div className="posts__left-button">
               <div className="posts__buttons">
-                <Link to={ROUTES.DASHBOARD_POSTS_EDIT}>
-                  <button className="posts__import">
-                    <MdGetApp
-                      style={{ color: "#E0E0E0", width: 24, height: 24 }}
-                    />
-                    Import
-                  </button>
-                </Link>
+                <button className="posts__import">
+                  <MdGetApp
+                    style={{ color: "#E0E0E0", width: 24, height: 24 }}
+                  />
+                  Import
+                </button>
+
                 <button className="posts__import">
                   <MdUpload
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
@@ -62,7 +62,7 @@ const PostBoard = () => {
               <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
             </button>
           </div>
-          <RenderSelects />
+          <RenderSelects selectsData={selects} />
         </form>
         <div className="post-selecteds-info">
           <div className="post-selecteds-info__selecteds">
@@ -70,7 +70,7 @@ const PostBoard = () => {
             <FilterSelected selected="Name1" nameSelect="Author" />
           </div>
           <div className="post-selecteds-info__small-selects">
-            <RenderSmallSelect />
+            <RenderSmallSelect smallSelectsData={smallSelects} />
           </div>
         </div>
         <div className="posts-page__comments">
@@ -78,7 +78,7 @@ const PostBoard = () => {
             <RenderComments />
           </div>
           <div className="posts-page__pagination">
-            <Pagination />
+            <Pagination smallSelect />
           </div>
         </div>
       </div>

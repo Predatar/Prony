@@ -1,13 +1,15 @@
 import React, { lazy, Suspense } from "react";
 
-import { Switch, Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
+import ROUTES from "../../../routes/const";
 import Spinner from "../../spinner//Spinner";
 
 const PostBoard = lazy(() => import("./main/PostBoard"));
 const PostCreate = lazy(() => import("./postCreate/PostCreate"));
 const PostEdit = lazy(() => import("./postEdit/PostEdit"));
-import ROUTES from "../../../routes/const";
+const PostView = lazy(() => import("./postView/PostView"));
+const PostVoters = lazy(() => import("./postVoters/PostVoters"));
 
 import "../boardPage/index.scss";
 
@@ -24,6 +26,12 @@ const PostPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_POSTS_EDIT}>
             <PostEdit />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_POSTS_VIEW}>
+            <PostView />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_POSTS_VOTERS}>
+            <PostVoters />
           </Route>
         </Switch>
       </Suspense>

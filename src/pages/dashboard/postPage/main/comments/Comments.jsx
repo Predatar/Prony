@@ -1,7 +1,25 @@
 import React from "react";
-import { MdOutlineThumbUpAlt, MdMoreVert } from "react-icons/md";
 import { BiComment } from "react-icons/bi";
+import { MdOutlineThumbUpAlt } from "react-icons/md";
 import "./comments.scss";
+
+import {
+  DashboardPopup,
+  DashboardPopupItemLink,
+} from "../../../../../components/dashboardPopup/DashboardPopup";
+
+import { IoMdCreate } from "react-icons/io";
+import {
+  MdAddBox,
+  MdCached,
+  MdCancel,
+  MdMergeType,
+  MdVisibility,
+} from "react-icons/md";
+import { RiThumbUpFill } from "react-icons/ri";
+import ROUTES from "../../../../../routes/const";
+
+RiThumbUpFill;
 
 const Comments = ({
   name,
@@ -65,16 +83,42 @@ const Comments = ({
             </div>
           </div>
           <div className="comments__right-right">
-            <button>
-              {" "}
-              <MdMoreVert
-                style={{
-                  pointerEvents: "none",
-                  width: 30,
-                  height: 30,
-                }}
+            <DashboardPopup name={"post"}>
+              <DashboardPopupItemLink
+                icon={<MdVisibility />}
+                text={"Public view"}
+                to={ROUTES.DASHBOARD_POSTS_VIEW}
               />
-            </button>
+              <DashboardPopupItemLink
+                icon={<MdCancel />}
+                text={"Delete post"}
+                to={ROUTES.DASHBOARD_POSTS}
+              />
+              <DashboardPopupItemLink
+                icon={<IoMdCreate />}
+                to={ROUTES.DASHBOARD_POSTS_EDIT}
+                text={"Edit post"}
+              />
+              <DashboardPopupItemLink
+                icon={<MdMergeType />}
+                text={"Merge post"}
+                to={ROUTES.DASHBOARD_POSTS}
+              />
+              <DashboardPopupItemLink
+                icon={<MdCached />}
+                text={"Change status"}
+                to={ROUTES.DASHBOARD_POSTS}
+              />
+              <DashboardPopupItemLink
+                icon={<MdAddBox />}
+                to={ROUTES.DASHBOARD_POSTS_VOTERS}
+                text={"Add voter"}
+              />
+              <DashboardPopupItemLink
+                icon={<RiThumbUpFill />}
+                text={"List voters"}
+              />
+            </DashboardPopup>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ import "./pagination.scss";
 import { smallSelects } from "../../../../../data/smallSelects";
 import { SmallSelects } from "../selects/smallSelects/SmallSelects";
 
-const Pagination = () => {
+const Pagination = ({ smallSelect }) => {
   return (
     <>
       <div className="pagination">
@@ -60,9 +60,11 @@ const Pagination = () => {
             </button>
           </div>
         </div>
-        <div className="pagination__show">
-          <RenderOneSelect />
-        </div>
+        {smallSelect && (
+          <div className="pagination__show">
+            <RenderOneSelect />
+          </div>
+        )}
       </div>
     </>
   );

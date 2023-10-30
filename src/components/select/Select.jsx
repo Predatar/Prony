@@ -2,7 +2,7 @@ import "./select.scss";
 import React  from "react";
 import { MdArrowDropDown } from "react-icons/md";
 
-const Select = ({title,width,children,count,widthPopup,position,borderTop,id,selectInPopup,onClick}) => {
+const Select = ({title,width,children,count,widthPopup,position,borderTop,id,onClick}) => {
 
   return (
     <div id={id} style={{ width: width }} className="select">

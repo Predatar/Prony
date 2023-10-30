@@ -1,28 +1,14 @@
-import React, { useRef, useState } from "react";
-import { AiOutlinePaperClip } from "react-icons/ai";
-import { MdCancel } from "react-icons/md";
+import React, { useState } from "react";
+
 import Btn from "../../../../../UI/button/Btn";
 import Select from "../../../../../components/select/Select";
 import Filter from "../../main/filter/filterPopup/FilterPopup";
 import "./postForm.scss";
 
 import { selectsInPostForm } from "../../../../../data/postFormSelects";
+import InputFile from "../inputFile/inputFile";
 
 const Form = () => {
-  //file
-  const [selectedFile, setSelectedFile] = useState(null);
-  const fileInputRef = useRef(null);
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setSelectedFile(file);
-  };
-
-  const handleCustomInputClick = () => {
-    fileInputRef.current.click();
-  };
-
-  //Select
   const [openFilter, setOpenFilter] = useState(null);
 
   const handleFilterClick = (filterId) => {
@@ -32,8 +18,6 @@ const Form = () => {
       setOpenFilter(filterId);
     }
   };
-
-  console.log(selectedFile);
 
   return (
     <form className="post-form">
@@ -68,41 +52,7 @@ const Form = () => {
             <div className="post-form__input-name">Detailes</div>
             <textarea placeholder="Enter post title" />
           </div>
-          <div className="post-form__wrapper">
-            <div className="post-form__input-name">Image </div>
-            <input
-              onChange={handleFileChange}
-              ref={fileInputRef}
-              type="file"
-              className="post-form__input-file"
-            />
-            <div className="post-form__file">
-              <div
-                onClick={handleCustomInputClick}
-                className="post-form__input-custom"
-              >
-                <AiOutlinePaperClip
-                  style={{ width: 16, height: 16, color: "#272557" }}
-                />
-                <span>Add file&nbsp;</span> or drop files here
-              </div>
-              <div className="post-form__show-file">
-                {selectedFile ? (
-                  <>
-                    <img src={URL.createObjectURL(selectedFile)} alt="" />
-                    <button
-                      onClick={() => setSelectedFile(null)}
-                      className="post-form__cancel"
-                    >
-                      <MdCancel
-                        style={{ width: 20, height: 20, color: "#E0E0E0" }}
-                      />
-                    </button>
-                  </>
-                ) : null}
-              </div>
-            </div>
-          </div>
+          <InputFile />
           <div className="post-form__wrapper">
             <div className="post-form__input-name">Owner</div>
             {selectsInPostForm.map(

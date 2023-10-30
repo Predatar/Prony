@@ -12,6 +12,9 @@
   transition: all 0.2s;
 }
 .label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .input {
   opacity: 0;

@@ -37,8 +37,6 @@
   &__wrapper-select {
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    border: 1px solid #e0e0e0;
   }
   &__wrapper {
     .select__window {
@@ -60,6 +58,12 @@
     padding: 15px 30px;
     border: none;
     flex: 1 1 auto;
+
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
   }
   &__search-btn {
     border-radius: 5px;
@@ -98,7 +102,7 @@
 }
 
 .posts-page {
-  &__comments{
+  &__comments {
     background: #fff;
   }
   &__comments-wrapper {

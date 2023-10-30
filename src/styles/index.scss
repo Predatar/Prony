@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Nunito:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Nunito:wght@400;600;700&display=swap");
 
 * {
   margin: 0;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
   position: relative;
   text-decoration: none;
-  font-family: 'Nunito';
+  font-family: "Nunito";
 }
 
 img {
@@ -27,4 +27,17 @@ a {
 .container {
   margin: 0 auto;
   width: min(100%, 1128px);
+}
+
+body {
+  --sidebar-bg: #fff;
+  --header-bg: #fff;
+  --textColor: #000;
+}
+
+
+body {
+  --sidebar-bg: #fff;
+  --header-bg: #fff;
+  --textColor: #000;
 }
