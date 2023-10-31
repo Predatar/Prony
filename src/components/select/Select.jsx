@@ -11,7 +11,7 @@ const Select = ({title,width,children,count,widthPopup,position,borderTop,id,onC
           <div className="select__title">{title}</div>
           {count === true && <div className="select__count">1</div>}
         </div>
-        <MdArrowDropDown style={{ width: 24, height: 24 }} />
+        <MdArrowDropDown style={{ width: 24, height: 24 ,color:"var(--textColor)"}} />
       </div>
 
       <div style={{width: widthPopup,position: position,borderTop: borderTop,}} className="select__window select-window">

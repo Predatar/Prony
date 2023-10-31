@@ -1,10 +1,10 @@
 .dashboard-board {
   padding: 10px 40px 90px 36px;
   height: calc(100% - 64px);
-  background: #f9f9fc;
+  background: var(--lightGray);
 
   &__text {
-    color: var(--272557, #272557);
+    color: var(--272557, var(--blueColor));
     font-variant-numeric: lining-nums proportional-nums;
 
     font-size: 16px;
@@ -22,7 +22,7 @@
     gap: 30px;
 
     border-radius: 10px;
-    background: #fff;
+    background: var(--dashBoardBg);
     box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
 
     &_long {
@@ -44,7 +44,7 @@
     flex-direction: column-reverse;
     gap: 5px;
 
-    color: var(--colors-grey-500, #9e9e9e);
+    color: var(--colors-grey-500, var(--grayColor));
     font-size: 14px;
     font-weight: 400;
     line-height: 21px; /* 150% */
@@ -56,10 +56,11 @@
   }
   &__input,
   &__textarea {
+    background: var(--sidebarColor);
     padding-left: 17px;
     height: 50px;
 
-    color: #000;
+    color: var(--textColor);
     font-size: 18px;
     font-weight: 400;
     line-height: 21px; /* 116.667% */
@@ -84,6 +85,7 @@
     padding: 17px;
     height: 131px;
     resize: none;
+    background: var(--sidebarColor);
   }
 
   &__form-btn {

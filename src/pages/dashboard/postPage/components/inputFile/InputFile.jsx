@@ -23,10 +23,13 @@ const InputFile = ({ width }) => {
         className="post-form__input-file"
       />
       <div className="post-form__file">
-        <div style={{ width: width }} onClick={handleCustomInputClick} className="post-form__input-custom"
+        <div
+          style={{ width: width }}
+          onClick={handleCustomInputClick}
+          className="post-form__input-custom"
         >
           <AiOutlinePaperClip
-            style={{ width: 16, height: 16, color: "#272557" }}
+            style={{ width: 16, height: 16, color: "var(--textColor)" }}
           />
           <span>Add file&nbsp;</span> or drop files here
         </div>

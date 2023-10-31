@@ -32,7 +32,7 @@ const DashboardPopup = ({ children, name }) => {
         <div className="dashboard__popup-wrapper">
           <label className="dashboard__close">
             <input type="radio" name={name} />
-            <MdClear style={{ pointerEvents: "none" }} />
+            <MdClear style={{ pointerEvents: "none" ,color:"var(--textColor)"}} />
           </label>
           <div className="dashboard__popup-list">{children}</div>
         </div>

@@ -59,7 +59,9 @@ const PostBoard = () => {
               type="search"
             />
             <button className="posts-form__search-btn">
-              <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
+              <BiSearchAlt2
+                style={{ color: "#fff", width: 24, height: 24 }}
+              />
             </button>
           </div>
           <RenderSelects selectsData={selects} />

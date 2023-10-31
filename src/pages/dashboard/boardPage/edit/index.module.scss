@@ -2,7 +2,7 @@
   width: stretch;
   display: flex;
   flex-wrap: wrap;
-  gap: 31px  42px;
+  gap: 31px 42px;
 }
 .container {
   width: 326px;
@@ -25,7 +25,7 @@
   align-items: center;
   gap: 15px;
 
-  color: #272557;
+  color: var(--blueColor);
 
   font-size: 14px;
   font-weight: 600;

@@ -2,7 +2,6 @@ import React from "react";
 import { MdOutlineThumbUpAlt } from "react-icons/md";
 
 import { useState } from "react";
-import person2 from "../../../../../img/Post/view/person2.png";
 import "./viewComments.scss";
 
 const ViewComments = ({

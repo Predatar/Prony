@@ -4,7 +4,7 @@
     align-items: center;
     gap: 19px;
     span {
-      color: #272557;
+      color: var(--blueColor);
       font-size: 24px;
       font-weight: 600;
       line-height: 28.8px;
@@ -14,7 +14,7 @@
 
 .post-voters-content {
   border-radius: 10px;
-  background: #fff;
+  background: var(--dashBoardBg);;
   margin-top: 10px;
   box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
   &__wrapper {
