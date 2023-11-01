@@ -10,6 +10,7 @@ const PostCreate = lazy(() => import("./postCreate/PostCreate"));
 const PostEdit = lazy(() => import("./postEdit/PostEdit"));
 const PostView = lazy(() => import("./postView/PostView"));
 const PostVoters = lazy(() => import("./postVoters/PostVoters"));
+const PostImport = lazy(() => import("./postImport/PostImport"));
 
 import "../boardPage/index.scss";
 
@@ -32,6 +33,9 @@ const PostPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_POSTS_VOTERS}>
             <PostVoters />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_POSTS_IMPORT}>
+            <PostImport />
           </Route>
         </Switch>
       </Suspense>

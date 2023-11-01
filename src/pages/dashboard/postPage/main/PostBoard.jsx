@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import Btn from "../../../../UI/button/Btn";
+import Links from "../../../../UI/links/Links";
 import ROUTES from "../../../../routes/const";
 import "./index.scss";
 
@@ -29,25 +29,28 @@ const PostBoard = () => {
           <div className="posts__buttons-body">
             <div className="posts__left-button">
               <div className="posts__buttons">
-                <button className="posts__import">
+                <Link  to={ROUTES.DASHBOARD_POSTS_IMPORT} className="posts__import">
                   <MdGetApp
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
                   />
                   Import
-                </button>
+                </Link>
 
-                <button className="posts__import">
+                <Link className="posts__import">
                   <MdUpload
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
                   />
                   Export
-                </button>
+                </Link>
               </div>
             </div>
             <div className="posts__right-button">
-              <Link to={ROUTES.DASHBOARD_POSTS_CREATE}>
-                <Btn text={"Create post"} width={136} theme={"btn_primary"} />
-              </Link>
+              <Links
+                text={"Create post"}
+                theme={"link_primary"}
+                width={136}
+                to={ROUTES.DASHBOARD_POSTS_CREATE}
+              ></Links>
             </div>
           </div>
         </div>
@@ -59,9 +62,7 @@ const PostBoard = () => {
               type="search"
             />
             <button className="posts-form__search-btn">
-              <BiSearchAlt2
-                style={{ color: "#fff", width: 24, height: 24 }}
-              />
+              <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
             </button>
           </div>
           <RenderSelects selectsData={selects} />

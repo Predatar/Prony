@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdCreate } from "react-icons/io";
 import {
   MdAddBox,
@@ -6,26 +6,43 @@ import {
   MdCancel,
   MdMergeType,
   MdOutlineThumbUpAlt,
-  MdVisibility,
 } from "react-icons/md";
-import { RiThumbUpFill } from "react-icons/ri";
 import Btn from "../../../../../UI/button/Btn";
 import Radio from "../../../../../UI/radio/Radio";
 import {
   DashboardPopup,
+  DashboardPopupItem,
   DashboardPopupItemLink,
 } from "../../../../../components/dashboardPopup/DashboardPopup";
 import { smallSelectView } from "../../../../../data/smallSelects";
 import person from "../../../../../img/Post/view/person.png";
 import room from "../../../../../img/Post/view/room.png";
 import ROUTES from "../../../../../routes/const";
+import "../../../tagsPage/index.scss";
 import "../../components/formForm/postForm.scss";
 import InputFile from "../../components/inputFile/inputFile";
 import { RenderSmallSelect } from "../../main/selects/Selects";
+
+import Popup from "../../components/popup/Popup";
+import {
+  PopupMerge,
+  PopupStatus,
+} from "../../components/popup/popupItems/PopupItems";
 import "./sendComment.scss";
-import "../../../tagsPage/index.scss";
 
 const SendComment = () => {
+  const [showPopupMerge, setShowPopupMerge] = useState(false);
+
+  const handlePopupMerge = () => {
+    setShowPopupMerge(true);
+  };
+
+  const [showPopupStatus, setShowPopupStatus] = useState(false);
+
+  const handlePopupStatus = () => {
+    setShowPopupStatus(true);
+  };
+
   return (
     <div className="send-comment">
       <div className="send-comment__body">
@@ -72,11 +89,6 @@ const SendComment = () => {
           <div className="send-comment__right">
             <DashboardPopup name={"post"}>
               <DashboardPopupItemLink
-                icon={<MdVisibility />}
-                text={"Public view"}
-                to={ROUTES.DASHBOARD_POSTS_VIEW}
-              />
-              <DashboardPopupItemLink
                 icon={<MdCancel />}
                 text={"Delete post"}
                 to={ROUTES.DASHBOARD_POSTS}
@@ -86,24 +98,21 @@ const SendComment = () => {
                 to={ROUTES.DASHBOARD_POSTS_EDIT}
                 text={"Edit post"}
               />
-              <DashboardPopupItemLink
+              <DashboardPopupItem
                 icon={<MdMergeType />}
                 text={"Merge post"}
-                to={ROUTES.DASHBOARD_POSTS}
+                onClick={() => handlePopupMerge()}
               />
-              <DashboardPopupItemLink
+
+              <DashboardPopupItem
                 icon={<MdCached />}
                 text={"Change status"}
-                to={ROUTES.DASHBOARD_POSTS}
+                onClick={() => handlePopupStatus()}
               />
               <DashboardPopupItemLink
                 icon={<MdAddBox />}
                 to={ROUTES.DASHBOARD_POSTS_VOTERS}
                 text={"Add voter"}
-              />
-              <DashboardPopupItemLink
-                icon={<RiThumbUpFill />}
-                text={"List voters"}
               />
             </DashboardPopup>
           </div>
@@ -140,6 +149,20 @@ const SendComment = () => {
           <RenderSmallSelect smallSelectsData={smallSelectView} />
         </div>
       </div>
+      <Popup
+        open={showPopupMerge}
+        state={showPopupMerge}
+        onClick={() => setShowPopupMerge(false)}
+      >
+        <PopupMerge />
+      </Popup>
+      <Popup
+        open={showPopupStatus}
+        state={showPopupStatus}
+        onClick={() => setShowPopupStatus(false)}
+      >
+        <PopupStatus />
+      </Popup>
     </div>
   );
 };

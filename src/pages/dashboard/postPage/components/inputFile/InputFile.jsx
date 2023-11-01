@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { AiOutlinePaperClip } from "react-icons/ai";
 import { MdCancel } from "react-icons/md";
-const InputFile = ({ width }) => {
+const InputFile = ({ width, title }) => {
   const handleCustomInputClick = () => {
     fileInputRef.current.click();
   };
@@ -15,7 +15,7 @@ const InputFile = ({ width }) => {
   };
   return (
     <div className="post-form__wrapper">
-      <div className="post-form__input-name">Image </div>
+      <div className="post-form__input-name">{title}</div>
       <input
         onChange={handleFileChange}
         ref={fileInputRef}

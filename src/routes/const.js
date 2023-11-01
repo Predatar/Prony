@@ -11,6 +11,7 @@ const ROUTES = {
   DASHBOARD_POSTS_EDIT: '/dashboard/posts/edit',
   DASHBOARD_POSTS_VIEW: '/dashboard/posts/view',
   DASHBOARD_POSTS_VOTERS: '/dashboard/posts/voters',
+  DASHBOARD_POSTS_IMPORT: '/dashboard/posts/import',
   DASHBOARD_STATUS: '/dashboard/status',
   DASHBOARD_STATUS_ADD: '/dashboard/status/add',
   DASHBOARD_STATUS_EDIT: '/dashboard/status/edit',
