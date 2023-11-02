@@ -5,7 +5,7 @@ import "./smallSelect.scss";
 const SmallSelects = (props) => {
   const { id, name, width, secondaryText, select, selectFirst } = props;
   const [open, setOpen] = useState(null);
-
+  const [selectedValue, setSelectedValue] = useState(selectFirst);
   const handleFilterClick = () => {
     if (open === name) {
       setOpen(null);
@@ -13,6 +13,14 @@ const SmallSelects = (props) => {
       setOpen(name);
     }
   };
+
+  const handleItemButtonClick = (value) => {
+    setSelectedValue(value);
+  };
+
+  const filteredSelect = select.filter(
+    ({ fields }) => fields !== selectedValue
+  );
 
   return (
     <div id={id} className="small-select">
@@ -23,7 +31,7 @@ const SmallSelects = (props) => {
           className="small-select__select mini-select"
         >
           <div style={{ width: width }} className="mini-select__body">
-            <div className="mini-select__left">{selectFirst}</div>
+            <div className="mini-select__left">{selectedValue}</div>
             <div className="mini-select__left">
               <MdArrowDropDown style={{ width: 16, height: 16 }} />
             </div>
@@ -31,9 +39,14 @@ const SmallSelects = (props) => {
           {open === name && (
             <div className="mini-select__window">
               <ul style={{ width: width }} className="mini-select__list">
-                {select.map(({ fields, id }) => (
+                {filteredSelect.map(({ fields, id }) => (
                   <li key={id} className="mini-select__item">
-                    {fields}
+                    <button
+                      onClick={() => handleItemButtonClick(fields)}
+                      className="mini-select__item-button"
+                    >
+                      {fields}
+                    </button>
                   </li>
                 ))}
               </ul>

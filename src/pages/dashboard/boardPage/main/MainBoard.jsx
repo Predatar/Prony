@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 import {
   MdCancel,
-  MdClear,
   MdCreate,
   MdDragIndicator,
   MdLockOpen,
@@ -18,6 +17,11 @@ import {
 } from "react-icons/md";
 
 import Links from "../../../../UI/links/Links";
+import {
+  DashboardPopup,
+  DashboardPopupItem,
+  DashboardPopupItemLink,
+} from "../../../../components/dashboardPopup/DashboardPopup";
 
 import ROUTES from "../../../../routes/const";
 
@@ -32,61 +36,6 @@ const MainBoard = () => {
       document.querySelector(".dashboard").style = "";
     };
   });
-
-  const Popup = useCallback((className) => {
-    return (
-      <div className={`dashboard-board__popup ${className}`}>
-        <div
-          className="dashboard-board__close"
-          onClick={(e) => {
-            e.target.parentNode.classList.remove(
-              "dashboard-board__popup_active"
-            );
-          }}
-        >
-          <MdClear style={{ pointerEvents: "none" }} />
-        </div>
-        <div className="dashboard-board__popup-list">
-          <div className="dashboard-board__popup-item">
-            <MdVisibility />
-            Public view
-          </div>
-          <Link
-            to={ROUTES.DASHBOARD_BOARDS_EDIT}
-            className="dashboard-board__popup-item"
-          >
-            <MdSettings />
-            Edit board settings
-          </Link>
-          <div className="dashboard-board__popup-item">
-            <MdViewHeadline />
-            List board tags
-          </div>
-          <Link
-            to={ROUTES.DASHBOARD_BOARDS_EDIT_BOARD}
-            className="dashboard-board__popup-item"
-          >
-            <MdCreate />
-            Edit board post
-          </Link>
-          <Link
-            to={ROUTES.DASHBOARD_BOARDS_DELETE}
-            className="dashboard-board__popup-item"
-          >
-            <MdCancel />
-            Delete board
-          </Link>
-          <Link
-            to={ROUTES.DASHBOARD_POSTS}
-            className="dashboard-board__popup-item"
-          >
-            <MdModeComment />
-            View posts
-          </Link>
-        </div>
-      </div>
-    );
-  }, []);
 
   const Board = useCallback(() => {
     return (
@@ -115,19 +64,38 @@ const MainBoard = () => {
           >
             <MdLockOpen />
           </div>
-          <div
-            className="dashboard-board__more"
-            onClick={(e) => {
-              if (e.target.classList.contains("dashboard-board__more")) {
-                e.target.nextSibling.classList.toggle(
-                  "dashboard-board__popup_active"
-                );
-              }
-            }}
-          >
-            <MdMoreVert style={{ pointerEvents: "none" }} />
+          <div>
+            <DashboardPopup name={"board"}>
+              <DashboardPopupItem
+                icon={<MdVisibility />}
+                text={"Public view"}
+              />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_BOARDS_EDIT}
+                icon={<MdSettings />}
+                text={"Edit board settings"}
+              />
+              <DashboardPopupItem
+                icon={<MdViewHeadline />}
+                text={"List board tags"}
+              />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_BOARDS_EDIT_BOARD}
+                icon={<MdCreate />}
+                text={"Edit board post"}
+              />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_BOARDS_DELETE}
+                icon={<MdCancel />}
+                text={"Delete board"}
+              />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_POSTS}
+                icon={<MdModeComment />}
+                text={"View posts"}
+              />
+            </DashboardPopup>
           </div>
-          {Popup()}
         </div>
       </div>
     );

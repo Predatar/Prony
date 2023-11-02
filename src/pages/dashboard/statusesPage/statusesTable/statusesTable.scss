@@ -1,0 +1,125 @@
+.statuses-table {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 22px 69px;
+    min-height: 72px;
+  }
+
+  &__bottom {
+    ul {
+      list-style-type: none;
+      li{
+        cursor: grab;
+      }
+    }
+  }
+
+  &__item {
+    color: #272557;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px; /* 131.25% */
+    letter-spacing: 0.09px;
+
+    &--votable {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      svg {
+        width: 16px;
+        height: 16px;
+        color: #e0e0e0;
+      }
+    }
+    &:not(:first-child) {
+      text-align: center;
+    }
+
+    &:nth-child(1) {
+      flex: 1 1 328px;
+    }
+    &:nth-child(2) {
+      flex: 1 1 188px;
+    }
+    &:nth-child(3) {
+      flex: 1 1 288px;
+    }
+    &:nth-child(4) {
+      flex: 1 1 202px;
+    }
+    &:nth-child(5) {
+      flex: 1 1 200px;
+    }
+  }
+}
+
+.statuses-item {
+  background: #f8f8f8;
+  padding: 22px 69px;
+  position: relative;
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    color: #9e9e9e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px;
+    letter-spacing: 0.06px;
+    &--name {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    &:not(:first-child) {
+      text-align: center;
+    }
+    &:nth-child(1) {
+      flex: 1 1 328px;
+    }
+    &:nth-child(2) {
+      flex: 1 1 188px;
+    }
+    &:nth-child(3) {
+      flex: 1 1 288px;
+    }
+    &:nth-child(4) {
+      flex: 1 1 202px;
+    }
+    &:nth-child(5) {
+      flex: 1 1 200px;
+    }
+  }
+  &__drag {
+    position: absolute;
+    left: 30px;
+    cursor: grab;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  &__activities {
+    position: absolute;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #e0e0e0;
+    }
+  }
+}

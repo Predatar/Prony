@@ -1,0 +1,117 @@
+.view-comment {
+  &.answer {
+    padding: 30px 30px 0px 30px;
+  }
+  &__main {
+    display: flex;
+    align-items: flex-start;
+  }
+  &__body {
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__answers {
+  }
+  &__left {
+    flex-basis: 100px;
+    display: flex;
+    padding: 34px 0;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+  &__button {
+    &.active {
+      color: var(--buttonCommentColor);
+      svg {
+        fill: #1565c0;
+      }
+    }
+  }
+}
+
+.view-comment-right {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 14px;
+  }
+  &__likes {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #e0e0e0;
+    }
+    span {
+      color: var(--grayColor);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.079px;
+    }
+  }
+  &__date {
+    color: var(--grayColor);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+  }
+  &__center {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+  &__name {
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px;
+    letter-spacing: 0.06px;
+  }
+  &__comment {
+    color: var(--textColor);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+    max-width: 1423px;
+    @media (min-width: 1950px) {
+      max-width: unset;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    flex-wrap: wrap;
+    button {
+      color: var(--grayColor);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.079px;
+      background: unset;
+      border: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      opacity: 0.7;
+      cursor: pointer;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

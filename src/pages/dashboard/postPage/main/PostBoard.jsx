@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import Btn from "../../../../UI/button/Btn";
+import Links from "../../../../UI/links/Links";
 import ROUTES from "../../../../routes/const";
 import "./index.scss";
 
@@ -11,7 +11,8 @@ import FilterSelected from "./FilterSelected/FilterSelected";
 import RenderComments from "./comments/renderComments/RenderComments";
 import Pagination from "./pagination/Pagination";
 import { RenderSelects, RenderSmallSelect } from "./selects/Selects";
-
+import { smallSelects } from "../../../../data/smallSelects";
+import { selects } from "../../../../data/select";
 const PostBoard = () => {
   return (
     <>
@@ -28,26 +29,28 @@ const PostBoard = () => {
           <div className="posts__buttons-body">
             <div className="posts__left-button">
               <div className="posts__buttons">
-                <Link to={ROUTES.DASHBOARD_POSTS_EDIT}>
-                  <button className="posts__import">
-                    <MdGetApp
-                      style={{ color: "#E0E0E0", width: 24, height: 24 }}
-                    />
-                    Import
-                  </button>
+                <Link  to={ROUTES.DASHBOARD_POSTS_IMPORT} className="posts__import">
+                  <MdGetApp
+                    style={{ color: "#E0E0E0", width: 24, height: 24 }}
+                  />
+                  Import
                 </Link>
-                <button className="posts__import">
+
+                <Link className="posts__import">
                   <MdUpload
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
                   />
                   Export
-                </button>
+                </Link>
               </div>
             </div>
             <div className="posts__right-button">
-              <Link to={ROUTES.DASHBOARD_POSTS_CREATE}>
-                <Btn text={"Create post"} width={136} theme={"btn_primary"} />
-              </Link>
+              <Links
+                text={"Create post"}
+                theme={"link_primary"}
+                width={136}
+                to={ROUTES.DASHBOARD_POSTS_CREATE}
+              ></Links>
             </div>
           </div>
         </div>
@@ -62,7 +65,7 @@ const PostBoard = () => {
               <BiSearchAlt2 style={{ color: "#fff", width: 24, height: 24 }} />
             </button>
           </div>
-          <RenderSelects />
+          <RenderSelects selectsData={selects} />
         </form>
         <div className="post-selecteds-info">
           <div className="post-selecteds-info__selecteds">
@@ -70,7 +73,7 @@ const PostBoard = () => {
             <FilterSelected selected="Name1" nameSelect="Author" />
           </div>
           <div className="post-selecteds-info__small-selects">
-            <RenderSmallSelect />
+            <RenderSmallSelect smallSelectsData={smallSelects} />
           </div>
         </div>
         <div className="posts-page__comments">
@@ -78,7 +81,7 @@ const PostBoard = () => {
             <RenderComments />
           </div>
           <div className="posts-page__pagination">
-            <Pagination />
+            <Pagination smallSelect />
           </div>
         </div>
       </div>

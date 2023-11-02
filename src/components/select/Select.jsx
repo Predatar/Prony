@@ -2,7 +2,7 @@ import "./select.scss";
 import React  from "react";
 import { MdArrowDropDown } from "react-icons/md";
 
-const Select = ({title,width,children,count,widthPopup,position,borderTop,id,selectInPopup,onClick}) => {
+const Select = ({title,width,children,count,widthPopup,position,borderTop,id,onClick}) => {
 
   return (
     <div id={id} style={{ width: width }} className="select">
@@ -11,7 +11,7 @@ const Select = ({title,width,children,count,widthPopup,position,borderTop,id,sel
           <div className="select__title">{title}</div>
           {count === true && <div className="select__count">1</div>}
         </div>
-        <MdArrowDropDown style={{ width: 24, height: 24 }} />
+        <MdArrowDropDown style={{ width: 24, height: 24 ,color:"var(--textColor)"}} />
       </div>
 
       <div style={{width: widthPopup,position: position,borderTop: borderTop,}} className="select__window select-window">
