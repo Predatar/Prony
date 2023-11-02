@@ -1,6 +1,6 @@
 .statuses-table {
   border-radius: 10px;
-  background: #fff;
+  background: var(--dashBoardBg);
   box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
   &__body {
     display: flex;
@@ -16,14 +16,14 @@
   &__bottom {
     ul {
       list-style-type: none;
-      li{
+      li {
         cursor: grab;
       }
     }
   }
 
   &__item {
-    color: #272557;
+    color: var(--blueColor);
     font-size: 16px;
     font-weight: 400;
     line-height: 21px; /* 131.25% */
@@ -63,7 +63,7 @@
 }
 
 .statuses-item {
-  background: #f8f8f8;
+  background: var(--dashBoardBg);
   padding: 22px 69px;
   position: relative;
   &__body {
@@ -106,6 +106,9 @@
     cursor: grab;
     top: 50%;
     transform: translate(0%, -50%);
+    svg {
+      fill: var(--textColor);
+    }
   }
   &__activities {
     position: absolute;
