@@ -21,4 +21,10 @@
     line-height: 21px;
     letter-spacing: 0.079px;
   }
+  &__right {
+    button {
+      background: unset;
+      border: none;
+    }
+  }
 }
