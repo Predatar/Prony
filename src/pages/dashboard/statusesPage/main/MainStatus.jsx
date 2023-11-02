@@ -4,13 +4,10 @@ import { Helmet } from "react-helmet";
 
 import { Link } from "react-router-dom";
 
-// import { MdDragIndicator, MdCached, MdCreate, MdCancel } from "react-icons/md";
-
 import Links from "../../../../UI/links/Links";
 import ROUTES from "../../../../routes/const";
-import "./mainStatus.scss";
 import RenderStatusesTable from "../renderStatusesTable/RenderStatusesTable";
-import List from "../renderStatusesTable/RenderStatusesTable";
+import "./mainStatus.scss";
 
 const MainStatus = () => {
   return (
@@ -32,7 +29,7 @@ const MainStatus = () => {
         />
       </div>
       <div className="dashboard-status">
-        <List />
+        <RenderStatusesTable />
       </div>
     </>
   );
