@@ -1,0 +1,110 @@
+.dashboard-board {
+  &__table {
+    margin-top: 23px;
+    border-radius: 10px;
+    background: var(--dashBoardBg);;
+    box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
+  }
+
+  &__head {
+    padding: 26px 0 24px 69px;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__tag {
+    color: var(--colors-1-primary, var(--blueColor));
+    font-variant-numeric: lining-nums proportional-nums;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px; /* 131.25% */
+    letter-spacing: 0.09px;
+
+    &:last-child {
+      margin-left: 835px;
+    }
+  }
+
+  &__body {
+    padding-bottom: 22px;
+  }
+
+  &__item {
+    padding-left: 70px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 70px;
+
+    &:nth-child(2n + 1) {
+      background: var(--secondaryWhite);
+    }
+  }
+
+  &__drag {
+    display: flex;
+    font-size: 24px;
+    color: rgba(224, 224, 224, 1);
+    position: absolute;
+    top: 50%;
+    left: 22px;
+
+    transform: translateY(-50%);
+
+    cursor: grab;
+  }
+
+  &__name {
+    width: 355px;
+    color: var(--textColor);
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px; /* 145.714% */
+    letter-spacing: 0.06px;
+  }
+
+  &__posts {
+    margin-left: 523px;
+    color: var(--textColor);
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px; /* 120% */
+  }
+
+  &__activities {
+    margin-left: 459px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__visibility,
+  &__lock,
+  &__more {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: rgba(224, 224, 224, 1);
+    cursor: pointer;
+
+    svg {
+      path {
+        pointer-events: none;
+      }
+    }
+
+    &_active {
+      color: rgba(21, 101, 192, 1);
+    }
+  }
+  &__more {
+    font-size: 30px;
+    color: rgba(39, 37, 87, 1);
+  }
+}
