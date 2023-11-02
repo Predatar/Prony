@@ -1,4 +1,5 @@
 import React from "react";
+
 export const selectsInPostForm = [
   {
     name: "Board",
@@ -8,13 +9,7 @@ export const selectsInPostForm = [
     filter: {
       title: "",
     },
-    content: (
-      <ul className="post-form__select-list">
-        <li className="post-form__select-item">1 Board</li>
-        <li className="post-form__select-item">2 Board</li>
-        <li className="post-form__select-item">3 Board</li>
-      </ul>
-    ),
+    content: ["1 Board", "2 Board", "3 Board"],
   },
   {
     name: "Owner",
@@ -24,13 +19,7 @@ export const selectsInPostForm = [
     filter: {
       title: "",
     },
-    content: (
-      <ul className="post-form__select-list">
-        <li className="post-form__select-item">1 Selection</li>
-        <li className="post-form__select-item">2 Selection</li>
-        <li className="post-form__select-item">3 Selection</li>
-      </ul>
-    ),
+    content: ["1 Owner", "2 Owner", "3 Owner"],
   },
   {
     name: "Status",
@@ -40,12 +29,6 @@ export const selectsInPostForm = [
     filter: {
       title: "",
     },
-    content: (
-      <ul className="post-form__select-list">
-        <li className="post-form__select-item">1 Status</li>
-        <li className="post-form__select-item">2 Status</li>
-        <li className="post-form__select-item">3 Status</li>
-      </ul>
-    ),
+    content: ["1 Status", "2 Status", "3 Status"],
   },
 ];

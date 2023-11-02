@@ -1,5 +1,6 @@
 .posts {
   margin-bottom: 12px;
+
   &__buttons {
     display: flex;
     align-items: center;
@@ -33,6 +34,8 @@
   align-items: baseline;
   flex-wrap: wrap;
   gap: 18px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 
   &__wrapper-select {
     display: flex;
@@ -104,6 +107,8 @@
 .posts-page {
   &__comments {
     background: var(--dashBoardBg);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   &__comments-wrapper {
     border-bottom: 1px solid #e0e0e0;
