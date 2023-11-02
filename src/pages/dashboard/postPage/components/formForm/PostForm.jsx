@@ -11,12 +11,27 @@ import InputFile from "../inputFile/inputFile";
 const Form = () => {
   const [openFilter, setOpenFilter] = useState(null);
 
+  const [boardFormSelectedValue, setBoardFormSelectedValue] = useState("");
+  const [ownerFormSelectedValue, setOwnerFormSelectedValue] = useState("");
+  const [statusFormSelectedValue, setStatusFormSelectedValue] = useState("");
+
   const handleFilterClick = (filterId) => {
     if (openFilter === filterId) {
       setOpenFilter(null);
     } else {
       setOpenFilter(filterId);
     }
+  };
+
+  const handleItemButtonClick = (value, id) => {
+    if (id === "boardForm") {
+      setBoardFormSelectedValue(value);
+    } else if (id === "ownerForm") {
+      setOwnerFormSelectedValue(value);
+    } else if (id === "statusrForm") {
+      setStatusFormSelectedValue(value);
+    }
+    setOpenFilter(null); // Закрываем попап
   };
 
   return (
@@ -35,9 +50,23 @@ const Form = () => {
                     onClick={() => handleFilterClick(name)}
                     width={width}
                     widthPopup={widthPopup}
-                    title="1 board"
+                    title={boardFormSelectedValue || content[0]}
                   >
-                    {openFilter === name && <Filter>{content}</Filter>}
+                    {openFilter === name && (
+                      <Filter>
+                        <ul className="post-form__select-list">
+                          {content.map((item) => (
+                            <li className="post-form__select-item" key={item}>
+                              <button
+                                onClick={() => handleItemButtonClick(item, id)}
+                              >
+                                {item}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </Filter>
+                    )}
                   </Select>
                 )
             )}
@@ -63,9 +92,23 @@ const Form = () => {
                     onClick={() => handleFilterClick(name)}
                     width={width}
                     widthPopup={widthPopup}
-                    title="no selection"
+                    title={ownerFormSelectedValue || content[0]}
                   >
-                    {openFilter === name && <Filter>{content}</Filter>}
+                    {openFilter === name && (
+                      <Filter>
+                        <ul className="post-form__select-list">
+                          {content.map((item) => (
+                            <li className="post-form__select-item" key={item}>
+                              <button
+                                onClick={() => handleItemButtonClick(item, id)}
+                              >
+                                {item}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </Filter>
+                    )}
                   </Select>
                 )
             )}
@@ -82,9 +125,23 @@ const Form = () => {
                     onClick={() => handleFilterClick(name)}
                     width={width}
                     widthPopup={widthPopup}
-                    title="first status"
+                    title={statusFormSelectedValue || content[0]}
                   >
-                    {openFilter === name && <Filter>{content}</Filter>}
+                    {openFilter === name && (
+                      <Filter>
+                        <ul className="post-form__select-list">
+                          {content.map((item) => (
+                            <li className="post-form__select-item" key={item}>
+                              <button
+                                onClick={() => handleItemButtonClick(item, id)}
+                              >
+                                {item}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </Filter>
+                    )}
                   </Select>
                 )
             )}
