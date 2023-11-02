@@ -20,6 +20,7 @@ const ROUTES = {
   DASHBOARD_TAGS_EDIT: "/dashboard/tags/edit",
   DASHBOARD_TAGS_REPLACE: "/dashboard/tags/replace",
   DASHBOARD_USERS: "/dashboard/users",
+  DASHBOARD_USERS_DETAILS: "/dashboard/users/details",
   DASHBOARD_CHANGELOG: "/dashboard/changelog",
   DASHBOARD_SETTINGS: "/dashboard/settings",
   DASHBOARD_INTEGRATION: "/dashboard/integration",
