@@ -29,7 +29,10 @@ const PostBoard = () => {
           <div className="posts__buttons-body">
             <div className="posts__left-button">
               <div className="posts__buttons">
-                <Link  to={ROUTES.DASHBOARD_POSTS_IMPORT} className="posts__import">
+                <Link
+                  to={ROUTES.DASHBOARD_POSTS_IMPORT}
+                  className="posts__import"
+                >
                   <MdGetApp
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
                   />
@@ -69,8 +72,8 @@ const PostBoard = () => {
         </form>
         <div className="post-selecteds-info">
           <div className="post-selecteds-info__selecteds">
-            <FilterSelected selected="Tagname1" nameSelect="Tag" />
-            <FilterSelected selected="Name1" nameSelect="Author" />
+            <FilterSelected selected="Tagname1" nameSelect="Tag:" />
+            <FilterSelected selected="Name1" nameSelect="Author:" />
           </div>
           <div className="post-selecteds-info__small-selects">
             <RenderSmallSelect smallSelectsData={smallSelects} />

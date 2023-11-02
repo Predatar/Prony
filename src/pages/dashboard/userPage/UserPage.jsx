@@ -1,14 +1,14 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from "react";
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Spinner from '../../spinner//Spinner';
+import Spinner from "../../spinner//Spinner";
 
-const MainBoard = lazy(() => import('./main/MainBoard'));
+const MainBoard = lazy(() => import("./main/MainBoard"));
 
-import ROUTES from '../../../routes/const';
+import ROUTES from "../../../routes/const";
 
-import './index.scss';
+import "./index.scss";
 
 const UserPage = () => {
   return (

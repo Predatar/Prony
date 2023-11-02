@@ -285,3 +285,161 @@ export const selects = [
     ),
   },
 ];
+
+export const userSelects = [
+  {
+    name: "User segments",
+    id: "userSegments",
+    width: 280,
+    count: false,
+    widthPopup: 333,
+
+    filter: {
+      title: "User segments",
+    },
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Segment1
+        </label>
+
+        <label>
+          <CheckBox />
+          Segment2
+        </label>
+
+        <label>
+          <CheckBox />
+          Segment3
+        </label>
+      </>
+    ),
+  },
+  {
+    name: "Email",
+    id: "email",
+    width: 200,
+    count: false,
+    widthPopup: 403,
+
+    filter: {
+      title: "E-mail",
+    },
+    subselect: {
+      name: "Enter e-mail",
+      id: "enderEmail",
+      width: 324,
+      widthPopup: 403,
+      filter: {
+        title: "Authors",
+      },
+      content: (
+        <div className="owners">
+          <label>
+            <CheckBox />
+            plishkan25@gmail.com
+          </label>
+
+          <label>
+            <CheckBox />
+            plishkan22@gmail.com
+          </label>
+
+          <label>
+            <CheckBox />
+            plishkan21@gmail.com
+          </label>
+        </div>
+      ),
+    },
+  },
+  {
+    name: "First Name",
+    id: "firstName",
+    width: 200,
+    count: true,
+    widthPopup: 403,
+
+    filter: {
+      title: "E-mail",
+    },
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Kairo Bruce
+        </label>
+
+        <label>
+          <CheckBox />
+          Lowri Leach
+        </label>
+
+        <label>
+          <CheckBox />
+          Kristopher Winter
+        </label>
+      </>
+    ),
+  },
+  {
+    name: "Last Name",
+    id: "lastName",
+    width: 200,
+    count: false,
+    widthPopup: 403,
+
+    filter: {
+      title: "E-mail",
+    },
+
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Kairo Bruce
+        </label>
+
+        <label>
+          <CheckBox />
+          Lowri Leach
+        </label>
+
+        <label>
+          <CheckBox />
+          Kristopher Winter
+        </label>
+      </>
+    ),
+  },
+  {
+    name: "Role",
+    id: "role",
+    width: 200,
+    count: false,
+    widthPopup: 333,
+
+    filter: {
+      title: "E-mail",
+    },
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Role 1
+        </label>
+
+        <label>
+          <CheckBox />
+          Role 2
+        </label>
+
+        <label>
+          <CheckBox />
+          Role 3
+        </label>
+      </>
+    ),
+  },
+];

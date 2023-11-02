@@ -6,7 +6,7 @@ const filterSelected = ({ selected, nameSelect }) => {
     <div className="filter-selected">
       <div className="filter-selected__body">
         <div className="filter-selected__left">
-          <span className="filter-selected__name">{nameSelect}:</span>
+          <span className="filter-selected__name">{nameSelect}</span>
           <span className="filter-selected__name"> &nbsp;{selected}</span>
         </div>
         <div className="filter-selected__right">
