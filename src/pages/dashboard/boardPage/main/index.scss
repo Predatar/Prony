@@ -7,14 +7,17 @@
   }
 
   &__head {
-    padding: 26px 0 24px 69px;
+    padding: 26px 29px 24px 69px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     border-bottom: 1px solid #e0e0e0;
   }
 
   &__tag {
+    flex: 0 1 281px;
+
     color: var(--colors-1-primary, var(--blueColor));
     font-variant-numeric: lining-nums proportional-nums;
 
@@ -23,8 +26,13 @@
     line-height: 21px; /* 131.25% */
     letter-spacing: 0.09px;
 
+    &:nth-child(2) {
+      flex: 0 1 163px;
+
+      text-align: right;
+    }
     &:last-child {
-      margin-left: 835px;
+      flex: 0 1 93px;
     }
   }
 
@@ -38,7 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 70px;
+    padding-right: 29px;
 
     &:nth-child(2n + 1) {
       background: var(--secondaryWhite);
@@ -59,26 +67,33 @@
   }
 
   &__name {
-    width: 355px;
+    // width: 355px;
+    flex: 0 1 281px;
     color: var(--textColor);
 
     font-size: 14px;
     font-weight: 600;
     line-height: 20.4px; /* 145.714% */
     letter-spacing: 0.06px;
+
+    text-align: center;
   }
 
   &__posts {
-    margin-left: 523px;
+    // margin-left: 523px;
+    flex: 0 1 163px;
     color: var(--textColor);
 
     font-size: 24px;
     font-weight: 600;
     line-height: 28.8px; /* 120% */
+
+    text-align: right;
   }
 
   &__activities {
-    margin-left: 459px;
+    // margin-left: 459px;
+    flex: 0 1 10px;
     display: flex;
     align-items: center;
     gap: 20px;
