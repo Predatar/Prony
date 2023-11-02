@@ -6,6 +6,7 @@ import Spinner from '../../spinner//Spinner';
 
 const MainBoard = lazy(() => import('./main/MainBoard'));
 const UserDetailPage = lazy(() => import('./userDetailsPage/UserDetailPage'));
+const UserSegments = lazy(() => import('./userSegments/UserSegments'));
 
 import ROUTES from '../../../routes/const';
 
@@ -21,6 +22,9 @@ const UserPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_USERS_DETAILS}>
             <UserDetailPage />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_USERS_SEGMENTS}>
+            <UserSegments />
           </Route>
         </Switch>
       </Suspense>
