@@ -18,7 +18,7 @@ const PostBoard = () => {
     <>
       <div className="dashboard__path">
         <Helmet>
-          <title>Posts - PRONY</title>
+          <title>Dashboard Posts - PRONY</title>
         </Helmet>
         <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/
         <Link to={ROUTES.DASHBOARD_POSTS}>Posts</Link>
