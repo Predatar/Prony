@@ -17,8 +17,8 @@ const EditBoard = () => {
         <Helmet>
           <title>Dashboard Tags - PRONY</title>
         </Helmet>
-        <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_STATUS}>Tags</Link>/
-        <Link to={ROUTES.DASHBOARD_STATUS}>Edit tags</Link>
+        <Link to={ROUTES.DASHBOARD_HOME}>Dashboard</Link>/<Link to={ROUTES.DASHBOARD_TAGS}>Tags</Link>/
+        <Link to={ROUTES.DASHBOARD_TAGS}>Edit tags</Link>
       </div>
       <div className="dashboard__main">
         <div className="dashboard__title">Edit tag</div>
@@ -129,7 +129,7 @@ const EditBoard = () => {
             <div className="dashboard-tags__helps">Private tags are only visible to moderators.</div>
           </div>
           <div className="dashboard-tags__btn">
-            <Links to={ROUTES.DASHBOARD_STATUS} text={'Cancel'} width={147} theme={'link_secondary'} />
+            <Links to={ROUTES.DASHBOARD_TAGS} text={'Cancel'} width={147} theme={'link_secondary'} />
             <Btn text={'Submit'} width={150} theme={'btn_primary'} />
           </div>
         </div>

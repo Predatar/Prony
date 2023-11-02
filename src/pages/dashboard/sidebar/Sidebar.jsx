@@ -117,7 +117,9 @@ const Sidebar = () => {
           className="sidebar__dropdown"
           ref={dropdown}
         >
-          <div className="sidebar__dropdown-item">Settings 1</div>
+          <NavLink to={ROUTES.DASHBOARD_TAGS}>
+            <div className="sidebar__dropdown-item">Settings 1</div>
+          </NavLink>
           <div className="sidebar__dropdown-item">Settings 2</div>
           <div className="sidebar__dropdown-item">Settings 3</div>
         </div>

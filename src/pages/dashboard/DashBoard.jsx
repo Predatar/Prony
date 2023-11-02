@@ -14,7 +14,7 @@ const PostPage = lazy(() => import("./postPage/PostPage"));
 const MainPage = lazy(() => import("./mainPage/MainPage"));
 const BoardPage = lazy(() => import("./boardPage/BoardPage"));
 const TagsPage = lazy(() => import("./tagsPage/TagsPage"));
-
+const StatusesPage = lazy(() => import("./statusesPage/StatusesPage"));
 import ThemeProvider from "../../providers/ThemeProvider";
 
 import "./index.scss";
@@ -40,8 +40,11 @@ const DashBoard = () => {
               <Route path={ROUTES.DASHBOARD_POSTS}>
                 <PostPage />
               </Route>
-              <Route path={ROUTES.DASHBOARD_STATUS}>
+              <Route path={ROUTES.DASHBOARD_TAGS}>
                 <TagsPage />
+              </Route>
+              <Route path={ROUTES.DASHBOARD_STATUS}>
+                <StatusesPage />
               </Route>
             </Switch>
           </Suspense>
