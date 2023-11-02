@@ -22,7 +22,7 @@ const MainStatus = () => {
       <div className="dashboard__main">
         <div className="dashboard__title">Statuses</div>
         <Links
-          to={ROUTES.DASHBOARD_TAGS_ADD}
+          to={ROUTES.DASHBOARD_STATUS_ADD}
           text={"Add tag"}
           theme={"link_primary"}
           width={114}
