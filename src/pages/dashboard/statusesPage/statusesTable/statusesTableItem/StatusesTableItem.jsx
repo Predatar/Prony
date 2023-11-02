@@ -53,14 +53,14 @@ const StatusesTableItem = ({
       </div>
       <div className="statuses-item__activities">
         <Link
-          to={ROUTES.DASHBOARD_TAGS_EDIT}
+          to={ROUTES.DASHBOARD_STATUS_EDIT}
           className="dashboard-tags__create"
         >
           <MdCreate />
         </Link>
         <div className="dashboard-tags__cancel">
           <Link
-            to={ROUTES.DASHBOARD_TAGS_EDIT}
+            to={ROUTES.DASHBOARD_STATUS_EDIT}
             className="dashboard-tags__create"
           >
             <MdCancel />
