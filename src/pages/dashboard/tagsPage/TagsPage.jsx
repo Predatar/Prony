@@ -1,33 +1,33 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from "react";
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Spinner from '../../spinner//Spinner';
+import Spinner from "../../spinner//Spinner";
 
-const MainBoard = lazy(() => import('./main/MainBoard'));
-const AddBoard = lazy(() => import('./add/AddPage'));
-const EditBoard = lazy(() => import('./edit/EditBoard'));
-const ReplaceBoard = lazy(() => import('./replace/ReplaceBoard'));
+const MainBoard = lazy(() => import("./main/MainBoard"));
+const AddBoard = lazy(() => import("./add/AddPage"));
+const EditBoard = lazy(() => import("./edit/EditBoard"));
+const ReplaceBoard = lazy(() => import("./replace/ReplaceBoard"));
 
-import ROUTES from '../../../routes/const';
+import ROUTES from "../../../routes/const";
 
-import './index.scss';
+import "./index.scss";
 
 const TagsPage = () => {
   return (
     <div className="dashboard-tags">
       <Suspense fallback={<Spinner />}>
         <Switch>
-          <Route exact path={ROUTES.DASHBOARD_STATUS}>
+          <Route exact path={ROUTES.DASHBOARD_TAGS}>
             <MainBoard />
           </Route>
-          <Route exact path={ROUTES.DASHBOARD_STATUS_ADD}>
+          <Route exact path={ROUTES.DASHBOARD_TAGS_ADD}>
             <AddBoard />
           </Route>
-          <Route exact path={ROUTES.DASHBOARD_STATUS_EDIT}>
+          <Route exact path={ROUTES.DASHBOARD_TAGS_EDIT}>
             <EditBoard />
           </Route>
-          <Route exact path={ROUTES.DASHBOARD_STATUS_REPLACE}>
+          <Route exact path={ROUTES.DASHBOARD_TAGS_REPLACE}>
             <ReplaceBoard />
           </Route>
         </Switch>

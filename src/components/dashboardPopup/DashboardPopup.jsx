@@ -1,14 +1,14 @@
-import React, { useRef } from 'react';
+import React from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { MdClear, MdMoreVert } from 'react-icons/md';
+import { MdClear, MdMoreVert } from "react-icons/md";
 
-import './index.scss';
+import "./index.scss";
 
-const DashboardPopupItem = ({ icon, text }) => {
+const DashboardPopupItem = ({ icon, text, onClick }) => {
   return (
-    <div className="dashboard__popup-item">
+    <div onClick={onClick} className="dashboard__popup-item">
       {icon}
       {text}
     </div>
@@ -24,8 +24,6 @@ const DashboardPopupItemLink = ({ icon, text, to }) => {
 };
 
 const DashboardPopup = ({ children, name }) => {
-  const ref = useRef();
-
   return (
     <div className={`dashboard__popup`}>
       <label className="dashboard__label">
@@ -34,7 +32,9 @@ const DashboardPopup = ({ children, name }) => {
         <div className="dashboard__popup-wrapper">
           <label className="dashboard__close">
             <input type="radio" name={name} />
-            <MdClear style={{ pointerEvents: 'none' }} />
+            <MdClear
+              style={{ pointerEvents: "none", color: "var(--textColor)" }}
+            />
           </label>
           <div className="dashboard__popup-list">{children}</div>
         </div>

@@ -1,0 +1,47 @@
+.voters-post {
+  background: var(--dashBoardBg);
+  padding: 20px 21px 20px 43px;
+  &.gray {
+    background: var(--secondaryWhite);
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    min-width: 292px;
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
+    span {
+      color: var(--textColor);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20.4px;
+      letter-spacing: 0.06px;
+      white-space: nowrap;
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__time {
+    color: var(--grayColor);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: 0.079px;
+  }
+  &__delete {
+    background: unset;
+    border: none;
+    cursor: pointer;
+  }
+}

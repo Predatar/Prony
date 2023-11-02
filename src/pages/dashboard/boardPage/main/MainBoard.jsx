@@ -16,12 +16,12 @@ import {
   MdVisibility,
 } from "react-icons/md";
 
-import Links from '../../../../UI/links/Links';
+import Links from "../../../../UI/links/Links";
 import {
   DashboardPopup,
   DashboardPopupItem,
-  DashboardPopupItemLink
-} from '../../../../components/dashboardPopup/DashboardPopup';
+  DashboardPopupItemLink,
+} from "../../../../components/dashboardPopup/DashboardPopup";
 
 import ROUTES from "../../../../routes/const";
 
@@ -65,21 +65,35 @@ const MainBoard = () => {
             <MdLockOpen />
           </div>
           <div>
-            <DashboardPopup name={'board'}>
-              <DashboardPopupItem icon={<MdVisibility />} text={'Public view'} />
+            <DashboardPopup name={"board"}>
+              <DashboardPopupItem
+                icon={<MdVisibility />}
+                text={"Public view"}
+              />
               <DashboardPopupItemLink
                 to={ROUTES.DASHBOARD_BOARDS_EDIT}
                 icon={<MdSettings />}
-                text={'Edit board settings'}
+                text={"Edit board settings"}
               />
-              <DashboardPopupItem icon={<MdViewHeadline />} text={'List board tags'} />
+              <DashboardPopupItem
+                icon={<MdViewHeadline />}
+                text={"List board tags"}
+              />
               <DashboardPopupItemLink
                 to={ROUTES.DASHBOARD_BOARDS_EDIT_BOARD}
                 icon={<MdCreate />}
-                text={'Edit board post'}
+                text={"Edit board post"}
               />
-              <DashboardPopupItemLink to={ROUTES.DASHBOARD_BOARDS_DELETE} icon={<MdCancel />} text={'Delete board'} />
-              <DashboardPopupItemLink to={ROUTES.DASHBOARD_POSTS} icon={<MdModeComment />} text={'View posts'} />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_BOARDS_DELETE}
+                icon={<MdCancel />}
+                text={"Delete board"}
+              />
+              <DashboardPopupItemLink
+                to={ROUTES.DASHBOARD_POSTS}
+                icon={<MdModeComment />}
+                text={"View posts"}
+              />
             </DashboardPopup>
           </div>
         </div>

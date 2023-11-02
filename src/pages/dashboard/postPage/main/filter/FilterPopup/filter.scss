@@ -1,5 +1,5 @@
 .filter {
-  background-color: #fff;
+  background-color: (--textColor);
   padding: 32px;
   &__body {
     display: flex;
@@ -20,7 +20,7 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      color: #333;
+      color: var(--brownColor);
       font-variant-numeric: lining-nums proportional-nums;
       font-size: 12px;
       font-weight: 400;

@@ -1,14 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from "react";
 
-import './index.scss';
+import "./index.scss";
 
-import img from '../../../img/personal-img.png';
+import img from "../../../img/personal-img.png";
+import { ThemeContext } from "../../../providers/ThemeProvider";
 
 const Header = () => {
   const input = useRef();
+  const [theme, setTheme] = useContext(ThemeContext);
+
+  const setLightTheme = () => {
+    setTheme("light");
+  };
+
+  const setDarkTheme = () => {
+    setTheme("dark");
+  };
 
   useEffect(() => {
-    input.current.checked = true
+    input.current.checked = true;
   }, []);
 
   return (
@@ -26,13 +36,26 @@ const Header = () => {
         </div>
       </div>
       <div className="theme">
-        <label htmlFor="day" className="radio__label">
-          <input type="radio" name="theme" id="day" value={'day'} className="radio__input" ref={input} />
+        <label onClick={setLightTheme} htmlFor="day" className="radio__label">
+          <input
+            type="radio"
+            name="theme"
+            id="day"
+            value={"day"}
+            className="radio__input"
+            ref={input}
+          />
           <span className="radio__custom"></span>
           <div className="radio__text">Day theme</div>
         </label>
-        <label htmlFor="night" className="radio__label">
-          <input type="radio" name="theme" id="night" value={'night'} className="radio__input" />
+        <label onClick={setDarkTheme} htmlFor="night" className="radio__label">
+          <input
+            type="radio"
+            name="theme"
+            id="night"
+            value={"night"}
+            className="radio__input"
+          />
           <span className="radio__custom"></span>
           <div className="radio__text">Night theme</div>
         </label>
