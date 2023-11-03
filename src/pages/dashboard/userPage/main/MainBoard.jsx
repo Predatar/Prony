@@ -9,12 +9,11 @@ import {
 
 import { Link } from "react-router-dom";
 
-import Links from "../../../../UI/links/Links";
-
 import ROUTES from "../../../../routes/const";
 
 import Checkbox from "../../../../UI/checkbox/Checkbox";
 import { smallSelects } from "../../../../data/smallSelects";
+import Pagination from "../../postPage/main/pagination/Pagination";
 import "./index.scss";
 import RenderUserItems from "./renderUserItems/RenderUserItems";
 const MainBoard = () => {
@@ -29,12 +28,6 @@ const MainBoard = () => {
       </div>
       <div className="dashboard__main">
         <div className="dashboard__title">Users</div>
-        <Links
-          to={ROUTES.DASHBOARD_TAGS_ADD}
-          text={"Add tag"}
-          theme={"link_primary"}
-          width={114}
-        />
       </div>
       <div className="user-page">
         <form className="user-page__form">
@@ -59,6 +52,7 @@ const MainBoard = () => {
         <div className="user-page__users">
           <RenderUserItems />
         </div>
+        <Pagination />
       </div>
     </>
   );

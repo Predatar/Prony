@@ -362,7 +362,7 @@ export const userSelects = [
     widthPopup: 403,
 
     filter: {
-      title: "E-mail",
+      title: "First Name",
     },
     content: (
       <>
@@ -391,7 +391,7 @@ export const userSelects = [
     widthPopup: 403,
 
     filter: {
-      title: "E-mail",
+      title: "Last Name",
     },
 
     content: (
@@ -421,7 +421,7 @@ export const userSelects = [
     widthPopup: 333,
 
     filter: {
-      title: "E-mail",
+      title: "Role",
     },
     content: (
       <>

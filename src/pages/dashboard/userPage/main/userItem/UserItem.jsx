@@ -1,7 +1,17 @@
 import React from "react";
-import { MdOutlineThumbUpAlt } from "react-icons/md";
 import { BiComment } from "react-icons/bi";
+import { MdOutlineThumbUpAlt } from "react-icons/md";
+import {
+  DashboardPopup,
+  DashboardPopupItem,
+  DashboardPopupItemLink,
+} from "../../../../../components/dashboardPopup/DashboardPopup";
 import "./userItem.scss";
+
+import { AiFillStar, AiFillWarning } from "react-icons/ai";
+import { MdCached, MdCancel } from "react-icons/md";
+import ROUTES from "../../../../../routes/const";
+
 const UserItem = ({ id, name, role, img, email }) => {
   return (
     <div id={id} className="user-item">
@@ -31,9 +41,30 @@ const UserItem = ({ id, name, role, img, email }) => {
               </div>
             </div>
           </div>
-          <div className="user-item__left">
+          <div className="user-item__left-role">
             <div className="user-item__role">{role}</div>
           </div>
+        </div>
+        <div className="comments__right-right">
+          <DashboardPopup name={"post"}>
+            <DashboardPopupItemLink
+              icon={<MdCached />}
+              text={"Change user role"}
+              to={ROUTES.DASHBOARD_POSTS_VIEW}
+            />
+
+            <DashboardPopupItemLink
+              icon={<MdCancel />}
+              text={"Delete user"}
+              to={ROUTES.DASHBOARD_POSTS}
+            />
+            <DashboardPopupItemLink
+              icon={<AiFillWarning />}
+              to={ROUTES.DASHBOARD_POSTS_EDIT}
+              text={"Ban user"}
+            />
+            <DashboardPopupItem icon={<AiFillStar />} text={"User roles"} />
+          </DashboardPopup>
         </div>
       </div>
     </div>
