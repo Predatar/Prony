@@ -1,24 +1,25 @@
-import React, { lazy, Suspense } from "react";
-import { Helmet } from "react-helmet";
+import React, { lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet';
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 
-import Spinner from "../spinner/Spinner";
+import Spinner from '../spinner/Spinner';
 
-import ROUTES from "../../routes/const";
+import ROUTES from '../../routes/const';
 
-import Header from "./header/Header";
-import Sidebar from "./sidebar/Sidebar";
+import Header from './header/Header';
+import Sidebar from './sidebar/Sidebar';
 
-const PostPage = lazy(() => import("./postPage/PostPage"));
-const MainPage = lazy(() => import("./mainPage/MainPage"));
-const BoardPage = lazy(() => import("./boardPage/BoardPage"));
-const TagsPage = lazy(() => import("./tagsPage/TagsPage"));
-const StatusesPage = lazy(() => import("./statusesPage/StatusesPage"));
-const UserPage = lazy(() => import("./userPage/UserPage"));
-import ThemeProvider from "../../providers/ThemeProvider";
+const PostPage = lazy(() => import('./postPage/PostPage'));
+const MainPage = lazy(() => import('./mainPage/MainPage'));
+const BoardPage = lazy(() => import('./boardPage/BoardPage'));
+const TagsPage = lazy(() => import('./tagsPage/TagsPage'));
+const StatusesPage = lazy(() => import('./statusesPage/StatusesPage'));
+const UserPage = lazy(() => import('./userPage/UserPage'));
+const ActivityPage = lazy(() => import('./activityPage/ActivityPage'));
+import ThemeProvider from '../../providers/ThemeProvider';
 
-import "./index.scss";
+import './index.scss';
 
 const DashBoard = () => {
   return (
@@ -49,6 +50,9 @@ const DashBoard = () => {
               </Route>
               <Route path={ROUTES.DASHBOARD_USERS}>
                 <UserPage />
+              </Route>
+              <Route path={ROUTES.DASHBOARD_ACTIVITY}>
+                <ActivityPage />
               </Route>
             </Switch>
           </Suspense>
