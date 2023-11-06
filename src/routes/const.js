@@ -33,6 +33,7 @@ const ROUTES = {
   DASHBOARD_CHANGELOG_LABELS_ADD: '/dashboard/changelog/labels/add',
   DASHBOARD_CHANGELOG_LABELS_EDIT: '/dashboard/changelog/labels/edit',
   DASHBOARD_SETTINGS: '/dashboard/settings',
+  DASHBOARD_SETTINGS_APPEARANCE: '/dashboard/settings/appearance',
   DASHBOARD_SETTINGS_EMAIL: '/dashboard/settings/email',
   DASHBOARD_SETTINGS_SSO: '/dashboard/settings/sso',
   DASHBOARD_SETTINGS_DOMAIN: '/dashboard/settings/domain',

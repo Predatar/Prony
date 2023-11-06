@@ -87,5 +87,10 @@
     &:first-child {
       margin-top: 6px;
     }
+
+    &_active {
+      background: #f2f2f5;
+      color: var(--sidebarItemsColor);
+    }
   }
 }
