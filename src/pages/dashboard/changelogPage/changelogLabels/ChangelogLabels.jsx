@@ -23,7 +23,7 @@ const ChangeLogLabels = () => {
       <div className="dashboard__main">
         <div className="dashboard__title">Changelog Labels</div>
         <Links
-          to={ROUTES.DASHBOARD_CHANGELOG_ADD}
+          to={ROUTES.DASHBOARD_CHANGELOG_LABELS_ADD}
           text={"Add label"}
           theme={"link_primary"}
           width={124}
