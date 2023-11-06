@@ -1,13 +1,17 @@
-import React from 'react';
-import { SiReaddotcv } from 'react-icons/si';
-import { BiSolidLabel } from 'react-icons/bi';
-import ROUTES from '../../../../../routes/const';
-import LogTag from '../../components/logTag/LogTag';
-import { IoMdCreate } from 'react-icons/io';
-import { FiSettings } from 'react-icons/fi';
 import { MdEmail } from 'react-icons/md';
-import { DashboardPopup, DashboardPopupItemLink } from '../../../../../components/dashboardPopup/DashboardPopup';
-import './changelogItem.scss';
+import React from "react";
+import { SiReaddotcv } from "react-icons/si";
+import { BiSolidLabel } from "react-icons/bi";
+import ROUTES from "../../../../../routes/const";
+import LogTag from "../../components/logTag/LogTag";
+import { IoMdCreate } from "react-icons/io";
+import { FiSettings } from "react-icons/fi";
+import {VscSettings} from "react-icons/vsc"
+import {
+  DashboardPopup,
+  DashboardPopupItemLink,
+} from "../../../../../components/dashboardPopup/DashboardPopup";
+import "./changelogItem.scss";
 const ChangelogItem = ({ time, feedback, changelog, admin }) => {
   return (
     <div className="changelog-item">
@@ -32,6 +36,11 @@ const ChangelogItem = ({ time, feedback, changelog, admin }) => {
                 text={'Settings'}
                 to={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}
               />
+              {/* <DashboardPopupItemLink
+                icon={<VscSettings />}
+                text={"General settings"}
+                to={ROUTES.DASHBOARD_CHANGELOG_SETTINGS_GENERAL}
+              /> */}
             </DashboardPopup>
           </div>
         </div>
