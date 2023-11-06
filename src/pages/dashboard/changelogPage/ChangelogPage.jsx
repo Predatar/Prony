@@ -11,6 +11,9 @@ const ChangelogLabels = lazy(() => import("./changelogLabels/ChangelogLabels"));
 const ChangelogSettings = lazy(() =>
   import("./changelogSettings/ChangelogSettings")
 );
+const ChangelogGeneral = lazy(() =>
+  import("./changelogGeneral/ChangelogGeneral")
+);
 import ROUTES from "../../../routes/const";
 import "./index.scss";
 const ChangelogPage = () => {
@@ -32,6 +35,9 @@ const ChangelogPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}>
             <ChangelogSettings />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_CHANGELOG_SETTINGS_GENERAL}>
+            <ChangelogGeneral />
           </Route>
         </Switch>
       </Suspense>

@@ -1,0 +1,83 @@
+.general-settings {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
+  padding: 22px 54px 38px 44px;
+  margin-top: 22px;
+  max-width: 597px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+    align-items: flex-end;
+  }
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    input {
+      border-radius: 5px;
+      border: 1px solid #e0e0e0;
+      padding: 16px 21px 13px 21px;
+      color: #9e9e9e;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: 0.079px;
+    }
+  }
+  &__title {
+    color: #9e9e9e;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+  }
+  &__radios {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  &__radio-left,
+  &__radio-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  &__checboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    label {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    color: #272557;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px;
+    letter-spacing: 0.06px;
+  }
+  &__bottom {
+    margin-top: 15px;
+    padding-left: 3px;
+  }
+  &__bottom-text {
+    color: #9e9e9e;
+    font-size: 12px;
+    line-height: 13.42px;
+    letter-spacing: 0.3px;
+  }
+}
