@@ -4,6 +4,7 @@ import { BiSolidLabel } from "react-icons/bi";
 import ROUTES from "../../../../../routes/const";
 import LogTag from "../../components/logTag/LogTag";
 import { IoMdCreate } from "react-icons/io";
+import { FiSettings } from "react-icons/fi";
 import {
   DashboardPopup,
   DashboardPopupItemLink,
@@ -39,6 +40,11 @@ const ChangelogItem = ({ time, feedback, changelog, admin }) => {
                 icon={<IoMdCreate />}
                 text={"Edit  label"}
                 to={ROUTES.DASHBOARD_CHANGELOG_EDIT}
+              />
+              <DashboardPopupItemLink
+                icon={<FiSettings />}
+                text={"Settings"}
+                to={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}
               />
             </DashboardPopup>
           </div>
