@@ -1,0 +1,12 @@
+.dashboard-changelog-table {
+  margin-top: 22px;
+}
+
+.changelog-table {
+  &__item {
+    span {
+      border-radius: 30px;
+      padding: 5px 20px;
+    }
+  }
+}
