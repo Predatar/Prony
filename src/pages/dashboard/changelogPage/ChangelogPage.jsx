@@ -4,15 +4,13 @@ import { Switch, Route } from 'react-router-dom';
 
 import Spinner from '../../spinner//Spinner';
 
-const MainBoard = lazy(() => import("./main/MainBoard"));
-const ChangelogEdit = lazy(() => import("./changelogEdit/ChangelogEdit"));
-const ChangelogAdd = lazy(() => import("./changelogAdd/ChangelogAdd"));
-const ChangelogLabels = lazy(() => import("./changelogLabels/ChangelogLabels"));
-const ChangelogSettings = lazy(() =>
-  import("./changelogSettings/ChangelogSettings")
-);
-import ROUTES from "../../../routes/const";
-import "./index.scss";
+const MainBoard = lazy(() => import('./main/MainBoard'));
+const ChangelogEdit = lazy(() => import('./changelogEdit/ChangelogEdit'));
+const ChangelogAdd = lazy(() => import('./changelogAdd/ChangelogAdd'));
+const ChangelogLabels = lazy(() => import('./changelogLabels/ChangelogLabels'));
+const ChangelogSettings = lazy(() => import('./changelogSettings/ChangelogSettings'));
+import ROUTES from '../../../routes/const';
+import './index.scss';
 const ChangelogLabelsAdd = lazy(() => import('./changelogLabelsAdd/ChangelogLabelsAdd'));
 const ChangelogLabelsEdit = lazy(() => import('./changelogLabelsEdit/ChangelogLabelsEdit'));
 const ChangelogPage = () => {
@@ -31,6 +29,15 @@ const ChangelogPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_CHANGELOG_LABELS}>
             <ChangelogLabels />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}>
+            <ChangelogSettings />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_CHANGELOG_LABELS_ADD}>
+            <ChangelogLabelsAdd />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_CHANGELOG_LABELS_EDIT}>
+            <ChangelogLabelsEdit />
           </Route>
         </Switch>
       </Suspense>
