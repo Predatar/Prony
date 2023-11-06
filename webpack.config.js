@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode == 'development';
@@ -36,7 +36,7 @@ if (!devMode) {
       minChunks: Infinity
     },
     minimize: true,
-    minimizer: [new TerserPlugin({ parallel: true, minify: TerserPlugin.swcMinify })]
+    minimizer: [new TerserPlugin({ minify: TerserPlugin.swcMinify, extractComments: true, })]
   };
 }
 
