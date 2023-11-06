@@ -21,17 +21,14 @@ import ROUTES from '../../../routes/const';
 import './index.scss';
 
 const Sidebar = () => {
-  const settings = useRef();
-  const dropdown = useRef();
-
-  const openSettings = e => {
+  /* const openSettings = e => {
     settings.current.childNodes[2].classList.toggle('sidebar__arrow_active');
     if (settings.current.childNodes[2].classList.contains('sidebar__arrow_active')) {
-      dropdown.current.style = '--height: 156px';
+      dropdown.current.style = '--height: 182px';
     } else {
       dropdown.current.style = '--height: 0px';
     }
-  };
+  }; */
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
@@ -81,19 +78,19 @@ const Sidebar = () => {
           <FiCheckSquare />
           Changelog
         </NavLink>
-        <div className={'sidebar__items sidebar__pointer'} ref={settings} onClick={openSettings}>
+        <NavLink className="sidebar__items" to={ROUTES.DASHBOARD_SETTINGS} activeClassName="sidebar__items_active-drop">
           <FiSettings />
           Settings
           <div className="sidebar__arrow">
             <FiChevronDown />
           </div>
-        </div>
-        <div style={{ '--height': '0px' }} className="sidebar__dropdown" ref={dropdown}>
+        </NavLink>
+        <div className="sidebar__dropdown">
           <NavLink
+            exact
             to={ROUTES.DASHBOARD_SETTINGS}
-            className={isActive =>
-              'sidebar__dropdown-item' + (!isActive ? ' unselected' : ' sidebar__dropdown-item_active')
-            }
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
           >
             General
           </NavLink>
