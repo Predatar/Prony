@@ -1,0 +1,104 @@
+.dashboard-log {
+  &__form {
+    margin-top: 22px;
+    padding: 22px 54px 42px 44px;
+    width: 597px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      label {
+        color: var(--colors-grey-500, #9e9e9e);
+        font-family: Nunito;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px; /* 150% */
+        letter-spacing: 0.079px;
+      }
+    }
+  }
+
+  &__input {
+    margin-top: 6px;
+    padding-left: 21px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--colors-grey-300, #e0e0e0);
+
+    &::placeholder {
+      color: var(--colors-grey-500, #9e9e9e);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 21px; /* 150% */
+      letter-spacing: 0.079px;
+    }
+  }
+
+  &__color-wrapper {
+    margin-top: 14px;
+
+    display: flex;
+    gap: 17px;
+  }
+
+  &__label {
+    color: var(--colors-grey-500, #9e9e9e);
+    font-family: Nunito;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+    letter-spacing: 0.079px;
+  }
+
+  &__radio-color {
+    span {
+      width: 34px;
+      height: 34px;
+      display: block;
+      border-radius: 50%;
+      background: var(--color);
+
+      &::after {
+        content: '';
+        width: 12px;
+        height: 7px;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        position: absolute;
+        top: 33%;
+        left: 28%;
+        opacity: 0;
+        transform: rotate(136deg);
+        transition: opacity 0.2s;
+      }
+    }
+
+    input {
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
+      background: var(--inputColor);
+      &:checked + span::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn-group {
+		margin-top: 54px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 22px;
+  }
+}

@@ -31,6 +31,8 @@ const ROUTES = {
   DASHBOARD_CHANGELOG_LABELS: "/dashboard/changelog/labels",
   DASHBOARD_CHANGELOG_SETTINGS: "/dashboard/changelog/settings",
   DASHBOARD_CHANGELOG_SETTINGS_GENERAL: "/dashboard/changelog/settings/general",
+  DASHBOARD_CHANGELOG_LABELS_ADD: "/dashboard/changelog/labels/add",
+  DASHBOARD_CHANGELOG_LABELS_EDIT: "/dashboard/changelog/labels/edit",
   DASHBOARD_SETTINGS: "/dashboard/settings",
   DASHBOARD_INTEGRATION: "/dashboard/integration",
 };
