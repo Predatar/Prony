@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom";
 
 import Spinner from "../../spinner//Spinner";
 
-const GeneralPage = lazy(() => import('./GeneralPage/index'));
+const GeneralPage = lazy(() => import('./GeneralPage/GeneralPage'));
 const EmailPage = lazy(() => import('./EmailPage/EmailPage'));
 const SsoPage = lazy(() => import('./ssoPage/SsoPage'));
 const CustomDomain = lazy(() => import('./customDomain/CustomDomain'));
