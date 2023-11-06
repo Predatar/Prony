@@ -18,12 +18,17 @@ const ChangelogSettings = lazy(() =>
 );
 
 import "./index.scss";
+
 const ChangelogLabelsAdd = lazy(() =>
   import("./changelogLabelsAdd/ChangelogLabelsAdd")
 );
 const ChangelogLabelsEdit = lazy(() =>
   import("./changelogLabelsEdit/ChangelogLabelsEdit")
 );
+const ChangelogAppearance = lazy(() =>
+  import("./changelogAppearance/ChangelogAppearance")
+);
+
 const ChangelogPage = () => {
   return (
     <div className="dashboard-log">
@@ -52,6 +57,9 @@ const ChangelogPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_CHANGELOG_LABELS_EDIT}>
             <ChangelogLabelsEdit />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_SETTINGS_APEARANCE}>
+            <ChangelogAppearance />
           </Route>
         </Switch>
       </Suspense>
