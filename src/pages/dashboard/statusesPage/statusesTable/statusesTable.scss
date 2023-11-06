@@ -18,6 +18,12 @@
       list-style-type: none;
       li {
         cursor: grab;
+        &:nth-child(odd) {
+          background-color: var(--secondaryWhite);
+        }
+        &:nth-child(even) {
+          background-color: var(--dashBoardBg);
+        }
       }
     }
   }
@@ -63,9 +69,9 @@
 }
 
 .statuses-item {
-  background: var(--dashBoardBg);
   padding: 22px 69px;
   position: relative;
+
   &__body {
     display: flex;
     align-items: center;

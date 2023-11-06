@@ -160,6 +160,8 @@ const RenderViewComments = () => {
   const [comments, setComments] = useState(dataComments);
   const [openAnswersForCommentId, setOpenAnswersForCommentId] = useState({});
 
+  console.log(comments)
+
   function handleDelete(id) {
     setComments((prevComments) =>
       prevComments.filter((comment) => comment.id !== id)

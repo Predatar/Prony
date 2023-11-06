@@ -6,7 +6,6 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "public",
     color: "#43A047",
-    backgroundColor: "var(--secondaryWhite)",
     nameEllipseColor: "#43A047",
   },
   {
@@ -16,7 +15,6 @@ export const tableStatusItem = [
     showOnRoadmap: true,
     privacy: "privat",
     color: "#E0E0E0",
-    backgroundColor: "var(--dashBoardBg)",
     nameEllipseColor: "#E0E0E0",
   },
   {
@@ -26,7 +24,6 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "public",
     color: "#E65100",
-    backgroundColor: "var(--secondaryWhite)",
     nameEllipseColor: "#E65100",
   },
   {
@@ -36,7 +33,30 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "privat",
     color: "#1565C0",
-    backgroundColor: "var(--dashBoardBg)",
     nameEllipseColor: "#ADF1B0",
+  },
+];
+
+export const changelogTableItem = [
+  {
+    id: 1,
+    name: "Changelog",
+    nameEllipseColor: "#546E7A",
+    backgroundTag: "#546E7A",
+    colorTag: "#ffff",
+  },
+  {
+    id: 2,
+    name: "Feedback",
+    nameEllipseColor: "#03B8FD",
+    backgroundTag: "#03B8FD",
+    colorTag: "#ffff",
+  },
+  {
+    id: 3,
+    name: "Admin",
+    nameEllipseColor: "#BFBECD",
+    backgroundTag: "#BFBECD",
+    colorTag: "#272557",
   },
 ];

@@ -26,6 +26,10 @@ const ROUTES = {
   DASHBOARD_USERS_SEGMENTS_ADD: '/dashboard/users/segments/add',
   DASHBOARD_USERS_SEGMENTS_EDIT: '/dashboard/users/segments/edit',
   DASHBOARD_CHANGELOG: '/dashboard/changelog',
+  DASHBOARD_CHANGELOG_ADD: '/dashboard/changelog/add',
+  DASHBOARD_CHANGELOG_EDIT: '/dashboard/changelog/edit',
+  DASHBOARD_CHANGELOG_LABELS: '/dashboard/changelog/labels',
+  DASHBOARD_CHANGELOG_SETTINGS: '/dashboard/changelog/settings',
   DASHBOARD_SETTINGS: '/dashboard/settings',
   DASHBOARD_INTEGRATION: '/dashboard/integration'
 };

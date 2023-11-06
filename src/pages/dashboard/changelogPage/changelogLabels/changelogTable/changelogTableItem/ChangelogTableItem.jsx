@@ -1,45 +1,24 @@
 import React from "react";
-import "../statusesTable.scss";
+import "../../../../statusesPage/statusesTable/statusesTable.scss";
 
 import { MdCancel, MdCreate, MdDragIndicator } from "react-icons/md";
 import { Link } from "react-router-dom";
-import ROUTES from "../../../../../routes/const";
-const StatusesTableItem = ({
-  id,
-  name,
-  votable,
-  showOnRoadmap,
-  privacy,
-  color,
-  background,
-  nameEllipseColor,
-}) => {
+import ROUTES from "../../../../../../routes/const";
+import "../../../index.scss";
+const ChangelogTableItem = ({ id, name, color, background ,backgroundTag,colorTag}) => {
   return (
     <div id={id} style={{ background: background }} className="statuses-item">
       <div className="statuses-item__drag">
         <MdDragIndicator />
       </div>
       <div className="statuses-item__body">
-        <div className="statuses-item__item statuses-item__item--name">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="7"
-            height="7"
-            viewBox="0 0 7 7"
-            fill="none"
-          >
-            <circle cx="3.5" cy="3.5" r="3.5" fill={nameEllipseColor} />
-          </svg>
-          {name}
+        <div
+          style={{ flex: "0 1 328px" }}
+          className="statuses-item__item changelog-table__item"
+        >
+          <span style={{background:backgroundTag, color:colorTag}}>{name}</span>
         </div>
-        <div className="statuses-item__item">
-          {votable === true ? "yes" : "no"}
-        </div>
-        <div className="statuses-item__item">
-          {showOnRoadmap === true ? "yes" : "no"}
-        </div>
-        <div className="statuses-item__item">{privacy}</div>
-        <div className="statuses-item__item">
+        <div style={{ flex: "0 1 188px" }} className="statuses-item__item">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="29"
@@ -71,4 +50,4 @@ const StatusesTableItem = ({
   );
 };
 
-export default StatusesTableItem;
+export default ChangelogTableItem;

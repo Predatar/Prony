@@ -122,7 +122,11 @@ const Comments = ({
           </div>
         </div>
       </div>
-      <Popup open={showPopup} state={showPopup} onClick={() => setShowPopup(false)}>
+      <Popup
+        open={showPopup}
+        state={showPopup}
+        onClick={() => setShowPopup(false)}
+      >
         <PopupMerge />
       </Popup>
     </>
