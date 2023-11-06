@@ -43,6 +43,15 @@
         color: rgba(21, 101, 192, 1);
       }
     }
+
+    &_active-drop {
+      background: #f2f2f5;
+      color: var(--sidebarItemsColor);
+    }
+
+    &_active-drop ~ .sidebar__dropdown {
+      display: flex;
+    }
   }
 
   &__arrow {
@@ -63,9 +72,7 @@
   }
 
   &__dropdown {
-    height: var(--height);
-
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 6px;
 
@@ -86,6 +93,11 @@
 
     &:first-child {
       margin-top: 6px;
+    }
+
+    &_active {
+      background: #f2f2f5;
+      color: var(--sidebarItemsColor);
     }
   }
 }
