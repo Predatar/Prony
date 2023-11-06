@@ -36,6 +36,10 @@ const ROUTES = {
   DASHBOARD_SETTINGS: "/dashboard/settings",
   DASHBOARD_SETTINGS_APEARANCE: "/dashboard/settings/apearance",
   DASHBOARD_INTEGRATION: "/dashboard/integration",
+  DASHBOARD_SETTINGS_DOMAIN: '/dashboard/settings/domain',
+  DASHBOARD_SETTINGS_SSO: '/dashboard/settings/sso',
+  DASHBOARD_SETTINGS_EMAIL: '/dashboard/settings/email',
+  DASHBOARD_SETTINGS_APPEARANCE: '/dashboard/settings/appearance',
 };
 
 export default ROUTES;

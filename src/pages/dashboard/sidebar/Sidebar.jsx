@@ -21,17 +21,14 @@ import ROUTES from '../../../routes/const';
 import './index.scss';
 
 const Sidebar = () => {
-  const settings = useRef();
-  const dropdown = useRef();
-
-  const openSettings = e => {
+  /* const openSettings = e => {
     settings.current.childNodes[2].classList.toggle('sidebar__arrow_active');
     if (settings.current.childNodes[2].classList.contains('sidebar__arrow_active')) {
-      dropdown.current.style = '--height: 85px';
+      dropdown.current.style = '--height: 182px';
     } else {
       dropdown.current.style = '--height: 0px';
     }
-  };
+  }; */
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
@@ -81,21 +78,64 @@ const Sidebar = () => {
           <FiCheckSquare />
           Changelog
         </NavLink>
-        <div className={'sidebar__items sidebar__pointer'} ref={settings} onClick={openSettings}>
+        <NavLink className="sidebar__items" to={ROUTES.DASHBOARD_SETTINGS} activeClassName="sidebar__items_active-drop">
           <FiSettings />
           Settings
           <div className="sidebar__arrow">
             <FiChevronDown />
           </div>
-        </div>
-        <div style={{ '--height': '0px' }} className="sidebar__dropdown" ref={dropdown}>
-          <NavLink to={ROUTES.DASHBOARD_TAGS} className="sidebar__dropdown-item">
-            Settings 1
+        </NavLink>
+        <div className="sidebar__dropdown">
+          <NavLink
+            exact
+            to={ROUTES.DASHBOARD_SETTINGS}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            General
           </NavLink>
-          <NavLink to={ROUTES.DASHBOARD_ACTIVITY} className="sidebar__dropdown-item">
-            Settings 2
+          <NavLink
+            to={ROUTES.DASHBOARD_SETTINGS_APPEARANCE}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            Appearance
           </NavLink>
-          <div className="sidebar__dropdown-item">Settings 3</div>
+          <NavLink
+            to={ROUTES.DASHBOARD_SETTINGS_EMAIL}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            Email settings
+          </NavLink>
+          <NavLink
+            to={ROUTES.DASHBOARD_SETTINGS_SSO}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            SSO
+          </NavLink>
+          <NavLink
+            to={ROUTES.DASHBOARD_SETTINGS_DOMAIN}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            Custom domain
+          </NavLink>
+          <NavLink
+            to={ROUTES.DASHBOARD_TAGS}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            Tags
+          </NavLink>
+          <NavLink
+            to={ROUTES.DASHBOARD_ACTIVITY}
+            className="sidebar__dropdown-item"
+            activeClassName="sidebar__dropdown-item_active"
+          >
+            Activity
+          </NavLink>
         </div>
         <NavLink
           to={ROUTES.DASHBOARD_INTEGRATION}

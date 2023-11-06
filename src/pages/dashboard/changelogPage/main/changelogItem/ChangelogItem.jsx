@@ -1,3 +1,4 @@
+import { MdEmail } from 'react-icons/md';
 import React from "react";
 import { SiReaddotcv } from "react-icons/si";
 import { BiSolidLabel } from "react-icons/bi";
@@ -26,25 +27,13 @@ const ChangelogItem = ({ time, feedback, changelog, admin }) => {
         </div>
         <div className="changelog-item__item">
           <div className="changelog-item__right-right">
-            <DashboardPopup name={"post"}>
-              <DashboardPopupItemLink
-                icon={<BiSolidLabel />}
-                text={"Labels"}
-                to={ROUTES.DASHBOARD_CHANGELOG_LABELS}
-              />
-              <DashboardPopupItemLink
-                icon={<SiReaddotcv />}
-                text={"Add new label"}
-                to={ROUTES.DASHBOARD_POSTS_VIEW}
-              />
-              <DashboardPopupItemLink
-                icon={<IoMdCreate />}
-                text={"Edit  label"}
-                to={ROUTES.DASHBOARD_CHANGELOG_EDIT}
-              />
+            <DashboardPopup name={'post'}>
+              <DashboardPopupItemLink icon={<BiSolidLabel />} text={'Labels'} to={ROUTES.DASHBOARD_CHANGELOG_LABELS} />
+              <DashboardPopupItemLink icon={<SiReaddotcv />} text={'Add new label'} to={ROUTES.DASHBOARD_POSTS_VIEW} />
+              <DashboardPopupItemLink icon={<IoMdCreate />} text={'Edit  label'} to={ROUTES.DASHBOARD_CHANGELOG_EDIT} />
               <DashboardPopupItemLink
                 icon={<FiSettings />}
-                text={"Settings"}
+                text={'Settings'}
                 to={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}
               />
               {/* <DashboardPopupItemLink
