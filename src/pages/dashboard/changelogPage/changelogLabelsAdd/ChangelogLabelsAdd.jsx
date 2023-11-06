@@ -9,7 +9,7 @@ import Links from '../../../../UI/links/Links';
 
 import ROUTES from '../../../../routes/const';
 
-import '../changelogLabelsAdd/index.scss';
+import './index.scss';
 
 const ChangelogLabelsAdd = () => {
   return (
