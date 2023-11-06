@@ -24,12 +24,14 @@ const ChangeLogLabels = () => {
         <div className="dashboard__title">Changelog Labels</div>
         <Links
           to={ROUTES.DASHBOARD_CHANGELOG_ADD}
-          text={"Add record"}
+          text={"Add label"}
           theme={"link_primary"}
-          width={134}
+          width={124}
         />
       </div>
-      <RenderChagelogTable />
+      <div className="dashboard-changelog-table">
+        <RenderChagelogTable />
+      </div>
     </>
   );
 };
