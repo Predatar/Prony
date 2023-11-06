@@ -1,8 +1,8 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from 'react';
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 
-import Spinner from "../../spinner//Spinner";
+import Spinner from '../../spinner//Spinner';
 
 const MainBoard = lazy(() => import("./main/MainBoard"));
 const ChangelogEdit = lazy(() => import("./changelogEdit/ChangelogEdit"));
@@ -13,6 +13,8 @@ const ChangelogSettings = lazy(() =>
 );
 import ROUTES from "../../../routes/const";
 import "./index.scss";
+const ChangelogLabelsAdd = lazy(() => import('./changelogLabelsAdd/ChangelogLabelsAdd'));
+const ChangelogLabelsEdit = lazy(() => import('./changelogLabelsEdit/ChangelogLabelsEdit'));
 const ChangelogPage = () => {
   return (
     <div className="dashboard-log">
@@ -29,9 +31,6 @@ const ChangelogPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_CHANGELOG_LABELS}>
             <ChangelogLabels />
-          </Route>
-          <Route exact path={ROUTES.DASHBOARD_CHANGELOG_SETTINGS}>
-            <ChangelogSettings />
           </Route>
         </Switch>
       </Suspense>
