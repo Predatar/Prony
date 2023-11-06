@@ -1,7 +1,11 @@
 .user-item {
-  padding: 38px 69px;
-  &:nth-child(odd){
-    background-color: #F8F8F8;;
+  padding: 37px 25px 33px 69px;
+
+  &:nth-child(odd) {
+    background-color: var(--secondaryWhite);
+  }
+  &:nth-child(even) {
+    background-color: var(--dashBoardBg);
   }
   &__body {
     display: flex;
@@ -12,6 +16,7 @@
     display: flex;
     align-items: center;
     gap: 31px;
+    flex: 0 1 300px;
     img {
       width: 65px;
       height: 65px;
@@ -19,12 +24,15 @@
       object-fit: cover;
     }
   }
+  &__center {
+    flex: 0 1 300px;
+  }
   &__info {
     display: flex;
     flex-direction: column;
   }
   &__info-name {
-    color: #000;
+    color: var(--textColor);
     font-size: 14px;
     font-weight: 600;
     line-height: 20.4px;
@@ -49,6 +57,7 @@
     display: flex;
     align-items: center;
     gap: 115px;
+    width: 100%;
   }
   &__likes {
     display: flex;
@@ -60,7 +69,7 @@
     align-items: center;
     gap: 12px;
     span {
-      color: #000;
+      color: var(--textColor);
       text-align: center;
       font-size: 14px;
       font-weight: 600;
@@ -69,7 +78,7 @@
     }
   }
   &__role {
-    color: #272557;
+    color: var(--blueColor);
     text-align: center;
     font-size: 14px;
     font-weight: 600;
