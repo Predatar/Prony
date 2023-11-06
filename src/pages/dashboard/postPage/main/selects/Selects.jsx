@@ -3,6 +3,9 @@ import Select from "../../../../../components/select/Select";
 import { SelectInPopup } from "../../../../../data/select";
 import Filter from "../filter/filterPopup/FilterPopup";
 import { SmallSelects } from "./smallSelects/SmallSelects";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+import "./calendar.scss";
 
 const RenderSelects = ({ selectsData }) => {
   const [openFilter, setOpenFilter] = useState(null);
@@ -24,6 +27,7 @@ const RenderSelects = ({ selectsData }) => {
       content,
       subselect,
       count,
+      calendar,
       filter: { title },
     }) => {
       return (
@@ -39,14 +43,14 @@ const RenderSelects = ({ selectsData }) => {
             {openFilter === name && (
               <Filter title={title}>
                 <div key={id} className="filter-form__wrapper">
-                  {subselect ? (
+                  {calendar && <UserCalendarSelect />}
+                  {subselect && (
                     <SelectInPopup
                       title={subselect.name}
                       content={subselect.content}
                     />
-                  ) : (
-                    content
                   )}
+                  {content}
                 </div>
               </Filter>
             )}
@@ -75,3 +79,12 @@ const RenderSmallSelect = ({ smallSelectsData }) => {
 };
 
 export { RenderSmallSelect };
+
+const UserCalendarSelect = () => {
+  const [value, onChange] = useState(new Date());
+  return (
+    <div className="user-calendar">
+      <Calendar onChange={onChange} value={value} locale="en" />
+    </div>
+  );
+};

@@ -29,6 +29,7 @@ const MainBoard = () => {
       <div className="dashboard__main">
         <div className="dashboard__title">Users</div>
       </div>
+
       <div className="user-page">
         <form className="user-page__form">
           <div className="user-page__top">
