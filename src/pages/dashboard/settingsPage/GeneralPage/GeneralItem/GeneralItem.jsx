@@ -1,6 +1,6 @@
 import React from "react";
 import Radio from "../../../../../UI/radio/Radio";
-import "./changelogGeneralItem.scss";
+import "./GeneralItem.scss";
 const ChangelogGeneralItem = ({ img, title, subtitle }) => {
   return (
     <div className="select-lang">

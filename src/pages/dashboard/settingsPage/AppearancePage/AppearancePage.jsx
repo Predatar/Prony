@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import ROUTES from "../../../../routes/const";
 import AppearanceForm from "./appearanceForm/AppearanceForm";
-
+import "./index.scss";
 const ChangelogAppearance = () => {
   return (
     <>
@@ -20,8 +20,7 @@ const ChangelogAppearance = () => {
       <div className="dashboard__main">
         <div className="dashboard__title">Appearance</div>
       </div>
-      <div className="appearance">
-        <h1>dekiike0</h1>
+      <div className="appearance-board">
         <AppearanceForm />
       </div>
     </>

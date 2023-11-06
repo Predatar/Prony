@@ -8,11 +8,11 @@ import ROUTES from "../../../../routes/const";
 import "./index.scss";
 import flag from "../../../../img/changeloog/settings/flag.png";
 import flag2 from "../../../../img/changeloog/settings/flag2.png";
-import ChangelogGeneralItem from "./changelogGeneralItem/ChangelogGeneralItem";
+import GeneralItem from "./GeneralItem/GeneralItem";
 import Checkbox from "../../../../UI/checkbox/Checkbox";
 import Btn from "../../../../UI/button/Btn";
 
-const ChangelogGeneral = () => {
+const GeneralPage = () => {
   return (
     <>
       <div className="dashboard__path">
@@ -44,34 +44,34 @@ const ChangelogGeneral = () => {
                 <div className="general-settings__title">Language</div>
                 <div className="general-settings__radios">
                   <div className="general-settings__radio-left">
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
                     />
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
                     />
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
                     />
                   </div>
                   <div className="general-settings__radio-right">
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
                     />
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
                     />
-                    <ChangelogGeneralItem
+                    <GeneralItem
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
@@ -108,4 +108,4 @@ const ChangelogGeneral = () => {
   );
 };
 
-export default ChangelogGeneral;
+export default GeneralPage;
