@@ -1,13 +1,14 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from "react";
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route } from "react-router-dom";
 
-import Spinner from '../../spinner//Spinner';
+import Spinner from "../../spinner//Spinner";
 
 const GeneralPage = lazy(() => import('./GeneralPage/index'));
 const EmailPage = lazy(() => import('./EmailPage/EmailPage'));
 const SsoPage = lazy(() => import('./ssoPage/SsoPage'));
 const CustomDomain = lazy(() => import('./customDomain/CustomDomain'));
+const AppearancePage = lazy(() => import("./AppearancePage/AppearancePage"));
 
 import ROUTES from '../../../routes/const';
 
@@ -29,6 +30,9 @@ const BoardPage = () => {
           </Route>
           <Route exact path={ROUTES.DASHBOARD_SETTINGS_DOMAIN}>
             <CustomDomain />
+          </Route>
+          <Route exact path={ROUTES.DASHBOARD_SETTINGS_APPEARANCE}>
+            <AppearancePage />
           </Route>
         </Switch>
       </Suspense>
