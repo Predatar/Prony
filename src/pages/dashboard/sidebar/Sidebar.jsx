@@ -90,12 +90,23 @@ const Sidebar = () => {
         </div>
         <div style={{ '--height': '0px' }} className="sidebar__dropdown" ref={dropdown}>
           <NavLink to={ROUTES.DASHBOARD_TAGS} className="sidebar__dropdown-item">
-            Settings 1
+            Tags
           </NavLink>
           <NavLink to={ROUTES.DASHBOARD_ACTIVITY} className="sidebar__dropdown-item">
-            Settings 2
+            Activity
           </NavLink>
-          <div className="sidebar__dropdown-item">Settings 3</div>
+          <NavLink to={ROUTES.DASHBOARD_SETTINGS} className="sidebar__dropdown-item">
+            General
+          </NavLink>
+          <NavLink to={ROUTES.DASHBOARD_SETTINGS_EMAIL} className="sidebar__dropdown-item">
+            Email settings
+          </NavLink>
+          <NavLink to={ROUTES.DASHBOARD_SETTINGS_SSO} className="sidebar__dropdown-item">
+            SSO
+          </NavLink>
+          <NavLink to={ROUTES.DASHBOARD_SETTINGS_DOMAIN} className="sidebar__dropdown-item">
+            Custom domain
+          </NavLink>
         </div>
         <NavLink
           to={ROUTES.DASHBOARD_INTEGRATION}
