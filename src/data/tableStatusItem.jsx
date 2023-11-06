@@ -6,7 +6,6 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "public",
     color: "#43A047",
-    backgroundColor: "var(--secondaryWhite)",
     nameEllipseColor: "#43A047",
   },
   {
@@ -16,7 +15,6 @@ export const tableStatusItem = [
     showOnRoadmap: true,
     privacy: "privat",
     color: "#E0E0E0",
-    backgroundColor: "var(--dashBoardBg)",
     nameEllipseColor: "#E0E0E0",
   },
   {
@@ -26,7 +24,6 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "public",
     color: "#E65100",
-    backgroundColor: "var(--secondaryWhite)",
     nameEllipseColor: "#E65100",
   },
   {
@@ -36,7 +33,6 @@ export const tableStatusItem = [
     showOnRoadmap: false,
     privacy: "privat",
     color: "#1565C0",
-    backgroundColor: "var(--dashBoardBg)",
     nameEllipseColor: "#ADF1B0",
   },
 ];

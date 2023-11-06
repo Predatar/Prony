@@ -1,7 +1,7 @@
 import React from "react";
 import "../statusesTable.scss";
 
-import { MdDragIndicator, MdCached, MdCreate, MdCancel } from "react-icons/md";
+import { MdCancel, MdCreate, MdDragIndicator } from "react-icons/md";
 import { Link } from "react-router-dom";
 import ROUTES from "../../../../../routes/const";
 const StatusesTableItem = ({

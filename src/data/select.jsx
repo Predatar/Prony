@@ -362,7 +362,7 @@ export const userSelects = [
     widthPopup: 403,
 
     filter: {
-      title: "E-mail",
+      title: "First Name",
     },
     content: (
       <>
@@ -391,7 +391,7 @@ export const userSelects = [
     widthPopup: 403,
 
     filter: {
-      title: "E-mail",
+      title: "Last Name",
     },
 
     content: (
@@ -421,7 +421,7 @@ export const userSelects = [
     widthPopup: 333,
 
     filter: {
-      title: "E-mail",
+      title: "Role",
     },
     content: (
       <>
@@ -441,5 +441,50 @@ export const userSelects = [
         </label>
       </>
     ),
+  },
+];
+
+export const changelogSelects = [
+  {
+    name: "Labels",
+    id: "labels",
+    width: 171,
+    count: true,
+    widthPopup: 403,
+
+    filter: {
+      title: "Labels",
+    },
+
+    content: (
+      <>
+        <label>
+          <CheckBox />
+          Label 1
+        </label>
+
+        <label>
+          <CheckBox />
+          Label 2
+        </label>
+
+        <label>
+          <CheckBox />
+          Label 3
+        </label>
+      </>
+    ),
+  },
+  {
+    name: "Publish time",
+    id: "publish",
+    width: 200,
+    count: false,
+    widthPopup: 385,
+
+    filter: {
+      title: null,
+    },
+    calendar: "1",
   },
 ];
