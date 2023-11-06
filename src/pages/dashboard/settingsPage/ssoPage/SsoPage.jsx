@@ -59,6 +59,7 @@ const SsoPage = () => {
               </div>
             </div>
             <div className="dashboard-settings__container">
+            <div className="dashboard-settings__t">Setup SSO redirect</div>
               <div className="dashboard-settings__steps">
                 <div className="dashboard-settings__step">1</div>
                 <div className="dashboard-settings__info">
