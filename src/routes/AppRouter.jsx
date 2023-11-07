@@ -2,8 +2,7 @@ import React, { lazy } from 'react';
 
 import ROUTES from './const.js';
 
-import { Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
-import Spinner from '../pages/spinner/Spinner';
+import { Route, Switch } from 'react-router-dom';
 
 const DashBoard = lazy(() => import('../pages/dashboard/DashBoard'));
 
