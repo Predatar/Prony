@@ -20,6 +20,8 @@
   &__cards {
     display: flex;
     gap: 19px;
+    flex-wrap: wrap;
+    align-items: center;
   }
 
   &__card {
@@ -42,6 +44,9 @@
 
   &__card-number {
     margin-top: 8px;
+    max-width: 150px;
+    word-break: break-all;
+    margin-left: auto;
     color: var(--colors-2-secondary, #1565c0);
     text-align: right;
     font-variant-numeric: lining-nums proportional-nums;
@@ -96,7 +101,7 @@
 
     &__name {
       color: var(--textColor);
-
+      max-width: 150px;
       font-size: 14px;
       font-weight: 600;
       line-height: 20.4px; /* 145.714% */
@@ -267,7 +272,7 @@
       border-radius: 3px;
       background: #2c629e;
 
-      color: (--textColor);
+      color: #fff;
       text-align: center;
       font-variant-numeric: lining-nums proportional-nums;
 

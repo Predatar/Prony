@@ -48,9 +48,15 @@ body {
   --buttonCommentColor: #1565c0;
   --cancelButtonColor: #9e9e9e;
   --logoColor: #272557;
+  --languageBlockColor: #ededed;
+  --primaryBlue: #1565c0;
+  --borderBg: #202020;
+  --hoverIcon: #000;
+  --hoverPopup: rgba(0, 0, 0, 0.05);
 }
 
 body.dark {
+  background: black;
   --sidebar-bg: black;
   --header-bg: black;
   --textColor: #fff;
@@ -68,4 +74,9 @@ body.dark {
   --buttonCommentColor: #fff;
   --cancelButtonColor: black;
   --logoColor: #fff;
+  --languageBlockColor: black;
+  --borderBg: #fff;
+  --primaryBlue: #ffff;
+  --hoverIcon: #1565c0;
+  --hoverPopup: #1565c0;
 }

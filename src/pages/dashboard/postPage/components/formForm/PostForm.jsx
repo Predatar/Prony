@@ -7,7 +7,8 @@ import "./postForm.scss";
 
 import { selectsInPostForm } from "../../../../../data/postFormSelects";
 import InputFile from "../inputFile/inputFile";
-
+import Links from "../../../../../UI/links/Links";
+import ROUTES from "../../../../../routes/const";
 const Form = () => {
   const [openFilter, setOpenFilter] = useState(null);
 
@@ -148,7 +149,12 @@ const Form = () => {
           </div>
         </div>
         <div className="post-form__buttons">
-          <Btn text="Cancel" theme={"btn_secondary"} width={150} />
+          <Links
+            to={ROUTES.DASHBOARD_POSTS}
+            text="Cancel"
+            theme={"link_secondary"}
+            width={150}
+          />
           <Btn text="Submit" theme={"btn_primary"} width={147} />
         </div>
       </div>

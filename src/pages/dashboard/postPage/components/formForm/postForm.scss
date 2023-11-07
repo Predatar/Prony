@@ -125,13 +125,18 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(243 243 243);
-
+    transition: all 0.3s;
+    padding-left: 10px;
+    &:hover{
+      background-color: var(--hoverPopup);;
+    }
     button {
       background-color: unset;
       border: none;
       display: flex;
       width: 100%;
       cursor: pointer;
+      color: var(--textColor);
     }
   }
 }

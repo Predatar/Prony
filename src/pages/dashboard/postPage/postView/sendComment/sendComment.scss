@@ -109,9 +109,6 @@
     line-height: 21px;
     letter-spacing: 0.09px;
     max-width: 1318px;
-    @media (min-width: 1950px) {
-      max-width: unset;
-    }
   }
   &__center {
     display: flex;

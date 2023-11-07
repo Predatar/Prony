@@ -140,15 +140,19 @@
     cursor: pointer;
 
     transition: color 0.2s;
-
     svg {
+      transition: all 0.3s;
+      &:hover {
+        fill: var(--hoverIcon);
+      }
       path {
         pointer-events: none;
       }
     }
 
+    transition: all 0.3s;
     &:hover {
-      color: rgba(21, 101, 192, 1);
+      color: var(--hoverIcon);
     }
   }
 }
