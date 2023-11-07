@@ -19,8 +19,8 @@ const Filter = ({ title, children }) => {
           <div className="filter-form__buttons">
             <Links
               to={ROUTES.DASHBOARD_POSTS}
-              text="Cancel"
-              theme={"link_secondary"}
+              text="Apply filters"
+              theme={"link_primary"}
               width={150}
             />
             <Btn text={"Cancel"} width={109} theme={"btn_secondary"} />
