@@ -1,17 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { AreaChart, CartesianGrid, Area, XAxis, YAxis, Tooltip } from 'recharts';
-import { subDays } from 'date-fns';
+import React, { useEffect, useRef, useState } from "react";
+import {
+  AreaChart,
+  CartesianGrid,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
+import { subDays } from "date-fns";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { FiChevronDown } from 'react-icons/fi';
+import { FiChevronDown } from "react-icons/fi";
 
-import ROUTES from '../../../routes/const';
+import ROUTES from "../../../routes/const";
 
-import './index.scss';
+import "./index.scss";
 
-import photo1 from '../../../img/Activities/Photo1.png';
-import photo2 from '../../../img/Activities/Photo2.png';
+import photo1 from "../../../img/Activities/Photo1.png";
+import photo2 from "../../../img/Activities/Photo2.png";
 
 const MainPage = () => {
   const input = useRef();
@@ -24,17 +31,26 @@ const MainPage = () => {
     input.current.checked = true;
     if (dataUsers.length == 0) {
       for (let i = 0; i < 15; i++) {
-        setDataUsers(data => [
+        setDataUsers((data) => [
           ...data,
-          { name: subDays(new Date(), i).toISOString().substring(0, 10), value: Math.random() * (15 - 1) + 1 }
+          {
+            name: subDays(new Date(), i).toISOString().substring(0, 10),
+            value: Math.random() * (15 - 1) + 1,
+          },
         ]);
-        setDataVoters(data => [
+        setDataVoters((data) => [
           ...data,
-          { name: subDays(new Date(), i).toISOString().substring(0, 10), value: Math.random() * (15 - 1) + 1 }
+          {
+            name: subDays(new Date(), i).toISOString().substring(0, 10),
+            value: Math.random() * (15 - 1) + 1,
+          },
         ]);
-        setDataPosts(data => [
+        setDataPosts((data) => [
           ...data,
-          { name: subDays(new Date(), i).toISOString().substring(0, 10), value: Math.random() * (15 - 1) + 1 }
+          {
+            name: subDays(new Date(), i).toISOString().substring(0, 10),
+            value: Math.random() * (15 - 1) + 1,
+          },
         ]);
       }
     }
@@ -45,7 +61,9 @@ const MainPage = () => {
       return (
         <div className="chart__tooltip">
           <div className="chart__date">{label}</div>
-          <div className="chart__number">{(payload[0].value * 1000).toFixed()}</div>
+          <div className="chart__number">
+            {(payload[0].value * 1000).toFixed()}
+          </div>
         </div>
       );
     }
@@ -61,16 +79,20 @@ const MainPage = () => {
       <div className="dashboard-main__container">
         <div className="dashboard-main__wrapper">
           <div className="dashboard-main__cards">
-            {Card('Boards', 123)}
-            {Card('Users', '1 623')}
-            {Card('Posts', '1 623')}
-            {Card('Votes', '1 623')}
+            {Card("Boards", 123)}
+            {Card("Users", "1 623")}
+            {Card("Posts", "1 623")}
+            {Card("Votes", "1 623")}
           </div>
           <div className="chart">
             <div className="chart__header">
               <div className="chart__title">Statistic</div>
               <div className="chart__radio">
-                <label htmlFor="users" className="chart__label" style={{ '--color': '#1565C0' }}>
+                <label
+                  htmlFor="users"
+                  className="chart__label"
+                  style={{ "--color": "#1565C0" }}
+                >
                   <input
                     type="radio"
                     name="chart"
@@ -82,7 +104,11 @@ const MainPage = () => {
                   <span className="chart__custom"></span>
                   Users
                 </label>
-                <label htmlFor="voters" className="chart__label" style={{ '--color': 'rgba(67, 160, 71, 1)' }}>
+                <label
+                  htmlFor="voters"
+                  className="chart__label"
+                  style={{ "--color": "rgba(67, 160, 71, 1)" }}
+                >
                   <input
                     type="radio"
                     name="chart"
@@ -93,7 +119,11 @@ const MainPage = () => {
                   <span className="chart__custom"></span>
                   Voters
                 </label>
-                <label htmlFor="posts" className="chart__label" style={{ '--color': 'rgba(255, 152, 0, 1)' }}>
+                <label
+                  htmlFor="posts"
+                  className="chart__label"
+                  style={{ "--color": "rgba(255, 152, 0, 1)" }}
+                >
                   <input
                     type="radio"
                     name="chart"
@@ -115,20 +145,47 @@ const MainPage = () => {
                 width={970}
                 height={390}
                 data={
-                  activeRadio == 0 ? dataUsers : activeRadio == 1 ? dataVoters : activeRadio == 2 ? dataPosts : null
+                  activeRadio == 0
+                    ? dataUsers
+                    : activeRadio == 1
+                    ? dataVoters
+                    : activeRadio == 2
+                    ? dataPosts
+                    : null
                 }
               >
                 <defs>
-                  <linearGradient id="paint0_linear_49_4827" x1="0" y1="0" x2="0" y2="1">
+                  <linearGradient
+                    id="paint0_linear_49_4827"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
                     <stop stopColor="#03B8FD" stopOpacity="0.46" />
                     <stop offset="1" stopColor="#03B8FD" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="4" />
-                <XAxis dataKey="name" tickLine={false} axisLine={false} tickCount={4} tickFormatter={str => ''} />
-                <YAxis tickFormatter={number => `${number.toFixed(0)}k`} tickLine={false} tickCount={4} />
+                <XAxis
+                  dataKey="name"
+                  tickLine={false}
+                  axisLine={false}
+                  tickCount={4}
+                  tickFormatter={(str) => ""}
+                />
+                <YAxis
+                  tickFormatter={(number) => `${number.toFixed(0)}k`}
+                  tickLine={false}
+                  tickCount={4}
+                />
                 <Tooltip content={<CustomizedTooltip />} />
-                <Area type="monotone" dataKey="value" stroke="#1565C0" fill="url(#paint0_linear_49_4827)" />
+                <Area
+                  type="monotone"
+                  dataKey="value"
+                  stroke="#1565C0"
+                  fill="url(#paint0_linear_49_4827)"
+                />
               </AreaChart>
             </div>
             <div className="chart__footer">
@@ -143,17 +200,35 @@ const MainPage = () => {
           <div className="activities">
             <div className="activities__title">Activities</div>
             <div className="activities__list">
-              {ActivityItem(photo1, 'Sophia-Rose Nava', 'upvoted', '6 min ago', 'Welcome to Nolt #1')}
+              {ActivityItem(
+                photo1,
+                "Sophia-Rose Nava",
+                "upvoted",
+                "6 min ago",
+                "Welcome to Nolt #1"
+              )}
               {ActivityItem(
                 photo2,
-                'Yuvaan Whittington',
-                'commented',
-                '38 min ago',
-                'Tips and Tricks #2',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                "Yuvaan Whittington",
+                "commented",
+                "38 min ago",
+                "Tips and Tricks #2",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
               )}
-              {ActivityItem(photo1, 'Sophia-Rose Nava', 'upvoted', '6 min ago', 'Welcome to Nolt #1')}
-              {ActivityItem(photo2, 'Yuvaan Whittington', 'commented', '38 min ago', 'Tips and Tricks #2')}
+              {ActivityItem(
+                photo1,
+                "Sophia-Rose Nava",
+                "upvoted",
+                "6 min ago",
+                "Welcome to Nolt #1"
+              )}
+              {ActivityItem(
+                photo2,
+                "Yuvaan Whittington",
+                "commented",
+                "38 min ago",
+                "Tips and Tricks #2"
+              )}
             </div>
             <div className="activities__link">View more</div>
           </div>

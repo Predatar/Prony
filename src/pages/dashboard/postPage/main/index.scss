@@ -23,6 +23,18 @@
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    transition: all 0.3s;
+    svg{
+      transition: all 0.3s; 
+    }
+    &:hover {
+      transform: translateY(-3px);
+      color: #8782ff;
+      svg {
+        transform: translateY(-3px);
+        fill: #8782ff;
+      }
+    }
   }
 }
 

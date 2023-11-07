@@ -42,7 +42,9 @@
 
   &__item {
     padding-left: 70px;
-    height: 85px;
+    min-height: 85px;
+    padding-top: 5px ;
+    padding-bottom: 5px ;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,6 +111,10 @@
     cursor: pointer;
 
     svg {
+      transition: all 0.3s;
+      &:hover {
+        fill: var(--hoverIcon);
+      }
       path {
         pointer-events: none;
       }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import ROUTES from "../../../../routes/const";
 import "./postVoters.scss";
 import VotersPost from "./votersPost/VotersPost";
-import person from "../../../../img/Post/Voters/person.png";
+import person from "../../../../img/Post/Voters/person1.png";
 import Pagination from "../main/pagination/Pagination";
 const postVoters = () => {
   return (

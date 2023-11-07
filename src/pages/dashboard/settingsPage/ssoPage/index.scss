@@ -6,7 +6,7 @@
     .dashboard-settings {
       &__tag {
         display: flex;
-        color: var(--colors-1-primary, #272557);
+        color: var(--colors-1-primary, var(--logoColor));
         font-variant-numeric: lining-nums proportional-nums;
 
         font-size: 16px;
@@ -43,7 +43,7 @@
       &__info {
         &-title {
           height: 21px;
-          color: #272557;
+          color: var(--logoColor);
 
           display: flex;
           align-items: center;
@@ -85,7 +85,7 @@
         border: 1px solid var(--colors-grey-300, #e0e0e0);
 
         &-text {
-          color: #000;
+          color: var(--textColor);
           font-size: 18px;
           font-weight: 400;
           line-height: 21px; /* 116.667% */

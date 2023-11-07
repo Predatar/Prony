@@ -1,5 +1,5 @@
 .select-lang {
-  background-color: #ededed;
+  background-color: var(--languageBlockColor);
   padding: 6px 15px 8px 13px;
   max-width: 241px;
   width: 100%;
@@ -21,7 +21,7 @@
     flex-direction: column;
   }
   &__top-title {
-    color: #272557;
+    color: var(--blueColor);
     font-size: 14px;
     font-weight: 600;
     line-height: 21px;

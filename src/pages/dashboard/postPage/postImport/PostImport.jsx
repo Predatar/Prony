@@ -9,8 +9,15 @@ import { selectsInPostForm } from "../../../../data/postFormSelects";
 import "../components/formForm/postForm.scss";
 import InputFile from "../components/inputFile/inputFile";
 import Filter from "../main/filter/filterPopup/FilterPopup";
+import Links from "../../../../UI/links/Links";
 const Import = () => {
   const [openFilter, setOpenFilter] = useState(null);
+
+  const handleItemButtonClick = (value, id) => {
+    setOpenFilter(value);
+
+    setOpenFilter(null); // Закрываем попап
+  };
 
   const handleFilterClick = (filterId) => {
     if (openFilter === filterId) {
@@ -50,7 +57,26 @@ const Import = () => {
                         widthPopup={widthPopup}
                         title="1 board"
                       >
-                        {openFilter === name && <Filter>{content}</Filter>}
+                        {openFilter === name && (
+                          <Filter>
+                            <ul className="post-form__select-list">
+                              {content.map((item) => (
+                                <li
+                                  className="post-form__select-item"
+                                  key={item}
+                                >
+                                  <button
+                                    onClick={() =>
+                                      handleItemButtonClick(item, id)
+                                    }
+                                  >
+                                    {item}
+                                  </button>
+                                </li>
+                              ))}
+                            </ul>
+                          </Filter>
+                        )}
                       </Select>
                     )
                 )}
@@ -58,7 +84,12 @@ const Import = () => {
               <InputFile title={"File"} />
             </div>
             <div className="post-form__buttons">
-              <Btn text="Cancel" theme={"btn_secondary"} width={150} />
+              <Links
+                to={ROUTES.DASHBOARD_POSTS}
+                text="Cancel"
+                theme={"link_secondary"}
+                width={150}
+              />
               <Btn text="Submit" theme={"btn_primary"} width={147} />
             </div>
           </div>

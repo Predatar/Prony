@@ -14,6 +14,11 @@
   color: #fff;
 
   cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px 10px rgb(20 81 255 / 44%);
+  }
 }
 
 .link_primary {
