@@ -6,7 +6,8 @@ import Filter from "../../../postPage/main/filter/filterPopup/FilterPopup";
 import "./changelogForm.scss";
 import InputFile from "../../../postPage/components/inputFile/inputFile";
 import LogTag from "../logTag/LogTag";
-
+import ROUTES from "../../../../../routes/const"
+import Links from "../../../../../UI/links/Links";
 const ChangelogForm = () => {
   const changeSelect = [
     {
@@ -83,7 +84,7 @@ const ChangelogForm = () => {
           </div>
         </div>
         <div className="post-form__buttons">
-          <Btn text="Cancel" theme={"btn_secondary"} width={150} />
+          <Links to={ROUTES.DASHBOARD_CHANGELOG} text="Cancel" theme={"link_secondary"} width={150} />
           <Btn text="Submit" theme={"btn_primary"} width={147} />
         </div>
       </div>

@@ -1,6 +1,6 @@
 .general-settings {
   border-radius: 10px;
-  background: #fff;
+  background: var(--dashBoardBg);
   box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
   padding: 22px 54px 38px 44px;
   margin-top: 22px;
@@ -29,6 +29,7 @@
       font-weight: 400;
       line-height: 21px;
       letter-spacing: 0.079px;
+      background-color: var(--sidebarColor);
     }
   }
   &__title {
@@ -39,7 +40,7 @@
   }
   &__radios {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 9px;
   }
   &__radio-left,
@@ -64,7 +65,7 @@
     flex-direction: column;
   }
   &__top {
-    color: #272557;
+    color: var(--blueColor);
     font-size: 14px;
     font-weight: 600;
     line-height: 20.4px;

@@ -1,6 +1,12 @@
 import React from "react";
 import { BiComment } from "react-icons/bi";
-import { MdOutlineThumbUpAlt } from "react-icons/md";
+import {
+  MdOutlineThumbUpAlt,
+  MdDetails,
+  MdNoteAdd,
+  MdEditDocument,
+} from "react-icons/md";
+import { PiLineSegmentsBold } from "react-icons/pi";
 import {
   DashboardPopup,
   DashboardPopupItem,
@@ -48,22 +54,25 @@ const UserItem = ({ id, name, role, img, email }) => {
         <div className="comments__right-right">
           <DashboardPopup name={"post"}>
             <DashboardPopupItemLink
-              icon={<MdCached />}
-              text={"Change user role"}
-              to={ROUTES.DASHBOARD_POSTS_VIEW}
-            />
-
-            <DashboardPopupItemLink
-              icon={<MdCancel />}
-              text={"Delete user"}
-              to={ROUTES.DASHBOARD_POSTS}
+              icon={<MdDetails />}
+              text={"User details"}
+              to={ROUTES.DASHBOARD_USERS_DETAILS}
             />
             <DashboardPopupItemLink
-              icon={<AiFillWarning />}
-              to={ROUTES.DASHBOARD_POSTS_EDIT}
-              text={"Ban user"}
+              icon={<PiLineSegmentsBold />}
+              text={"User segments"}
+              to={ROUTES.DASHBOARD_USERS_SEGMENTS}
             />
-            <DashboardPopupItem icon={<AiFillStar />} text={"User roles"} />
+            <DashboardPopupItemLink
+              icon={<MdNoteAdd />}
+              text={"Add user segment"}
+              to={ROUTES.DASHBOARD_USERS_SEGMENTS_ADD}
+            />
+            <DashboardPopupItemLink
+              icon={<MdEditDocument />}
+              text={"Edit user segment"}
+              to={ROUTES.DASHBOARD_USERS_SEGMENTS_EDIT}
+            />
           </DashboardPopup>
         </div>
       </div>

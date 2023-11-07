@@ -2,6 +2,8 @@ import React from "react";
 import Btn from "../../../../../../UI/button/Btn";
 import SelectTitle from "../../../../../../components/select/selectTitle/SelectTitle";
 import "./filter.scss";
+import Links from "../../../../../../UI/links/Links";
+import ROUTES from "../../../../../../routes/const";
 const Filter = ({ title, children }) => {
   const bodyStyle = {
     display: title ? "flex" : "block",
@@ -15,7 +17,12 @@ const Filter = ({ title, children }) => {
         <div className="filter__form filter-form">
           <div className="filter-form__top">{children}</div>
           <div className="filter-form__buttons">
-            <Btn text={"Apply filters"} width={140} theme={"btn_primary"} />
+            <Links
+              to={ROUTES.DASHBOARD_POSTS}
+              text="Cancel"
+              theme={"link_secondary"}
+              width={150}
+            />
             <Btn text={"Cancel"} width={109} theme={"btn_secondary"} />
           </div>
         </div>

@@ -39,7 +39,10 @@ const PostBoard = () => {
                   Import
                 </Link>
 
-                <Link className="posts__import">
+                <Link
+                  to={ROUTES.DASHBOARD_POSTS_IMPORT}
+                  className="posts__import"
+                >
                   <MdUpload
                     style={{ color: "#E0E0E0", width: 24, height: 24 }}
                   />

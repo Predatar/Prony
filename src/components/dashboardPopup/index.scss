@@ -29,9 +29,11 @@
 
     font-size: 30px;
     color: var(--dotsColor);
+    transition: all 0.3s;
 
     svg {
       pointer-events: none;
+
       path {
       }
     }
@@ -95,7 +97,7 @@
     }
 
     &:hover {
-      background: var(--lists-hover, rgba(0, 0, 0, 0.05));
+      background: var(--hoverPopup);
 
       svg {
         color: rgba(39, 37, 87, 1);

@@ -1,6 +1,6 @@
 .theme-form {
   margin-top: 15px;
-  
+
   &__body {
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     cursor: pointer;
     border-radius: 5px;
     &.selected {
-      border: 1px solid #202020;
+      border: 1px solid var(--borderBg);
       .theme-form__item-top {
         svg {
           opacity: 1;
@@ -52,7 +52,7 @@
     align-items: center;
     gap: 11px;
     flex-wrap: wrap;
-    svg{
+    svg {
       height: 23px;
     }
   }

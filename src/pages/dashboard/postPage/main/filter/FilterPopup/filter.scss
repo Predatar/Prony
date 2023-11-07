@@ -17,9 +17,11 @@
     flex-direction: column;
     gap: 9px;
     label {
+      cursor: pointer;
       display: flex;
       align-items: center;
       gap: 15px;
+      max-width: 200px;
       color: var(--brownColor);
       font-variant-numeric: lining-nums proportional-nums;
       font-size: 12px;
