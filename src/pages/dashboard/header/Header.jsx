@@ -4,7 +4,8 @@ import "./index.scss";
 
 import img from "../../../img/personal-img.png";
 import { ThemeContext } from "../../../providers/ThemeProvider";
-
+import ROUTES from "../../../routes/const";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 const Header = () => {
   const input = useRef();
   const [theme, setTheme] = useContext(ThemeContext);
@@ -23,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="dashboard-header">
-      <div className="personal">
+      <Link to={ROUTES.CLIENT_HOME} className="personal">
         <div className="personal__img">
           <img src={img} alt="Personal img" loading="lazy" />
         </div>
@@ -34,7 +35,7 @@ const Header = () => {
             Online
           </div>
         </div>
-      </div>
+      </Link>
       <div className="theme">
         <label onClick={setLightTheme} htmlFor="day" className="radio__label">
           <input

@@ -1,0 +1,117 @@
+.footer {
+  background-color: #272557;
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 145px;
+    min-height: 232px;
+    padding-top: 25px;
+  }
+  &__left {
+    svg {
+      width: 205px;
+      height: 45px;
+      g {
+        path {
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7),
+          &:nth-child(8),
+          &:nth-child(9),
+          &:nth-child(10) {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  &__columns {
+    display: flex;
+    align-items: baseline;
+    gap: 88px;
+    padding-top: 21px;
+  }
+  &__bottom {
+    background: #322f71;
+  }
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 114px;
+  &__title {
+    color: #f43658;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px;
+    letter-spacing: 0.06px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    list-style-type: none;
+  }
+  &__list-link {
+    color: #fff;
+    font-size: 12px;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: 0.6px;
+    transition: all 0.3s;
+    &:hover {
+      color: #8782ff;
+    }
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 38px;
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 59px;
+  }
+  &__left,
+  &__right-text {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  &__right-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    a {
+      background: #ffffff80;
+      border-radius: 50%;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s;
+      &:hover {
+        background-color: #8782ff;
+        svg {
+          fill: #fff;
+        }
+      }
+      svg {
+        width: 11px;
+        height: 11px;
+        fill: #272557;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.clientbutton {
+  border-radius: 30px;
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20.4px;
+  letter-spacing: 0.06px;
+}
+
+.clientbutton_primary {
+  background: #1565c0;
+}
+
+.clientbutton_warning {
+  background: #f43658;
+}

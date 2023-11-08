@@ -1,0 +1,30 @@
+.header-client {
+  min-height: 99px;
+  display: flex;
+  align-items: center;
+  &__left {
+    svg {
+      width: 205px;
+      height: 45px;
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+  }
+  &__name {
+    color: var(--272557, #272557);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20.4px;
+    letter-spacing: 0.06px;
+  }
+}

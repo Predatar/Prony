@@ -8,7 +8,8 @@
   .personal {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 20px;  
+    cursor: pointer;
 
     &__img {
       height: 100%;
