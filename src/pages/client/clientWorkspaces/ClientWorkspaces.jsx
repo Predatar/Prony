@@ -5,7 +5,6 @@ import { Route, Switch, useLocation } from "react-router-dom";
 
 import ROUTES from "../../../routes/const";
 
-import ClientSpinner from "../../spinner/clientSpinner/ClientSpinner";
 import PageError from "../error/PageError";
 import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
 import Container from "./components/Container/Container";
@@ -63,7 +62,7 @@ const ClientWorkspaces = () => {
           <div className="main-client__wrapper">
             {!isPageError && <SidebarClient />}
             <div className="main-client__content">
-              <Suspense fallback={<ClientSpinner />}>
+              <Suspense>
                 <Switch>
                   <Route exact path={ROUTES.CLIENT_WORKSPACES}>
                     <WorkSpaces />
