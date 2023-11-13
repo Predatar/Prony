@@ -1,0 +1,21 @@
+.workspaces {
+  padding-bottom: 95px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 93px;
+    a {
+      align-self: center;
+    }
+  }
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+  }
+}

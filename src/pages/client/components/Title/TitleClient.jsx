@@ -1,7 +1,7 @@
 import React from "react";
 import "./title.scss";
-const Title = ({ text }) => {
+const TitleClient = ({ text }) => {
   return <div className="client-title">{text}</div>;
 };
 
-export default Title;
+export default TitleClient;

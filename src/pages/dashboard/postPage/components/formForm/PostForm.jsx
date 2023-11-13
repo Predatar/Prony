@@ -6,7 +6,7 @@ import Filter from "../../main/filter/filterPopup/FilterPopup";
 import "./postForm.scss";
 
 import { selectsInPostForm } from "../../../../../data/postFormSelects";
-import InputFile from "../inputFile/inputFile";
+import InputFile from "../inputFile/InputFile";
 import Links from "../../../../../UI/links/Links";
 import ROUTES from "../../../../../routes/const";
 const Form = () => {

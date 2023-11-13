@@ -1,0 +1,131 @@
+.billing-plan {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__notify {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 12px;
+    border-radius: 10px;
+    opacity: 0.4;
+    background: #f43658;
+    box-shadow: 0px 0px 14px 0px rgba(53, 64, 82, 0.05);
+    span {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: #ffffff;
+    }
+  }
+}
+
+.plan-table {
+  max-width: 864px;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(202, 221, 255, 0.55);
+  margin-bottom: 30px;
+  &__body {
+    width: 100%;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    padding: 0px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-height: 76px;
+    justify-content: center;
+  }
+  &__item-top {
+    color: #7791c2;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  &__item-bottom {
+    color: #272557;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.219px;
+  }
+  &__title {
+    color: #7791c2;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+    margin-bottom: 12px;
+  }
+}
+
+.available-plan {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    padding-bottom: 94px;
+  }
+}
+
+.available-item {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(202, 221, 255, 0.55);
+  position: relative;
+
+  &__color {
+    position: absolute;
+    left: -30px;
+    top: -30px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__button {
+    border-radius: 30px;
+    border: none;
+    padding: 10px 54px;
+    color: #fff;
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20.4px; /* 145.714% */
+    letter-spacing: 0.06px;
+    margin-right: 28px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px 10px rgb(20 81 255 / 44%);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.change-password {
+    &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    &__bottom {
+      padding-bottom: 90px;
+    }
+  }
+  

@@ -7,7 +7,7 @@ import Btn from "../../../../UI/button/Btn";
 import Select from "../../../../components/select/Select";
 import { selectsInPostForm } from "../../../../data/postFormSelects";
 import "../components/formForm/postForm.scss";
-import InputFile from "../components/inputFile/inputFile";
+import InputFile from "../components/inputFile/InputFile";
 import Filter from "../main/filter/filterPopup/FilterPopup";
 import Links from "../../../../UI/links/Links";
 const Import = () => {

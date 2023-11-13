@@ -1,0 +1,50 @@
+.add-plan {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  &__title {
+    color: #272557;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.079px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+  }
+  &__btn {
+    border-radius: 7px;
+    border: 3px solid #e5ecf9;
+    max-width: 252px;
+    padding: 9px 48px;
+    width: 100%;
+    background: unset;
+    color: #272557;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25.9px; /* 185% */
+    letter-spacing: -0.219px;
+    cursor: pointer;
+    &.selected {
+      border-radius: 7px;
+      border: 3px solid #e5ecf9;
+      background: #1565c0;
+      color: #f8faff;
+      position: relative;
+      &::after {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        color: #fff;
+        transform: translate(-0, -50%);
+      }
+    }
+  }
+}

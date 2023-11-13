@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { AiOutlinePaperClip } from "react-icons/ai";
 import { MdCancel } from "react-icons/md";
-const InputFile = ({ width, title }) => {
+const InputFile = ({ width, title ,flexDirection ,height}) => {
   const handleCustomInputClick = () => {
     fileInputRef.current.click();
   };
@@ -24,7 +24,7 @@ const InputFile = ({ width, title }) => {
       />
       <div className="post-form__file">
         <div
-          style={{ width: width }}
+          style={{ width: width ,flexDirection:flexDirection , height: height }}
           onClick={handleCustomInputClick}
           className="post-form__input-custom"
         >

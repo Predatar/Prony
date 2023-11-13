@@ -1,0 +1,36 @@
+.clientlink {
+  width: var(--width);
+  border-radius: 30px;
+  min-height: 41px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 10px 56px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20.4px;
+  letter-spacing: 0.06px;
+  position: relative;
+  transition: all 0.3s;
+  svg {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 25px;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px 10px rgb(20 81 255 / 44%);
+  }
+}
+
+.clientlink_primary {
+  background: #1565c0;
+}
+
+.clientlink_warning {
+  background: #f43658;
+}

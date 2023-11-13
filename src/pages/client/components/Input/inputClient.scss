@@ -1,0 +1,17 @@
+.input-client {
+  border-radius: 7px;
+  border: 1px solid #e5ecf9;
+  padding: 7px 22px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25.9px; /* 185% */
+  letter-spacing: -0.219px;
+  &._error {
+    border: 1px solid #f43658;
+  }
+  &::placeholder {
+    color: #cddaf2;
+  }
+}

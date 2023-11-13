@@ -43,6 +43,18 @@ const ROUTES = {
   CLIENT_HOME: "/client",
   CLIENT_WORKSPACES: "/client/workspaces",
   CLIENT_WORKSPACES_EDIT: "/client/workspaces/edit",
+  CLIENT_WORKSPACES_ADD: "/client/workspaces/add",
+  CLIENT_WORKSPACES_DELETE: "/client/workspaces/delete",
+  CLIENT_WORKSPACES_CHANGE_PASSWORD: "/client/workspaces/change password/",
+  CLIENT_WORKSPACES_SOCIAL: "/client/workspaces/social",
+  CLIENT_WORKSPACES_AVATAR: "/client/workspaces/avatar",
+  CLIENT_WORKSPACES_PAYMENT: "/client/workspaces/payment",
+  CLIENT_WORKSPACES_ADD_PAYMENT: "/client/workspaces/add payment",
+  CLIENT_WORKSPACES_BILLING: "/client/workspaces/billing plan",
+  CLIENT_WORKSPACES_HISTORY_BILLING: "/client/workspaces/billing history",
+  CLIENT_WORKSPACES_PROFILE: "/client/workspaces/profile",
+  CLIENT_WORKSPACES_EMAIL: "/client/workspaces/email",
+  ERROR_PAGE: "*",
 };
 
 export default ROUTES;

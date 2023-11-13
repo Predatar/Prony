@@ -71,6 +71,7 @@
     opacity: 0;
     left: -200%;
     overflow: hidden;
+    pointer-events: none;
   }
   &__input-custom {
     background: var(--sidebarColor);

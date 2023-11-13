@@ -1,12 +1,12 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import styles from "./index.module.scss";
 
 const ClientLinks = ({ to, icon, text, width, onClick, theme, background }) => {
   return (
     <Link
       to={to}
-      className={styles.clientbutton + " " + styles[theme]}
+      className={styles.clientlink + " " + styles[theme]}
       style={{ "--width": `${width}px`, background: background }}
       onClick={onClick}
     >

@@ -4,7 +4,7 @@ import Btn from "../../../../../UI/button/Btn";
 import Select from "../../../../../components/select/Select";
 import Filter from "../../../postPage/main/filter/filterPopup/FilterPopup";
 import "./changelogForm.scss";
-import InputFile from "../../../postPage/components/inputFile/inputFile";
+import InputFile from "../../../postPage/components/inputFile/InputFile";
 import LogTag from "../logTag/LogTag";
 import ROUTES from "../../../../../routes/const"
 import Links from "../../../../../UI/links/Links";

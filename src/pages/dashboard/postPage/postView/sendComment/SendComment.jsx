@@ -20,7 +20,7 @@ import room from "../../../../../img/Post/view/room.png";
 import ROUTES from "../../../../../routes/const";
 import "../../../tagsPage/index.scss";
 import "../../components/formForm/postForm.scss";
-import InputFile from "../../components/inputFile/inputFile";
+import InputFile from "../../components/inputFile/InputFile";
 import { RenderSmallSelect } from "../../main/selects/Selects";
 
 import Popup from "../../components/popup/Popup";

@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <div className="dashboard-header">
-      <Link to={ROUTES.CLIENT_HOME} className="personal">
+      <Link to={ROUTES.CLIENT_WORKSPACES} className="personal">
         <div className="personal__img">
           <img src={img} alt="Personal img" loading="lazy" />
         </div>

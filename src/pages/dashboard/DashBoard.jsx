@@ -1,27 +1,27 @@
-import React, { lazy, Suspense } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet";
 
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
-import Spinner from '../spinner/Spinner';
+import Spinner from "../spinner/Spinner";
 
-import ROUTES from '../../routes/const';
+import ROUTES from "../../routes/const";
 
-import Header from './header/Header';
-import Sidebar from './sidebar/Sidebar';
+import Header from "./header/Header";
+import Sidebar from "./sidebar/Sidebar";
 
-const PostPage = lazy(() => import('./postPage/PostPage'));
-const MainPage = lazy(() => import('./mainPage/MainPage'));
-const BoardPage = lazy(() => import('./boardPage/BoardPage'));
-const TagsPage = lazy(() => import('./tagsPage/TagsPage'));
-const StatusesPage = lazy(() => import('./statusesPage/StatusesPage'));
-const UserPage = lazy(() => import('./userPage/UserPage'));
-const ActivityPage = lazy(() => import('./activityPage/ActivityPage'));
-const ChangelogPage = lazy(() => import('./changelogPage/ChangelogPage'));
-const SettingsPage = lazy(() => import('./settingsPage/SettingsPage'));
-import ThemeProvider from '../../providers/ThemeProvider';
+const PostPage = lazy(() => import("./postPage/PostPage"));
+const MainPage = lazy(() => import("./mainPage/MainPage"));
+const BoardPage = lazy(() => import("./boardPage/BoardPage"));
+const TagsPage = lazy(() => import("./tagsPage/TagsPage"));
+const StatusesPage = lazy(() => import("./statusesPage/StatusesPage"));
+const UserPage = lazy(() => import("./userPage/UserPage"));
+const ActivityPage = lazy(() => import("./activityPage/ActivityPage"));
+const ChangelogPage = lazy(() => import("./changelogPage/ChangelogPage"));
+const SettingsPage = lazy(() => import("./settingsPage/SettingsPage"));
+import ThemeProvider from "../../providers/ThemeProvider";
 
-import './index.scss';
+import "./index.scss";
 
 const DashBoard = () => {
   return (

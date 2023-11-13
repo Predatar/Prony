@@ -1,0 +1,55 @@
+.billing {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+  }
+  &__bottom {
+    padding-bottom: 74px;
+  }
+}
+.billing-form {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 30px 0px rgba(202, 221, 255, 0.55);
+  max-width: 864px;
+  display: flex;
+  flex-direction: column;
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 382px;
+    padding: 18px 37px;
+    background-color: #e5ecf9;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  &__top-left,
+  &__top-right {
+    color: #272557;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 38.8px;
+  }
+}
+
+.billing-item {
+  padding: 17px 37px 0px 37px;
+  &__body {
+    border-bottom: 1px dashed #e5ecf9;
+    display: flex;
+    align-items: center;
+    gap: 460px;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  &__left,
+  &__right {
+    color: #7791c2;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 38.8px;
+  }
+}
