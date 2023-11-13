@@ -4,7 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io5";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Logo from "../logo/Logo";
-import Container from "../../pages/client/components/Container/Container";
+import Container from "../../pages/client/clientWorkspaces/components/Container/Container";
 import "./footer.scss";
 const Footer = () => {
   return (

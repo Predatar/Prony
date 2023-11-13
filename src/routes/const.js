@@ -40,7 +40,6 @@ const ROUTES = {
   DASHBOARD_SETTINGS_SSO: "/dashboard/settings/sso",
   DASHBOARD_SETTINGS_EMAIL: "/dashboard/settings/email",
   DASHBOARD_SETTINGS_APPEARANCE: "/dashboard/settings/appearance",
-  CLIENT_HOME: "/client",
   CLIENT_WORKSPACES: "/client/workspaces",
   CLIENT_WORKSPACES_EDIT: "/client/workspaces/edit",
   CLIENT_WORKSPACES_ADD: "/client/workspaces/add",
@@ -54,6 +53,7 @@ const ROUTES = {
   CLIENT_WORKSPACES_HISTORY_BILLING: "/client/workspaces/billing history",
   CLIENT_WORKSPACES_PROFILE: "/client/workspaces/profile",
   CLIENT_WORKSPACES_EMAIL: "/client/workspaces/email",
+  CLIENT_HOME: "/client",
   ERROR_PAGE: "*",
 };
 

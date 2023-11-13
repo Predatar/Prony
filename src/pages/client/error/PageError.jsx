@@ -2,7 +2,7 @@ import React from "react";
 import "./error.scss";
 import ClientLinks from "../../../UI/clientLinks/ClientLinks";
 import ROUTES from "../../../routes/const";
-import img404 from "../../../img/errors/404.svg";
+import img404 from "../../../img/client/404.svg";
 const PageError = ({ onClick }) => {
   return (
     <div className="error">
