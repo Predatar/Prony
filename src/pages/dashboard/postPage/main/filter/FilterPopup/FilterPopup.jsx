@@ -4,7 +4,7 @@ import SelectTitle from "../../../../../../components/select/selectTitle/SelectT
 import "./filter.scss";
 import Links from "../../../../../../UI/links/Links";
 import ROUTES from "../../../../../../routes/const";
-const Filter = ({ title, children }) => {
+const Filter = ({ title, children, onClick }) => {
   const bodyStyle = {
     display: title ? "flex" : "block",
   };
@@ -23,7 +23,12 @@ const Filter = ({ title, children }) => {
               theme={"link_primary"}
               width={150}
             />
-            <Btn text={"Cancel"} width={109} theme={"btn_secondary"} />
+            <Btn
+              text={"Cancel"}
+              onClick={onClick}
+              width={109}
+              theme={"btn_secondary"}
+            />
           </div>
         </div>
       </div>

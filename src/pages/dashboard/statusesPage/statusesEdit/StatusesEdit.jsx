@@ -50,7 +50,7 @@ const StatusesEdit = () => {
               }}
               className="dashboard-tags__radio-wrapper"
             >
-              <div
+              <label
                 style={{ alignItems: "flex-start" }}
                 className="dashboard-tags__radio"
               >
@@ -61,8 +61,8 @@ const StatusesEdit = () => {
                     Defines if posts in this status can get votes
                   </div>
                 </div>
-              </div>
-              <div
+              </label>
+              <label
                 style={{ alignItems: "flex-start" }}
                 className="dashboard-tags__radio"
               >
@@ -73,7 +73,7 @@ const StatusesEdit = () => {
                     Defines if posts in this status can get votes
                   </div>
                 </div>
-              </div>
+              </label>
             </div>
           </div>
 
@@ -83,14 +83,14 @@ const StatusesEdit = () => {
           >
             <label htmlFor="name">Privacy</label>
             <div className="dashboard-tags__radio-wrapper">
-              <div className="dashboard-tags__radio">
+              <label className="dashboard-tags__radio">
                 <Radio name={"privacy"} />
                 Public
-              </div>
-              <div className="dashboard-tags__radio">
+              </label>
+              <label className="dashboard-tags__radio">
                 <Radio name={"privacy"} />
                 Private
-              </div>
+              </label>
             </div>
             <div className="dashboard-tags__helps">
               Privacy flag that defines post visibility and tag visibility at

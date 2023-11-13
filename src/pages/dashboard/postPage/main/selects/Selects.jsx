@@ -41,7 +41,7 @@ const RenderSelects = ({ selectsData }) => {
             count={count}
           >
             {openFilter === name && (
-              <Filter title={title}>
+              <Filter onClick={() => setOpenFilter(!openFilter)} title={title}>
                 <div key={id} className="filter-form__wrapper">
                   {calendar && <UserCalendarSelect />}
                   {subselect && (

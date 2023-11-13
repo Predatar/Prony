@@ -48,16 +48,19 @@ const GeneralPage = () => {
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
+                      name={"lang"}
                     />
                     <GeneralItem
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
+                      name={"lang"}
                     />
                     <GeneralItem
                       title={"English"}
                       subtitle={"English, US"}
                       img={flag}
+                      name={"lang"}
                     />
                   </div>
                   <div className="general-settings__radio-right">
@@ -65,16 +68,19 @@ const GeneralPage = () => {
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
+                      name={"lang"}
                     />
                     <GeneralItem
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
+                      name={"lang"}
                     />
                     <GeneralItem
                       title={"German"}
                       subtitle={"Deutsch"}
                       img={flag2}
+                      name={"lang"}
                     />
                   </div>
                 </div>

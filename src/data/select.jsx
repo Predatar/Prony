@@ -218,17 +218,17 @@ export const selects = [
     content: (
       <>
         <label>
-          <Radio />
+          <Radio name={"date"} />
           Last 24 hours
         </label>
 
         <label>
-          <Radio />
+          <Radio name={"date"} />
           Last week
         </label>
 
         <label>
-          <Radio />
+          <Radio name={"date"} />
           Last month
         </label>
       </>

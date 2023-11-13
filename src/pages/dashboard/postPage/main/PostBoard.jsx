@@ -61,7 +61,10 @@ const PostBoard = () => {
           </div>
         </div>
         <form className="posts__form posts-form">
-          <div style={{ width: 488 }} className="posts-form__wrapper-select">
+          <div
+            style={{ width: 488, border: "1px solid #e0e0e0" ,borderRadius:"10px"}}
+            className="posts-form__wrapper-select"
+          >
             <input
               placeholder="Search all posts"
               className="posts-form__search"
